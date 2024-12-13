@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import index0 from "/public/imgs/index/index_0.webp";
 import index1 from "/public/imgs/index/index1.webp";
 import index2 from "/public/imgs/index/index2.webp";
 import index3 from "/public/imgs/index/index3.webp";
@@ -14,7 +15,42 @@ import index5 from "/public/imgs/index/index5.webp";
 
     <!-- HERO -->
 
+    <!-- ROLLING BANNER -->
+
     <!-- OM OS -->
+
+    <section class="px-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+        <!-- Billede (venstre kolonne) -->
+        <div>
+          <Image
+            src={index0}
+            alt=""
+            class="w-[764px] h-[687px]"
+          />
+        </div>
+    
+        <!-- Tekst (højre kolonne) -->
+        <div>
+          <h2 class="font-headline text-headline2_lg text-beige-700 mb-4xs">MAGNOLIA</h2>
+          <h3 class="font-headline text-headline3_s text-beige-700 mb-lg">
+            blomsterabonnement på dine betingelser
+          </h3>
+          <p class="text-beige-700 mb-s">
+            Hos Magnolia tilbyder vi et unikt blomsterabonnement, der kombinerer
+            bæredygtighed og skønhed. Vores buketter er ikke kun designet til at
+            bringe glæde til dit hjem, men også til at skabe en grønnere fremtid. Vi
+            forener overskudsblomster, miljøcertificerede valg og lokale avlere,
+            hvilket gør vores abonnement både ansvarligt og smukt.
+          </p>
+          <p class="text-beige-700 mb-s">
+            Oplev hvordan blomster kan være en del af en bæredygtig livsstil – altid
+            på dine betingelser, og leveret direkte til døren. Vi skaber smukke
+            øjeblikke med omtanke for planeten.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- DYNAMISK TEKSTUDSKIFTNING -->
 
