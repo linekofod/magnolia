@@ -10,14 +10,99 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
 ---
 
 <MainLayout title="Vores mission">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
+  <section class="">
+    <!-- OVERSKRIFT -->
+    <section class="mx-ml">
+      <h1
+        class="font-headline text-headline1_lg text-center text-grøn-700 mb-ml"
       >
-    </p>
-    <Image src={mission1} alt="" />
-  </article>
+        VORES MISSION
+      </h1>
+    </section>
+
+    <!-- MAGNOLIA - SKØNHED MED OMTANKE -->
+    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 mt-xl">
+      <div>
+        <Image src={mission1} alt="" class="w-[707px] h-[685px]" />
+      </div>
+
+      <div class="p-4xl">
+        <h2 class="font-headline text-headline2_lg mb-xs">
+          Magnolia – Skønhed med omtanke
+        </h2>
+
+        <p class="text-body_lg font-light">
+          Magnolia blev grundlagt i 2020 med en ambition om at skabe en
+          blomstervirksomhed, der forener elegance og ansvar. Vores mission er
+          at tilbyde buketter, der ikke blot bringer glæde til modtageren, men
+          også bidrager til en mere bæredygtig fremtid.
+        </p>
+      </div>
+    </section>
+
+    <!-- BLOMSTER MED ANSVAR -->
+    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 mt-xl">
+      <div class="p-4xl">
+        <h2 class="font-headline text-headline2_lg mb-xs">
+          Blomster med ansvar
+        </h2>
+
+        <p class="text-body_lg font-light">
+          Siden dag ét har vi brugt overskudsblomster som fundamentet for vores
+          buketter. Disse smukke blomster, der ellers ville gå til spilde,
+          bliver omdannet til unikke kreationer. Med tiden har vi udvidet vores
+          sortiment til også at omfatte miljøcertificerede blomster og
+          samarbejder med danske blomsteravlere – en kombination, der sikrer
+          både kvalitet og bæredygtighed.
+        </p>
+      </div>
+
+      <div>
+        <Image src={mission2} alt="" class="w-[707px] h-[685px]" />
+      </div>
+    </section>
+
+    <!-- EN GRØNNERE BUKET -->
+    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 mt-xl">
+      <div>
+        <Image src={mission3} alt="" class="w-[707px] h-[685px]" />
+      </div>
+
+      <div class="p-4xl">
+        <h2 class="font-headline text-headline2_lg mt-xl">En grønnere buket</h2>
+
+        <p class="text-body_lg font-light">
+          Hos Magnolia er vi stolte af at gøre en forskel. En uafhængig
+          livscyklusanalyse foretaget af Teknologisk Institut dokumenterer, at
+          vores buketter har et CO₂-aftryk, der er 35% lavere end konventionelle
+          blomster. Det er et løfte om at skabe skønhed uden at belaste vores
+          planet.
+        </p>
+      </div>
+    </section>
+
+    <!-- FREMTIDEN BLOMSTRER GRØNNERE -->
+    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 mt-xl">
+      <div class="p-4xl">
+        <h2 class="font-headline text-headline2_lg mb-xs">
+          Fremtiden blomstrer grønnere
+        </h2>
+
+        <p class="text-body_lg font-light">
+          For Magnolia er bæredygtighed ikke blot en ambition – det er selve
+          kernen i alt, hvad vi gør. Vi prioriterer ansvarlige løsninger gennem
+          hele værdikæden: fra reduktion af vores vandforbrug med over 90% til
+          samarbejder med sociale projekter og sikring af gode arbejdsvilkår for
+          alle vores medarbejdere. Hver buket fra Magnolia er en hyldest til
+          skønheden i blomster og naturens uendelige rigdomme. Sammen skaber vi
+          en verden, hvor glæden ved blomster går hånd i hånd med ansvar for
+          planeten.
+        </p>
+      </div>
+
+      <div>
+        <Image src={mission4} alt="" class="w-[707px] h-[685px]" />
+      </div>
+    </section>
+  </section>
 </MainLayout>
