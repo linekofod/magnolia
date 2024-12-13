@@ -53,6 +53,41 @@ export default {
             "neutrals-100": "rgba(242, 242, 242, 1)",
             "neutrals-50": "rgba(255, 255, 255, 1)"
           },
+
+        /* SPACING */
+        spacing: {
+        "4xs": "4px",
+        "3xs": "8px",
+        "2xs": "12px",
+        "xs": "16px",
+        "s": "20px",
+        "sm": "26px",
+        "m": "32px",
+        "ml": "40px",
+        "lg": "48px",
+        "xl": "64px",
+        "2xl": "80px",
+        "3xl": "96px",
+        "4xl": "112px",
+        "5xl": "128px",
+        "6xl": "160px",
+        "7xl": "208px",
+        "8xl": "320px",
+        "9xl": "360px",
+        "10xl": "424px",
+        "border-05px": "0.5px",
+        "border-1px": "1px",
+        "border-2px": "2px",
+        "border-3px": "3px",
+        "border-4px": "4px",
+        "border-5px": "5px",
+        "border-radius-0px": "0px",
+        "border-radius-10px": "10px",
+        "border-radius-20px": "20px",
+        "border-radius-30px": "30px",
+        "border-radius-40px": "40px",
+        "border-radius-100px": "100px"
+        },
                   
           /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
         /* FONTE */
@@ -92,41 +127,6 @@ export default {
 
 		extend: {
             // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
-
-          /* SPACING */
-          spacing: {
-            "spacing-4xs": "4px",
-            "spacing-3xs": "8px",
-            "spacing-2xs": "12px",
-            "spacing-xs": "16px",
-            "spacing-s": "20px",
-            "spacing-sm": "26px",
-            "spacing-m": "32px",
-            "spacing-ml": "40px",
-            "spacing-lg": "48px",
-            "spacing-xl": "64px",
-            "spacing-2xl": "80px",
-            "spacing-3xl": "96px",
-            "spacing-4xl": "112px",
-            "spacing-5xl": "128px",
-            "spacing-6xl": "160px",
-            "spacing-7xl": "208px",
-            "spacing-8xl": "320px",
-            "spacing-9xl": "360px",
-            "spacing-10xl": "424px",
-            "border-05px": "0.5px",
-            "border-1px": "1px",
-            "border-2px": "2px",
-            "border-3px": "3px",
-            "border-4px": "4px",
-            "border-5px": "5px",
-            "border-radius-0px": "0px",
-            "border-radius-10px": "10px",
-            "border-radius-20px": "20px",
-            "border-radius-30px": "30px",
-            "border-radius-40px": "40px",
-            "border-radius-100px": "100px"
-          },
 
         /* BORDERWIDTH */
         borderWidth: {

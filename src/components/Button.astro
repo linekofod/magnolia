@@ -1,5 +1,29 @@
 ---
+const {
+  variant = "primary",
+  size = "large",
+  href = "#",
+  target = "_self",
+} = Astro.props;
+
+const buttonStyling = "uppercase text-link font-semibold w-fit h-fit";
+
+const variantClasses = {
+  primary:
+    "bg-orange-500 text-yellow-500 hover:shadow-drop25 border-2 border-orange-500",
+  secondary:
+    "border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-yellow-500 hover:shadow-drop25",
+};
+
+const sizeClasses = {
+  small: "py-xs px-xs",
+  large: "py-xs px-s",
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<a
+  href={href}
+  target={target}
+  class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}
+  ><slot />
+</a>
