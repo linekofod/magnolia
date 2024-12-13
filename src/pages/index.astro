@@ -1,15 +1,27 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import index1 from "/public/imgs/index/index1.webp";
+import index2 from "/public/imgs/index/index2.webp";
+import index3 from "/public/imgs/index/index3.webp";
+import index4 from "/public/imgs/index/index4.webp";
+import index5 from "/public/imgs/index/index5.webp";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Magnolia">
+  <article>
+    <h1 class="font-headline">Index overskrift</h1>
+    <p class="font-light text-secondbody_lg text-grøn-700">
+      Friske blomster på dine betingelser
+    </p>
+    <Button>Klik!</Button>
+    <p>
+      Link til <Link href="https://www.kea.dk" target="_blank"
+        >En anden side</Link
+      >
+    </p>
+    <Image src={index1} alt="" />
+  </article>
 </MainLayout>

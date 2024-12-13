@@ -1,0 +1,23 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import mission1 from "/public/imgs/vores_mission/mission1.webp";
+import mission2 from "/public/imgs/vores_mission/mission2.webp";
+import mission3 from "/public/imgs/vores_mission/mission3.webp";
+import mission4 from "/public/imgs/vores_mission/mission4.webp";
+---
+
+<MainLayout title="Vores mission">
+  <article>
+    <h1>Index overskrift</h1>
+    <Button>Klik!</Button>
+    <p>
+      Link til <Link href="https://www.kea.dk" target="_blank"
+        >En anden side</Link
+      >
+    </p>
+    <Image src={mission1} alt="" />
+  </article>
+</MainLayout>

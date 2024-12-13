@@ -1,0 +1,20 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import kontakt from "/public/imgs/kontakt/kontakt.webp";
+---
+
+<MainLayout title="Kontakt">
+  <article>
+    <h1>Index overskrift</h1>
+    <Button>Klik!</Button>
+    <p>
+      Link til <Link href="https://www.kea.dk" target="_blank"
+        >En anden side</Link
+      >
+    </p>
+    <Image src={kontakt} alt="" />
+  </article>
+</MainLayout>

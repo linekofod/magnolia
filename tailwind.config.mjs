@@ -5,129 +5,156 @@ export default {
     /* Vil du overskrive eller extende tailwinds indstillinger?  */
 
 	theme: {
+        // Hvis du placerer noget herinde, så vil du erstatte Tailwinds styling.
+        /* COLORS */
+        colors: {
+            "grøn-950": "rgba(6, 6, 4, 1)",
+            "grøn-900": "rgba(12, 12, 8, 1)",
+            "grøn-800": "rgba(28, 28, 18, 1)",
+            "grøn-700": "rgba(40, 40, 26, 1)",
+            "grøn-600": "rgba(56, 56, 36, 1)",
+            "grøn-500": "rgba(69, 69, 45, 1)",
+            "grøn-400": "rgba(117, 117, 76, 1)",
+            "grøn-300": "rgba(160, 160, 110, 1)",
+            "grøn-200": "rgba(193, 193, 159, 1)",
+            "grøn-100": "rgba(223, 223, 206, 1)",
+            "grøn-50": "rgba(239, 239, 230, 1)",
+            "lyserød-950": "rgba(32, 16, 14, 1)",
+            "lyserød-900": "rgba(63, 33, 29, 1)",
+            "lyserød-800": "rgba(127, 65, 57, 1)",
+            "lyserød-700": "rgba(184, 107, 97, 1)",
+            "lyserød-600": "rgba(212, 166, 160, 1)",
+            "lyserød-500": "rgba(241, 226, 224, 1)",
+            "lyserød-400": "rgba(244, 232, 230, 1)",
+            "lyserød-300": "rgba(247, 239, 237, 1)",
+            "lyserød-200": "rgba(249, 242, 241, 1)",
+            "lyserød-100": "rgba(252, 248, 248, 1)",
+            "lyserød-50": "rgba(253, 252, 251, 1)",
+            "beige-950": "rgba(32, 28, 19, 1)",
+            "neutrals-950": "rgba(0, 0, 0, 1)",
+            "beige-900": "rgba(49, 42, 28, 1)",
+            "beige-800": "rgba(78, 67, 44, 1)",
+            "beige-700": "rgba(110, 95, 63, 1)",
+            "beige-600": "rgba(143, 122, 82, 1)",
+            "beige-500": "rgba(170, 148, 106, 1)",
+            "beige-400": "rgba(188, 172, 138, 1)",
+            "beige-300": "rgba(205, 192, 167, 1)",
+            "beige-200": "rgba(223, 216, 200, 1)",
+            "beige-100": "rgba(242, 239, 232, 1)",
+            "beige-50": "rgba(251, 250, 248, 1)",
+            "neutrals-900": "rgba(38, 38, 38, 1)",
+            "neutrals-800": "rgba(64, 64, 64, 1)",
+            "neutrals-700": "rgba(89, 89, 89, 1)",
+            "neutrals-600": "rgba(115, 115, 115, 1)",
+            "neutrals-500": "rgba(140, 140, 140, 1)",
+            "neutrals-400": "rgba(166, 166, 166, 1)",
+            "neutrals-300": "rgba(191, 191, 191, 1)",
+            "neutrals-200": "rgba(217, 217, 217, 1)",
+            "neutrals-100": "rgba(242, 242, 242, 1)",
+            "neutrals-50": "rgba(255, 255, 255, 1)"
+          },
+                  
+          /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
+        /* FONTE */
+        fontFamily: {
+            sans: ['poppins', 'sans-serif'],
+            'headline': ['cormorant-sc', 'sans-serif'], /* eksempel på ekstra font */
+        },
 
-        /* Tilføj din egen farvepalette nedenfor */
-        // colors: {
-        //     transparent: 'transparent',
-        //     current: 'currentColor',
-        //     'farvenavn': {
-        //         50: '#hexkode',     
-        //         100: '#hexkode',
-        //         200: '#hexkode',
-        //         300: '#hexkode',
-        //         400: '#hexkode',
-        //         500: '#hexkode',
-        //         600: '#hexkode',
-        //         700: '#hexkode',
-        //         800: '#hexkode',
-        //         900: '#hexkode',
-        //     },
-        //     'white': '#fff',
-        //     'black': '#000',
-        // },
+        /* FONTSIZE */
+        fontSize: {
+            link_s: ['1.375rem', { lineHeight: '150%' }],
+            link_lg: ['1.75rem', { lineHeight: '150%' }],
+            secondbody_s: ['1.125rem', { lineHeight: '150%' }],
+            secondbody_lg: ['1.75rem', { lineHeight: '150%' }],
+            body_s: ['0.875rem', { lineHeight: '150%' }],
+            body_lg: ['1rem', { lineHeight: '150%' }],
+            headline4_s: ['1.125rem', { lineHeight: '150%' }],
+            headline4_lg: ['1.5rem', { lineHeight: '150%' }],
+            headline3_s: ['1.5rem', { lineHeight: '150%' }],
+            headline3_lg: ['2.50rem', { lineHeight: '150%' }],
+            headline2_s: ['2.125rem', { lineHeight: '150%' }],
+            headline2_lg: ['3.375rem', { lineHeight: '150%' }],
+            headline1_s: ['3rem', { lineHeight: '150%' }],
+            headline1_lg: ['5.062rem', { lineHeight: '150%' }],
+            display_s: ['3.75rem', { lineHeight: '150%' }],
+            display_lg: ['9.3752rem', { lineHeight: '150%' }],
+          },
 
-         /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
-
-        /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-        // fontFamily: {
-        //     sans: ['Prompt', 'sans-serif'],
-        //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-        // },
-
-        /* Tilføj dit typografiske hierarki herunder */
-        // fontSize: {
-        //     base: ['1rem', { lineHeight: '1.5rem' }],
-        //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-        //   },
-
-        /* Tilføj dit fontvægt-hierarki nedenfor */
-        //   fontWeight: {
-        //     regular: '400',
-        //   },
-
-        /* Borders - borderstørrelser herunder */
-        // borderWidth: {
-        //     DEFAULT: '1px',
-        //     0: '0px',
-        //     2: '2px',
-        // },
-
-        /* Border radius størrelser herunder */
-        // borderRadius: {
-        //     DEFAULT: '1.25rem',
-        //     none: '0px',
-        // },
-
-        /* Box shadows herunder */
-        // boxShadow: {
-        //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */  
-        // },
+        /* WEIGHT */
+          fontWeight: {
+            extralight: '200',
+            light: '300',
+            regular: '400',
+            semibold: '500',
+            bold: '700',
+          },
 
 		extend: {
+            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
 
-        /* Tilføj din egen farvepalette nedenfor */
-        // colors: {
-        //     transparent: 'transparent',
-        //     current: 'currentColor',
-        //     'farvenavn': {
-        //         50: '#hexkode',     
-        //         100: '#hexkode',
-        //         200: '#hexkode',
-        //         300: '#hexkode',
-        //         400: '#hexkode',
-        //         500: '#hexkode',
-        //         600: '#hexkode',
-        //         700: '#hexkode',
-        //         800: '#hexkode',
-        //         900: '#hexkode',
-        //     },
-        //     'white': '#fff',
-        //     'black': '#000',
-        // },
+          /* SPACING */
+          spacing: {
+            "spacing-4xs": "4px",
+            "spacing-3xs": "8px",
+            "spacing-2xs": "12px",
+            "spacing-xs": "16px",
+            "spacing-s": "20px",
+            "spacing-sm": "26px",
+            "spacing-m": "32px",
+            "spacing-ml": "40px",
+            "spacing-lg": "48px",
+            "spacing-xl": "64px",
+            "spacing-2xl": "80px",
+            "spacing-3xl": "96px",
+            "spacing-4xl": "112px",
+            "spacing-5xl": "128px",
+            "spacing-6xl": "160px",
+            "spacing-7xl": "208px",
+            "spacing-8xl": "320px",
+            "spacing-9xl": "360px",
+            "spacing-10xl": "424px",
+            "border-05px": "0.5px",
+            "border-1px": "1px",
+            "border-2px": "2px",
+            "border-3px": "3px",
+            "border-4px": "4px",
+            "border-5px": "5px",
+            "border-radius-0px": "0px",
+            "border-radius-10px": "10px",
+            "border-radius-20px": "20px",
+            "border-radius-30px": "30px",
+            "border-radius-40px": "40px",
+            "border-radius-100px": "100px"
+          },
 
-         /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
+        /* BORDERWIDTH */
+        borderWidth: {
+            DEFAULT: '1px',
+            0: '0px',
+            2: '2px',
+            3: '3px',
+            4: '4px',
+            5: '5px',
+        },
 
-        /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-        // fontFamily: {
-        //     sans: ['Prompt', 'sans-serif'],
-        //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-        // },
+        /* BORDERRADIUS */
+        borderRadius: {
+            DEFAULT: '20px',
+            none: '0px',
+            sm: '10px',
+            md: '20px',
+            lg: '30px',
+            xl: '40px',
+            full: '999px',
+        },
 
-        /* Tilføj dit typografiske hierarki herunder */
-        // fontSize: {
-        //     base: ['1rem', { lineHeight: '1.5rem' }],
-        //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-        //   },
-
-        /* Tilføj dit fontvægt-hierarki nedenfor */
-        //   fontWeight: {
-        //     regular: '400',
-        //   },
-
-        /* Borders - borderstørrelser herunder */
-        // borderWidth: {
-        //     DEFAULT: '1px',
-        //     0: '0px',
-        //     2: '2px',
-        // },
-
-        /* Border radius størrelser herunder */
-        // borderRadius: {
-        //     DEFAULT: '1.25rem',
-        //     none: '0px',
-        // },
-
-        /* Box shadows herunder */
-        // boxShadow: {
-        //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */  
-        // },
-
+        /* BOXSHADOW */
+        boxShadow: {
+            drop25: '4px 4px 4px 0 rgb(34 34 34 / 0.25)',
+            drop50: '4px 4px 4px 0 rgb(34 34 34 / 0.50)',  
+            inner25: '5px 5px 5px 0 rgb(34 34 34 / 0.25) inset',
+        },
         },
 	},
 	plugins: [
