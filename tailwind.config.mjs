@@ -56,6 +56,7 @@ export default {
 
         /* SPACING */
         spacing: {
+        "0": "0px",
         "4xs": "4px",
         "3xs": "8px",
         "2xs": "12px",
