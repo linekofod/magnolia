@@ -8,16 +8,14 @@ import kontakt from "/public/imgs/kontakt/kontakt.webp";
 
 <MainLayout title="Kontakt">
   <article>
-    <div class="m-2xl"><Button>Button</Button></div>
-    <div class="m-2xl"><Button variant="secondary">Button</Button></div>
-    <div class="m-2xl"><Button size="small">Button</Button></div>
-    <div class="m-2xl">
-      <Button size="small" variant="secondary">Button</Button>
+    <div class="m-2xl block md:hidden">
+      <!-- Button for small screens -->
+      <Button size="small">Small Button</Button>
     </div>
-    <button
-      class="text-grøn-500 hover:before:bg-grøn-500 relative h-[50px] w-40 overflow-hidden border border-grøn-500 px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-grøn-500 before:transition-all before:duration-500 hover:text-beige-50 hover:before:left-0 hover:before:w-full"
-      ><span class="relative z-10">Swipe</span></button
-    >
+    <div class="m-2xl hidden md:block">
+      <!-- Button for large screens -->
+      <Button size="large">Large Button</Button>
+    </div>
     <h1>Index overskrift</h1>
     <p>
       Link til <Link href="https://www.kea.dk" target="_blank"

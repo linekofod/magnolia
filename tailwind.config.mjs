@@ -76,18 +76,6 @@ export default {
         "8xl": "320px",
         "9xl": "360px",
         "10xl": "424px",
-        "border-05px": "0.5px",
-        "border-1px": "1px",
-        "border-2px": "2px",
-        "border-3px": "3px",
-        "border-4px": "4px",
-        "border-5px": "5px",
-        "border-radius-0px": "0px",
-        "border-radius-10px": "10px",
-        "border-radius-20px": "20px",
-        "border-radius-30px": "30px",
-        "border-radius-40px": "40px",
-        "border-radius-100px": "100px"
         },
                   
           /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
@@ -126,13 +114,13 @@ export default {
             bold: '700',
           },
 
-		extend: {
-            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
-
+        
         /* BORDERWIDTH */
         borderWidth: {
             DEFAULT: '1px',
             0: '0px',
+            0.5: '0.5px',
+            1: '1px',
             2: '2px',
             3: '3px',
             4: '4px',
@@ -156,6 +144,9 @@ export default {
             drop50: '4px 4px 4px 0 rgb(34 34 34 / 0.50)',  
             inner25: '5px 5px 5px 0 rgb(34 34 34 / 0.25) inset',
         },
+
+		extend: {
+            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
         },
 	},
 	plugins: [
