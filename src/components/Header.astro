@@ -1,18 +1,11 @@
 ---
-import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import logo from "/public/imgs/logo.svg";
 ---
 
-<div
-  class="flex items-center h-fit w-full bg-cover bg-top static top-0"
-  style="background-image: url('/src/assets/images/baggrund.webp')"
->
-  <div
-    x-data="{ showmenu: false }"
-    class="static top-0 w-full bg-grøn-500 z-50"
-  >
+<div class="flex items-center h-fit w-full static">
+  <div x-data="{ showmenu: false }" class="w-full bg-grøn-500 z-50">
     <div
       id="navbar"
       class="flex flex-row justify-between py-2xs px-sm items-center"

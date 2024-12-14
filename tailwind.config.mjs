@@ -51,7 +51,8 @@ export default {
             "neutrals-300": "rgba(191, 191, 191, 1)",
             "neutrals-200": "rgba(217, 217, 217, 1)",
             "neutrals-100": "rgba(242, 242, 242, 1)",
-            "neutrals-50": "rgba(255, 255, 255, 1)"
+            "neutrals-50": "rgba(255, 255, 255, 1)",
+            "transparent": "rgba(0, 0, 0, 0)"
           },
 
         /* SPACING */
@@ -147,6 +148,16 @@ export default {
 
 		extend: {
             // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
+
+            animation: {
+                'infinite-scroll': 'infinite-scroll 25s linear infinite',
+              },
+              keyframes: {
+                'infinite-scroll': {
+                  from: { transform: 'translateX(0)' },
+                  to: { transform: 'translateX(-100%)' },
+                },
+              }
         },
 	},
 	plugins: [

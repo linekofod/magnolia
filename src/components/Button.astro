@@ -7,7 +7,7 @@ const {
 } = Astro.props;
 
 const buttonStyling =
-  "uppercase font-light w-fit h-fit relative overflow-hidden";
+  "uppercase font-light w-fit h-fit relative overflow-hidden inline-block";
 
 const variantClasses = {
   primary:
@@ -17,8 +17,9 @@ const variantClasses = {
 };
 
 const sizeClasses = {
-  small: "py-3xs px-s text-link_s",
-  large: "py-3xs px-m text-link_lg",
+  large: "py-2xs px-m text-link_lg",
+  small: "py-2xs px-s text-link_s",
+  xsmall: "py-3xs px-xs text-body_s",
 };
 ---
 
