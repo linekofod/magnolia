@@ -89,7 +89,7 @@ export default {
         /* FONTSIZE */
         fontSize: {
             link_s: ['1.375rem', { lineHeight: '150%' }],
-            link_lg: ['1.75rem', { lineHeight: '150%' }],
+            link_lg: ['1.5rem', { lineHeight: '150%' }],
             secondbody_s: ['1.125rem', { lineHeight: '150%' }],
             secondbody_lg: ['1.75rem', { lineHeight: '150%' }],
             body_s: ['0.875rem', { lineHeight: '150%' }],

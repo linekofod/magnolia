@@ -15,14 +15,15 @@ import logo from "/public/imgs/logo.svg";
         <a href="/"><Image src={logo} alt="Magnolia logo" /></a>
       </div>
 
-      <div class="flex flex-row items-center gap-ml">
+      <div class="flex flex-row items-center gap-m">
         <!-- Desktop menu -->
         <nav id="desktopmenu" class="hidden xl:block">
-          <ul class="flex flex-row gap-ml">
+          <ul class="flex flex-row gap-m">
             <div class="relative group">
               <li><Link href="/">Abonnement</Link></li>
+              <!-- Dropdown -->
               <div
-                class="hidden group-hover:block absolute bg-grøn-500 p-s top-lg w-full"
+                class="hidden group-hover:block absolute bg-grøn-500 p-s top-[41px] w-full"
               >
                 <li class="py-3xs">
                   <Link href="/gave_abonnement" size="small">Gave</Link>
