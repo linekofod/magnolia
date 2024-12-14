@@ -7,14 +7,31 @@ import kontakt from "/public/imgs/kontakt/kontakt.webp";
 ---
 
 <MainLayout title="Kontakt">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={kontakt} alt="" />
-  </article>
+  <section class="mx-ml grid grid-cols-1 md:grid-cols-2 mt-m text-grøn-700">
+    <div>
+      <Image src={kontakt} alt="" class="w-[596px] h-[746px]" />
+    </div>
+
+    <div class="">
+      <h1 class="font-headline text-headline1_lg mt-lg">kontakt</h1>
+
+      <h3 class="font-headline text-headline2_s mt-ml">Kontor</h3>
+      <p class="text-body_lg font-light">
+        Linde Allé 42 <br />
+        Frederiksberg
+      </p>
+
+      <h3 class="font-headline text-headline2_s mt-ml">Telefon</h3>
+      <ul class="text-body_lg font-light">
+        <li>+45 20 20 20 20</li>
+        <li>Mandag til Fredag</li>
+        <li>Kl. 08:00 – 13:00</li>
+      </ul>
+
+      <p class="text-secondbody_s">Vi leverer alle 365 dage året rundt.</p>
+
+      <h3 class="font-headline text-headline2_s mt-ml">Kontakt</h3>
+      <p class="text-body_lg font-light">support@magnolia.dk</p>
+    </div>
+  </section>
 </MainLayout>

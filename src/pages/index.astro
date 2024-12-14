@@ -54,11 +54,49 @@ import index5 from "/public/imgs/index/index5.webp";
 
     <!-- DYNAMISK TEKSTUDSKIFTNING -->
 
+    <section class="px-4xl py-lg bg-beige-50 mt-6xl mb-6xl h-[484px] flex items-center justify-left text-left">
+      <div>
+        <h2 class="font-headline text-headline3_lg text-beige-700">
+          HAR DU HUSKET AT FORKÆLE
+          <span class="text-dynamic font-headline text-headline2_md text-beige-500">
+          </span>
+        </h2>
+        <h2 class="font-headline text-headline3_lg text-beige-700 mt-md">
+          MED ET BLOMSTERABONNEMENT
+        </h2>
+        <h2 class="font-headline text-headline3_lg text-beige-700 mt-md">
+          HOS MAGNOLIA?
+        </h2>
+      </div>
+    </section>
+
     <!-- VORES BUKETTER -->
 
     <!-- SKRÆDDERSY DIT ABONNOMENT  -->
 
     <!-- BESTIL ABONNOMENT -->
+
+    <section class="relative bg-cover bg-center bg-no-repeat h-[708px]" style="background-image: url('/public/imgs/index/index1.webp');">
+      <div class="absolute inset-0 bg-white bg-opacity-25"></div>
+
+      <div class="relative flex flex-col items-center justify-center h-full text-center">
+        <!-- Overskrift -->
+        <h2 class="font-headline text-headline2_lg text-beige-700 mb-lg">Bestil din buket her</h2>
+        
+        <!-- Knapper -->
+        <div class="flex justify-center space-x-4 gap-lg">
+
+          <!-- Gave abonnement -->
+          <Button class="">Gave abonnement</Button>
+          
+          <!-- Personligt abonnement -->
+          <Button class="">Personligt abonnement</Button>
+          
+          <!-- Erhvervs abonnement -->
+          <Button class="">Erhvervs abonnement</Button>
+        </div>
+      </div>
+    </section>
 
     <!-- INSTAGRAM -->
 
@@ -69,3 +107,21 @@ import index5 from "/public/imgs/index/index5.webp";
     <!-- SAMARBEJDSPARTNERE -->
 
 </MainLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const dynamicText = document.querySelector(".text-dynamic");
+  const phrases = [
+   "DEN NYBAGTE MOR", "FØDSELAREN", "TEAMET", "DIN KÆRE", "DIN MOR", "JUBILAREN", "ARBEJDSPLADSEN", "DIN MORMOR", "DIN SØSTER", "KONTORET", "STUDENTEN", "DINE KOLLEGAER"
+  ];
+
+  let index = 0;
+
+  function updateText() {
+    dynamicText.textContent = phrases[index];
+    index = (index + 1) % phrases.length; // Loop tilbage til start
+  }
+
+  setInterval(updateText, 1500); // Skift tekst hver 3. sekund
+});
+</script>
