@@ -1,0 +1,319 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import index1 from "/public/imgs/index/index1.webp";
+---
+
+<MainLayout title="Personligt abonnement">
+  <section class="bg_image text-grøn-700">
+    <div class="max-w-4xl mt-xl px-sm flex flex-col gap-m">
+      <div class="flex flex-col gap-xs">
+        <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+          Velkommen til dit personlige blomsterabonnement!
+        </h2>
+        <p class="font-light text-secondbody_s md:text-secondbody_lg">
+          Lad os hjælpe dig med at få smukke, friske buketter leveret lige til
+          døren. <br />Det tager kun få minutter at tilpasse dit abonnement.
+        </p>
+      </div>
+      <div class="block md:hidden">
+        <!-- Button for small screens -->
+        <Button size="small">Skræddersy dit abonnemet</Button>
+      </div>
+      <div class="hidden md:block">
+        <!-- Button for large screens -->
+        <Button size="large">Skræddersy dit abonnemet</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET PAGE -->
+  <section
+    class="bg-beige-50 h-fit w-full flex flex-col items-center p-s text-grøn-700"
+    id="budget"
+  >
+    <div class="flex flex-col gap-ml">
+      <!-- Progress dots -->
+      <div
+        class="w-fit h-[1px] bg-grøn-500 flex items-center mt-m gap-sm md:gap-2xl lg:gap-4xl"
+      >
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-grøn-500"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+      </div>
+
+      <!-- Indhold -->
+      <div class="flex flex-col gap-m">
+        <div class="flex flex-col gap-2xs">
+          <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+            Hvad er dit budget?
+          </h2>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Vælg det budget, der passer til dig. <br />Du kan altid ændre det
+            senere.
+          </p>
+        </div>
+
+        <form
+          action="#farvepræferencer"
+          class="flex flex-col items-start gap-lg"
+        >
+          <div class="flex flex-wrap gap-xs">
+            <!-- Maks 200 DKK -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="budget"
+                id="maks200"
+                name="maks200"
+                class="hidden peer"
+              />
+              <label
+                for="maks200"
+                class="inline-flex border-3 w-fit border-lyserød-500 p-2xs text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:bg-lyserød-500 peer-checked:bg-lyserød-500"
+                >Maks 200 DKK</label
+              >
+            </div>
+            <!-- Maks 300 DKK -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="budget"
+                id="maks300"
+                name="maks300"
+                class="hidden peer"
+              />
+              <label
+                for="maks300"
+                class="inline-flex border-3 w-fit border-lyserød-500 p-2xs text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:bg-lyserød-500 peer-checked:bg-lyserød-500"
+                >Maks 300 DKK</label
+              >
+            </div>
+            <!-- Maks 300 DKK -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="budget"
+                id="maks400"
+                name="maks400"
+                class="hidden peer"
+              />
+              <label
+                for="maks400"
+                class="inline-flex border-3 w-fit border-lyserød-500 p-2xs text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:bg-lyserød-500 peer-checked:bg-lyserød-500"
+                >Maks 400 DKK</label
+              >
+            </div>
+            <!-- Maks 300 DKK -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="budget"
+                id="maks500"
+                name="maks500"
+                class="hidden peer"
+              />
+              <label
+                for="maks500"
+                class="inline-flex border-3 w-fit border-lyserød-500 p-2xs text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:bg-lyserød-500 peer-checked:bg-lyserød-500"
+                >Maks 500 DKK</label
+              >
+            </div>
+          </div>
+          <button type="submit">
+            <div class="block md:hidden">
+              <!-- Button for small screens -->
+              <Button size="small">Næste</Button>
+            </div>
+            <div class="hidden md:block">
+              <!-- Button for large screens -->
+              <Button size="large">Næste</Button>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FARVEPRÆFERENCER PAGE -->
+  <section
+    class="bg-beige-50 h-fit w-full flex flex-col items-center p-s text-grøn-700"
+    id="farvepræferencer"
+  >
+    <div class="flex flex-col gap-ml">
+      <!-- Progress dots -->
+      <div
+        class="w-fit h-[1px] bg-grøn-500 flex items-center mt-m gap-sm md:gap-2xl lg:gap-4xl"
+      >
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-grøn-500"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+      </div>
+
+      <!-- Indhold -->
+      <div class="flex flex-col gap-m">
+        <div class="flex flex-col gap-2xs">
+          <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+            Hvad er dine farvepræferencer?
+          </h2>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Hvilke farve nuancer foretrækker du i dine buketter?
+          </p>
+        </div>
+
+        <form
+          action="#leveringsfrekvens"
+          class="flex flex-col items-start gap-lg"
+        >
+          <div class="flex flex-wrap gap-xs">
+            <!-- Hvide -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="hvide"
+                name="hvide"
+                class="hidden peer"
+              />
+              <label
+                for="hvide"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-neutrals-50 border-1 border-neutrals-200"
+                ></span>Hvide
+              </label>
+            </div>
+            <!-- Røde -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="røde"
+                name="røde"
+                class="hidden peer"
+              />
+              <label
+                for="røde"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-[#9B272C] border-1 border-neutrals-200"
+                ></span>Røde
+              </label>
+            </div>
+            <!-- Blå -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="blå"
+                name="blå"
+                class="hidden peer"
+              />
+              <label
+                for="blå"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-[#7289AE] border-1 border-neutrals-200"
+                ></span>Blå
+              </label>
+            </div>
+            <!-- Farverige -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="farverige"
+                name="farverige"
+                class="hidden peer"
+              />
+              <label
+                for="farverige"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-gradient-to-b from-neutrals-50 from-10% via-[#9B272C] via-30 to-[#7289AE] to-90% border-1 border-neutrals-200"
+                ></span>Farverige
+              </label>
+            </div>
+            <!-- Overrask mig -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="overrask"
+                name="overrask"
+                class="hidden peer"
+              />
+              <label
+                for="overrask"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-[url('/public/imgs/ikoner/questionmark.png')] bg-contai border-1 border-neutrals-200"
+                ></span>Overrask mig
+              </label>
+            </div>
+          </div>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Se eksempler på de forskellige farvenuancer <a
+              href="#farvenuancer"
+              class="underline underline-offset-4 decoration-grøn-700 decoration-1"
+              >her.</a
+            >
+          </p>
+          <button type="submit">
+            <div class="block md:hidden">
+              <!-- Button for small screens -->
+              <Button size="small">Næste</Button>
+            </div>
+            <div class="hidden md:block">
+              <!-- Button for large screens -->
+              <Button size="large">Næste</Button>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .bg_image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .bg_image:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/public/imgs/index/index1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+  }
+</style>
