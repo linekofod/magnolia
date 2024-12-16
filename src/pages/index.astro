@@ -11,7 +11,18 @@ import index3 from "/public/imgs/index/index3.webp";
 import index4 from "/public/imgs/index/index4.webp";
 import index5 from "/public/imgs/index/index5.webp";
 import index6 from "/public/imgs/index/index6.webp";
+import hjem1 from "/public/imgs/blomster_hjem/hjem1.webp";
+import hjem2 from "/public/imgs/blomster_hjem/hjem2.webp";
+import hjem3 from "/public/imgs/blomster_hjem/hjem3.webp";
+import hjem4 from "/public/imgs/blomster_hjem/hjem4.webp";
+import hjem5 from "/public/imgs/blomster_hjem/hjem5.webp";
+import hjem6 from "/public/imgs/blomster_hjem/hjem6.webp";
+import hjem7 from "/public/imgs/blomster_hjem/hjem7.webp";
+import hjem8 from "/public/imgs/blomster_hjem/hjem8.webp";
+import hjem9 from "/public/imgs/blomster_hjem/hjem9.webp";
+import hjem10 from "/public/imgs/blomster_hjem/hjem10.webp";
 ---
+
 <MainLayout title="Magnolia">
   <!-- HERO -->
 
@@ -58,21 +69,116 @@ import index6 from "/public/imgs/index/index6.webp";
       <h2 class="font-headline text-headline3_lg text-grøn-700">
         HAR DU HUSKET AT FORKÆLE
         <span
-          class="text-dynamic font-headline text-headline2_md text-beige-500"
+          class="text-dynamic font-headline text-headline2_md text-grøn-200"
         >
         </span>
       </h2>
       <h2 class="font-headline text-headline3_lg text-grøn-700 mt-md">
-        MED ET BLOMSTERABONNEMENT
-      </h2>
-      <h2 class="font-headline text-headline3_lg text-grøn-700 mt-md">
-        HOS MAGNOLIA?
+        MED ET BLOMSTERABONNEMENT <br /> HOS MAGNOLIA?
       </h2>
     </div>
   </section>
 
   <!-- VORES BUKETTER -->
-   <section id="farvenuancer"></section>
+  <section class="bg-white flex items-center justify-center min-h-screen mb-4xl">
+    <section id="buketter-slider" class="text-center w-full max-w-6xl mx-auto">
+        <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">VORES BUKETTER</h2>
+      <div class="relative">
+        <!-- Venstre pil -->
+        <button
+          id="buketter-prev-btn"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M15 19L8 12L15 5"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <!-- Karrusel container -->
+        <div id="buketter-carousel" class="flex gap-4xl items-center overflow-hidden">
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+          <Image src={hjem1} alt="" 
+              class="w-[462px] h-[604px] object-cover"
+            />
+            <div class="text-left justify-start -ml-[3rem]">
+            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Farverige Nuancer</h3>
+            <p class="font-light text-body_lg text-grøn-700 mb-s">En buket fyldt med livlige og glade farver.</p>
+            </div>
+          </div>
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+            <Image src={hjem1} alt="" 
+            class="w-[462px] h-[604px] object-cover"
+          />
+          <div class="text-left justify-start -ml-[3rem]">
+            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Hvide Nuancer</h3>
+            <p class="font-light text-body_lg text-grøn-700 mb-s">En elegant og stilren buket med hvide blomster.</p>
+          </div>
+          </div>
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+          <Image src={hjem1} alt="" 
+             class="w-[462px] h-[604px] object-cover"
+            />
+            <div class="text-left justify-start -ml-[3rem]">
+            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Røde Nuancer</h3>
+            <p class="font-light text-body_lg text-grøn-700 mb-s">Romantiske og varme nuancer i smukke røde toner.</p>
+            </div>
+          </div>
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+          <Image src={hjem1} alt="" 
+           class="w-[462px] h-[604px] object-cover"
+            />
+            <div class="text-left justify-start -ml-[3rem]">
+            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Andre Nuancer</h3>
+            <p class="font-light text-body_lg text-grøn-700 mb-s">Unikke og kreative buketter med særlige blomster.</p>
+          </div>
+          </div>
+        </div>
+
+        <!-- Højre pil -->
+        <button
+          id="buketter-next-btn"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-ml"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M9 5L16 12L9 19"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+  </section>
+
 
   <!-- SKRÆDDERSY DIT ABONNOMENT -->
   <section class="grid grid-cols-1 md:grid-cols-2 text-grøn-700">
@@ -217,7 +323,55 @@ import index6 from "/public/imgs/index/index6.webp";
   </section>
 
   <!-- INSTAGRAM -->
-
+  <section class="bg-white flex items-center justify-center min-h-screen">
+    <div class="text-center">
+      <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">JERES BLOMSTER I HJEMMET</h2>
+      <div class="relative w- max-w-5xl mx-auto">
+        <!-- Left Arrow -->
+        <button id="prevBtn" class="carousel-button left gap-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="38" viewBox="0 0 21 38" fill="none">
+            <path d="M21 3.10563L17.8768 0L0.865293 16.9257C0.591077 17.1969 0.373455 17.5194 0.224953 17.8746C0.076451 18.2299 0 18.6108 0 18.9956C0 19.3804 0.076451 19.7613 0.224953 20.1166C0.373455 20.4718 0.591077 20.7943 0.865293 21.0655L17.8768 38L20.9971 34.8944L5.03059 19L21 3.10563Z" fill="#28281A"/>
+            </svg>
+        </button>
+  
+        <!-- Carousel Container -->
+        <div id="carousel" class="carousel-container flex gap-xl">
+          <!-- Carousel Items -->
+          <div class="carousel-item w-64 h-64 flex items-center justify-center">
+            <Image src={hjem1} alt="" class="w-[300px] h-[300px] object-cover">
+          </div>
+          <div class="carousel-item w-64 h-64 flex items-center justify-center">
+            <Image src={hjem2} alt="" class="w-[300px] h-[300px] object-cover">
+          </div>
+          <div class="carousel-item w-64 h-64 flex items-center justify-center">
+            <Image src={hjem3} alt="" class="w-[300px] h-[300px] object-cover">
+          </div>
+          <div class="carousel-item w-64 h-64 flex items-center justify-center">
+            <Image src={hjem4} alt="" class="w-[300px] h-[300px] object-cover">
+          </div>
+          <div class="carousel-item w-64 h-64 flex items-center justify-center">
+            <Image src={hjem5} alt="" class="w-[300px] h-[300px] object-cover">
+          </div>
+          <div class="carousel-item w-64 h-64 flex items-center justify-center">
+            <Image src={hjem6} alt="" class="w-[300px] h-[300px] object-cover">
+          </div>
+          <div class="carousel-item w-64 h-64 flex items-center justify-center">
+            <Image src={hjem7} alt="" class="w-[300px] h-[300px] object-cover">
+          </div>
+          <div class="carousel-item w-64 h-64 flex items-center justify-center">
+            <Image src={hjem8} alt="" class="w-[300px] h-[300px] object-cover">
+          </div>
+        </div>
+  
+        <!-- Right Arrow -->
+        <button id="nextBtn" class="carousel-button right gap-ml">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="38" viewBox="0 0 22 38" fill="none">
+            <path d="M0.953247 3.10563L4.07648 0L21.088 16.9257C21.3622 17.1969 21.5798 17.5194 21.7283 17.8746C21.8768 18.2299 21.9532 18.6108 21.9532 18.9956C21.9532 19.3804 21.8768 19.7613 21.7283 20.1166C21.5798 20.4718 21.3622 20.7943 21.088 21.0655L4.07648 38L0.95619 34.8944L16.9227 19L0.953247 3.10563Z" fill="#28281A"/>
+            </svg>
+        </button>
+      </div>
+    </div>
+    </section>
 
 
   <!-- ET GRØNNERE VALG -->
@@ -289,6 +443,48 @@ import index6 from "/public/imgs/index/index6.webp";
 </MainLayout>
 
 <style>
+     .buketter-slider-item {
+        margin-bottom: 8rem;
+        transition: transform 0.5s, opacity 0.5s;
+        opacity: 0.7;
+      }
+      .buketter-slider-item.active {
+        margin-bottom: 5rem;
+        transform: scale(1.2);
+        z-index: 10;
+        opacity: 1;
+      }
+      .buketter-text {
+        transition: opacity 0.5s;
+        opacity: 0;
+      }
+      .buketter-text.active {
+        opacity: 1;
+      }
+         .carousel-container {
+      scroll-snap-type: x mandatory;
+      overflow-x: hidden;
+    }
+    .carousel-item {
+      scroll-snap-align: center;
+      flex-shrink: 0;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      color: #28281A;
+      font-size: 2rem;
+      cursor: pointer;
+      border: none;
+    }
+    .carousel-button.left {
+      left: -4rem;
+    }
+    .carousel-button.right {
+      right: -4rem;
+    }
   .bg_image {
     position: relative;
     width: 100%;
@@ -310,7 +506,43 @@ import index6 from "/public/imgs/index/index6.webp";
     opacity: 0.2;
   }
 </style>
+<script>
+  const buketterCarousel = document.getElementById("buketter-carousel");
+  const buketterPrevBtn = document.getElementById("buketter-prev-btn");
+  const buketterNextBtn = document.getElementById("buketter-next-btn");
+  const buketterItems = document.querySelectorAll(".buketter-slider-item");
 
+  let currentIndex = 1;
+
+  function updateActiveSlide() {
+    buketterItems.forEach((item, index) => {
+      if (index === currentIndex) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }
+
+  function moveCarousel(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) currentIndex = buketterItems.length - 1;
+    if (currentIndex >= buketterItems.length) currentIndex = 0;
+
+    buketterItems[currentIndex].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+    });
+
+    updateActiveSlide();
+  }
+
+  buketterPrevBtn.addEventListener("click", () => moveCarousel(-1));
+  buketterNextBtn.addEventListener("click", () => moveCarousel(1));
+
+  updateActiveSlide();
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const dynamicText = document.querySelector(".text-dynamic");
@@ -337,6 +569,21 @@ import index6 from "/public/imgs/index/index6.webp";
     }
 
     setInterval(updateText, 1500); // Skift tekst hver 3. sekund
+  });
+</script>
+<script>
+  const carousel = document.getElementById('carousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  const scrollStep = 272; // Image width (250px) + gap (22px)
+
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
   });
 </script>
 
