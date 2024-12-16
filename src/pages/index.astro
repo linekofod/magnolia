@@ -135,16 +135,22 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   <Indexbanner />
 
   <!-- OM OS -->
-  <section class="px-4xl">
+  <section class="px-xs md:px-4xl">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
       <!-- Billede (venstre kolonne) -->
       <div>
-        <Image src={index0} alt="" class="w-[764px] h-[687px]" />
+        <Image
+          src={index0}
+          alt=""
+          class="w-full h-full aspect-[4/5] object-cover"
+        />
       </div>
 
       <!-- Tekst (højre kolonne) -->
       <div>
-        <h2 class="font-headline text-headline2_lg text-grøn-700 mb-4xs">
+        <h2
+          class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-4xs"
+        >
           MAGNOLIA
         </h2>
         <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
@@ -168,17 +174,21 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
 
   <!-- DYNAMISK TEKSTUDSKIFTNING -->
   <section
-    class="px-4xl py-lg bg-beige-50 mt-6xl mb-6xl h-[484px] flex items-center justify-left text-left"
+    class="px-xl md:px-4xl py-lg bg-beige-50 mt-xl mb-xl ml:mt-6xl ml:mb-6xl h-fit ml:h-[484px] flex items-center justify-left text-left"
   >
     <div>
-      <h2 class="font-headline text-headline3_lg text-grøn-700">
+      <h2
+        class="font-headline text-headline_s md:text-headline3_lg text-grøn-700"
+      >
         HAR DU HUSKET AT FORKÆLE
         <span
           class="text-dynamic font-headline text-headline2_md text-grøn-200"
         >
         </span>
       </h2>
-      <h2 class="font-headline text-headline3_lg text-grøn-700 mt-md">
+      <h2
+        class="font-headline text-headline_s md:text-headline3_lg text-grøn-700 mt-md"
+      >
         MED ET BLOMSTERABONNEMENT <br /> HOS MAGNOLIA?
       </h2>
     </div>
@@ -189,7 +199,9 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
     class="bg-white flex items-center justify-center min-h-screen mb-4xl"
   >
     <section id="buketter-slider" class="text-center w-full max-w-6xl mx-auto">
-      <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">
+      <h2
+        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-lg"
+      >
         VORES BUKETTER
       </h2>
       <div class="relative">
@@ -322,10 +334,12 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   </section>
 
   <!-- SKRÆDDERSY DIT ABONNOMENT -->
-  <section class="grid grid-cols-1 md:grid-cols-2 text-grøn-700">
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 gap-sm ml:gap-0 text-grøn-700"
+  >
     <!-- Venstre side med tekst -->
-    <div class="ml-2xl">
-      <h1 class="font-headline text-headline2_lg mt-s">
+    <div class="ml-s ml:ml-2xl">
+      <h1 class="font-headline text-headline2_s md:text-headline2_lg mt-s">
         Dit personlige blomsterabonnement
       </h1>
 
@@ -410,14 +424,14 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           </p>
         </div>
 
-        <p class="text-body_lg font-light mb-s mr-4xl mt-s">
+        <p class="text-body_lg font-light mb-s ml:mr-4xl mt-s">
           Skulle du ønske at pause dit abonnement, springe leveringer over eller
           opsige det, gør vi processen enkel og smertefri. Start dit abonnement
           i dag, og oplev glæden ved altid at have friske, smukke blomster i dit
           hjem.
         </p>
 
-        <p class="text-body_lg font-light mr-4xl">
+        <p class="text-body_lg font-light ml:mr-4xl">
           Bestil dit abonnement i dag og lad Magnolia bringe skønhed og ansvar
           ind i din hverdag.
         </p>
@@ -445,20 +459,58 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       class="relative flex flex-col items-center justify-center h-full text-center"
     >
       <!-- Overskrift -->
-      <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">
+      <h2
+        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-lg"
+      >
         Bestil din buket her
       </h2>
 
       <!-- Knapper -->
-      <div class="flex justify-center space-x-4 gap-lg">
-        <!-- Gave abonnement -->
-        <Button>Gave abonnement</Button>
-
-        <!-- Personligt abonnement -->
-        <Button>Personligt abonnement</Button>
-
-        <!-- Erhvervs abonnement -->
-        <Button>Erhvervs abonnement</Button>
+      <div
+        class="flex flex-col md:flex-row justify-center space-x-4 gap-2xs md:gap-lg"
+      >
+        <div>
+          <div class="block md:hidden">
+            <!-- Button for small screens -->
+            <Button size="small" href="/abonnement_flow/budget"
+              >Personligt abonnement</Button
+            >
+          </div>
+          <div class="hidden md:block">
+            <!-- Button for large screens -->
+            <Button size="large" href="/abonnement_flow/budget"
+              >Personligt abonnement</Button
+            >
+          </div>
+        </div>
+        <div>
+          <div class="block md:hidden">
+            <!-- Button for small screens -->
+            <Button size="small" href="/abonnement_flow/budget"
+              >Gave abonnenemt</Button
+            >
+          </div>
+          <div class="hidden md:block">
+            <!-- Button for large screens -->
+            <Button size="large" href="/abonnement_flow/budget"
+              >Gave abonnenemt</Button
+            >
+          </div>
+        </div>
+        <div>
+          <div class="block md:hidden">
+            <!-- Button for small screens -->
+            <Button size="small" href="/abonnement_flow/budget"
+              >Erhvervs abonnement</Button
+            >
+          </div>
+          <div class="hidden md:block">
+            <!-- Button for large screens -->
+            <Button size="large" href="/abonnement_flow/budget"
+              >Erhvervs abonnement</Button
+            >
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -466,7 +518,9 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   <!-- INSTAGRAM -->
   <section class="bg-white flex items-center justify-center min-h-screen">
     <div class="text-center">
-      <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">
+      <h2
+        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-lg"
+      >
         JERES BLOMSTER I HJEMMET
       </h2>
       <div class="relative w- max-w-5xl mx-auto">
@@ -583,7 +637,9 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   <!-- ET GRØNNERE VALG -->
   <section class="bg-beige-50 mx-auto py-xl">
     <div class="max-w-[1200px] h-[650px] px-[20px] mx-auto text-center">
-      <h2 class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl">
+      <h2
+        class="text-headline2_s md:text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl"
+      >
         Et grønnere valg
       </h2>
       <!-- Kolonner -->
