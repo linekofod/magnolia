@@ -24,12 +24,15 @@ import hjem10 from "/public/imgs/blomster_hjem/hjem10.webp";
 import hvid from "/public/imgs/farvevalg_blomster/hvide_nuancer.webp";
 import farver from "/public/imgs/farvevalg_blomster/farverige_nuancer.webp";
 import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
-
-
 ---
 
 <MainLayout title="Magnolia">
   <!-- HERO -->
+  <section class="bg-grøn-500">
+    <h1>Magnolia</h1>
+    <p>Blomsterabonnement på dine betingelser</p>
+    <Button>Skræddersy abonnement</Button>
+  </section>
 
   <!-- ROLLING BANNER -->
   <Indexbanner />
@@ -85,9 +88,13 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
   </section>
 
   <!-- VORES BUKETTER -->
-  <section class="bg-white flex items-center justify-center min-h-screen mb-4xl">
+  <section
+    class="bg-white flex items-center justify-center min-h-screen mb-4xl"
+  >
     <section id="buketter-slider" class="text-center w-full max-w-6xl mx-auto">
-        <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">VORES BUKETTER</h2>
+      <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">
+        VORES BUKETTER
+      </h2>
       <div class="relative">
         <!-- Venstre pil -->
         <button
@@ -106,56 +113,90 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
               stroke="#000"
               stroke-width="2"
               stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+              stroke-linejoin="round"></path>
           </svg>
         </button>
 
         <!-- Karrusel container -->
-        <div id="buketter-carousel" class="flex gap-4xl items-center overflow-hidden">
+        <div
+          id="buketter-carousel"
+          class="flex gap-4xl items-center overflow-hidden"
+        >
           <div
             class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
           >
-          <Image src={farver} alt="" 
+            <Image
+              src={farver}
+              alt=""
               class="w-[462px] h-[604px] object-cover"
             />
             <div class="text-left justify-start">
-            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Farverige Nuancer</h3>
-            <p class="font-light text-body_lg text-grøn-700 mb-s w-[462px]">Elegante og tidløse buketter, der bringer ro og renhed ind i dit hjem. En harmonisk kombination af klassiske hvide blomster og bløde grønne detaljer – et strejf af enkelhed og luksus til hverdagen.</p>
+              <h3
+                class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs"
+              >
+                Farverige Nuancer
+              </h3>
+              <p class="font-light text-body_lg text-grøn-700 mb-s w-[462px]">
+                Elegante og tidløse buketter, der bringer ro og renhed ind i dit
+                hjem. En harmonisk kombination af klassiske hvide blomster og
+                bløde grønne detaljer – et strejf af enkelhed og luksus til
+                hverdagen.
+              </p>
             </div>
           </div>
           <div
             class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
           >
-            <Image src={hvid} alt="" 
-            class="w-[462px] h-[604px] object-cover"
-          />
-          <div class="text-left justify-start">
-            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Hvide Nuancer</h3>
-            <p class="font-light text-body_lg text-grøn-700 mb-s w-[462px]">Elegante og tidløse buketter, der bringer ro og renhed ind i dit hjem. En harmonisk kombination af klassiske hvide blomster og bløde grønne detaljer – et strejf af enkelhed og luksus til hverdagen.</p>
-          </div>
-          </div>
-          <div
-            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
-          >
-          <Image src={rød} alt="" 
-             class="w-[462px] h-[604px] object-cover"
-            />
+            <Image src={hvid} alt="" class="w-[462px] h-[604px] object-cover" />
             <div class="text-left justify-start">
-            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Røde Nuancer</h3>
-            <p class="font-light text-body_lg text-grøn-700 mb-s w-[462px]">Elegante og tidløse buketter, der bringer ro og renhed ind i dit hjem. En harmonisk kombination af klassiske hvide blomster og bløde grønne detaljer – et strejf af enkelhed og luksus til hverdagen.</p>
+              <h3
+                class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs"
+              >
+                Hvide Nuancer
+              </h3>
+              <p class="font-light text-body_lg text-grøn-700 mb-s w-[462px]">
+                Elegante og tidløse buketter, der bringer ro og renhed ind i dit
+                hjem. En harmonisk kombination af klassiske hvide blomster og
+                bløde grønne detaljer – et strejf af enkelhed og luksus til
+                hverdagen.
+              </p>
             </div>
           </div>
           <div
             class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
           >
-          <Image src={hvid} alt="" 
-           class="w-[462px] h-[604px] object-cover"
-            />
+            <Image src={rød} alt="" class="w-[462px] h-[604px] object-cover" />
             <div class="text-left justify-start">
-            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Andre Nuancer</h3>
-            <p class="font-light text-body_lg text-grøn-700 mb-s w-[462px]">Elegante og tidløse buketter, der bringer ro og renhed ind i dit hjem. En harmonisk kombination af klassiske hvide blomster og bløde grønne detaljer – et strejf af enkelhed og luksus til hverdagen.</p>
+              <h3
+                class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs"
+              >
+                Røde Nuancer
+              </h3>
+              <p class="font-light text-body_lg text-grøn-700 mb-s w-[462px]">
+                Elegante og tidløse buketter, der bringer ro og renhed ind i dit
+                hjem. En harmonisk kombination af klassiske hvide blomster og
+                bløde grønne detaljer – et strejf af enkelhed og luksus til
+                hverdagen.
+              </p>
+            </div>
           </div>
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+            <Image src={hvid} alt="" class="w-[462px] h-[604px] object-cover" />
+            <div class="text-left justify-start">
+              <h3
+                class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs"
+              >
+                Andre Nuancer
+              </h3>
+              <p class="font-light text-body_lg text-grøn-700 mb-s w-[462px]">
+                Elegante og tidløse buketter, der bringer ro og renhed ind i dit
+                hjem. En harmonisk kombination af klassiske hvide blomster og
+                bløde grønne detaljer – et strejf af enkelhed og luksus til
+                hverdagen.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -176,14 +217,12 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
               stroke="#000"
               stroke-width="2"
               stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+              stroke-linejoin="round"></path>
           </svg>
         </button>
       </div>
     </section>
   </section>
-
 
   <!-- SKRÆDDERSY DIT ABONNOMENT -->
   <section class="grid grid-cols-1 md:grid-cols-2 text-grøn-700">
@@ -330,166 +369,256 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
   <!-- INSTAGRAM -->
   <section class="bg-white flex items-center justify-center min-h-screen">
     <div class="text-center">
-      <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">JERES BLOMSTER I HJEMMET</h2>
+      <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">
+        JERES BLOMSTER I HJEMMET
+      </h2>
       <div class="relative w- max-w-5xl mx-auto">
         <!-- Left Arrow -->
         <button id="prevBtn" class="carousel-button left gap-xl">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="38" viewBox="0 0 21 38" fill="none">
-            <path d="M21 3.10563L17.8768 0L0.865293 16.9257C0.591077 17.1969 0.373455 17.5194 0.224953 17.8746C0.076451 18.2299 0 18.6108 0 18.9956C0 19.3804 0.076451 19.7613 0.224953 20.1166C0.373455 20.4718 0.591077 20.7943 0.865293 21.0655L17.8768 38L20.9971 34.8944L5.03059 19L21 3.10563Z" fill="#28281A"/>
-            </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="38"
+            viewBox="0 0 21 38"
+            fill="none"
+          >
+            <path
+              d="M21 3.10563L17.8768 0L0.865293 16.9257C0.591077 17.1969 0.373455 17.5194 0.224953 17.8746C0.076451 18.2299 0 18.6108 0 18.9956C0 19.3804 0.076451 19.7613 0.224953 20.1166C0.373455 20.4718 0.591077 20.7943 0.865293 21.0655L17.8768 38L20.9971 34.8944L5.03059 19L21 3.10563Z"
+              fill="#28281A"></path>
+          </svg>
         </button>
-  
+
         <!-- Carousel Container -->
         <div id="carousel" class="carousel-container flex gap-xl">
           <!-- Carousel Items -->
           <div class="carousel-item w-64 h-64 flex items-center justify-center">
-            <Image src={hjem1} alt="" class="w-[300px] h-[300px] object-cover">
-          </div>
-          <div class="carousel-item w-64 h-64 flex items-center justify-center">
-            <Image src={hjem2} alt="" class="w-[300px] h-[300px] object-cover">
-          </div>
-          <div class="carousel-item w-64 h-64 flex items-center justify-center">
-            <Image src={hjem3} alt="" class="w-[300px] h-[300px] object-cover">
-          </div>
-          <div class="carousel-item w-64 h-64 flex items-center justify-center">
-            <Image src={hjem4} alt="" class="w-[300px] h-[300px] object-cover">
-          </div>
-          <div class="carousel-item w-64 h-64 flex items-center justify-center">
-            <Image src={hjem5} alt="" class="w-[300px] h-[300px] object-cover">
-          </div>
-          <div class="carousel-item w-64 h-64 flex items-center justify-center">
-            <Image src={hjem6} alt="" class="w-[300px] h-[300px] object-cover">
-          </div>
-          <div class="carousel-item w-64 h-64 flex items-center justify-center">
-            <Image src={hjem7} alt="" class="w-[300px] h-[300px] object-cover">
-          </div>
-          <div class="carousel-item w-64 h-64 flex items-center justify-center">
-            <Image src={hjem8} alt="" class="w-[300px] h-[300px] object-cover">
+            <Image
+              src={hjem1}
+              alt=""
+              class="w-[300px] h-[300px] object-cover"
+            />
+            <div
+              class="carousel-item w-64 h-64 flex items-center justify-center"
+            >
+              <Image
+                src={hjem2}
+                alt=""
+                class="w-[300px] h-[300px] object-cover"
+              />
+              <div
+                class="carousel-item w-64 h-64 flex items-center justify-center"
+              >
+                <Image
+                  src={hjem3}
+                  alt=""
+                  class="w-[300px] h-[300px] object-cover"
+                />
+                <div
+                  class="carousel-item w-64 h-64 flex items-center justify-center"
+                >
+                  <Image
+                    src={hjem4}
+                    alt=""
+                    class="w-[300px] h-[300px] object-cover"
+                  />
+                  <div
+                    class="carousel-item w-64 h-64 flex items-center justify-center"
+                  >
+                    <Image
+                      src={hjem5}
+                      alt=""
+                      class="w-[300px] h-[300px] object-cover"
+                    />
+                    <div
+                      class="carousel-item w-64 h-64 flex items-center justify-center"
+                    >
+                      <Image
+                        src={hjem6}
+                        alt=""
+                        class="w-[300px] h-[300px] object-cover"
+                      />
+                      <div
+                        class="carousel-item w-64 h-64 flex items-center justify-center"
+                      >
+                        <Image
+                          src={hjem7}
+                          alt=""
+                          class="w-[300px] h-[300px] object-cover"
+                        />
+                        <div
+                          class="carousel-item w-64 h-64 flex items-center justify-center"
+                        >
+                          <Image
+                            src={hjem8}
+                            alt=""
+                            class="w-[300px] h-[300px] object-cover"
+                          />
+                        </div>
+
+                        <!-- Right Arrow -->
+                        <button
+                          id="nextBtn"
+                          class="carousel-button right gap-ml"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="38"
+                            viewBox="0 0 22 38"
+                            fill="none"
+                          >
+                            <path
+                              d="M0.953247 3.10563L4.07648 0L21.088 16.9257C21.3622 17.1969 21.5798 17.5194 21.7283 17.8746C21.8768 18.2299 21.9532 18.6108 21.9532 18.9956C21.9532 19.3804 21.8768 19.7613 21.7283 20.1166C21.5798 20.4718 21.3622 20.7943 21.088 21.0655L4.07648 38L0.95619 34.8944L16.9227 19L0.953247 3.10563Z"
+                              fill="#28281A"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ET GRØNNERE VALG -->
+                  <section class="bg-beige-50 mx-auto py-xl">
+                    <div
+                      class="max-w-[1200px] h-[650px] px-[20px] mx-auto text-center"
+                    >
+                      <h2
+                        class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl"
+                      >
+                        Et grønnere valg
+                      </h2>
+                      <!-- Kolonner -->
+                      <div
+                        class="grid grid-cols-1 md:grid-cols-3 gap-2xl items-start"
+                      >
+                        <!-- Kolonne 1 -->
+                        <div
+                          class="flex flex-col items-center text-center flex-grow"
+                        >
+                          <img
+                            src="https://img.icons8.com/ios/50/map-marker--v1.png"
+                            alt="Danske blomster"
+                            class="mb-s w-12 h-12"
+                          />
+                          <h3
+                            class="font-headline text-headline3_s text-grøn-700 mb-lg"
+                          >
+                            Danske blomster
+                          </h3>
+                          <p class="text-grøn-700 mb-s">
+                            Vi prioriterer lokalt og dansk. Vores blomster
+                            dyrkes på friland uden brug af kunstgødning eller
+                            sprøjtemidler, hvilket minimerer transport og
+                            beskytter miljøet. Når du vælger danske blomster,
+                            støtter du samtidig lokale avlere og bidrager til et
+                            sundere klima.
+                          </p>
+                        </div>
+
+                        <!-- Kolonne 2 -->
+                        <div
+                          class="flex flex-col items-center text-center flex-grow"
+                        >
+                          <img
+                            src="https://img.icons8.com/ios/50/flower--v1.png"
+                            alt="Friske overskudsblomster"
+                            class="mb-s w-12 h-12"
+                          />
+                          <h3
+                            class="font-headline text-headline3_s text-grøn-700 mb-lg"
+                          >
+                            Friske overskudsblomster
+                          </h3>
+                          <p class="text-grøn-700 mb-s">
+                            Vi forvandler overskud til elegance. Gennem
+                            eksklusive aftaler med blomstertransportører redder
+                            vi blomster, der stadig er friske, men ellers ville
+                            være gået til spilde. Disse overskudsblomster er
+                            kernen i vores buketter, som er designet til at
+                            forene skønhed og bæredygtighed.
+                          </p>
+                        </div>
+
+                        <!-- Kolonne 3 -->
+                        <div
+                          class="flex flex-col items-center text-center flex-grow"
+                        >
+                          <img
+                            src="https://img.icons8.com/external-line-lima-studio/64/external-bouquet-event-line-lima-studio.png"
+                            alt="Certificerede blomster"
+                            class="mb-s w-12 h-12"
+                          />
+                          <h3
+                            class="font-headline text-headline3_s text-grøn-700 mb-lg"
+                          >
+                            Certificerede blomster
+                          </h3>
+                          <p class="text-grøn-700 mb-s">
+                            Vores sortiment suppleres med blomster fra
+                            miljøcertificerede gartnerier rundt om i verden.
+                            Disse gartnerier arbejder med respekt for naturen,
+                            reducerer vandspild og sikrer gode arbejdsvilkår. Vi
+                            prioriterer certificeringer som BIO, MPS og GLOBAL
+                            G.A.P., der garanterer ansvarlig produktion.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-  
-        <!-- Right Arrow -->
-        <button id="nextBtn" class="carousel-button right gap-ml">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="38" viewBox="0 0 22 38" fill="none">
-            <path d="M0.953247 3.10563L4.07648 0L21.088 16.9257C21.3622 17.1969 21.5798 17.5194 21.7283 17.8746C21.8768 18.2299 21.9532 18.6108 21.9532 18.9956C21.9532 19.3804 21.8768 19.7613 21.7283 20.1166C21.5798 20.4718 21.3622 20.7943 21.088 21.0655L4.07648 38L0.95619 34.8944L16.9227 19L0.953247 3.10563Z" fill="#28281A"/>
-            </svg>
-        </button>
       </div>
     </div>
-    </section>
-
-
-  <!-- ET GRØNNERE VALG -->
-  <section class="bg-beige-50 mx-auto py-xl">
-    <div class="max-w-[1200px] h-[650px] px-[20px] mx-auto text-center">
-      <h2 class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl">
-        Et grønnere valg
-      </h2>
-      <!-- Kolonner -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-2xl items-start">
-        <!-- Kolonne 1 -->
-        <div class="flex flex-col items-center text-center flex-grow">
-          <img
-            src="https://img.icons8.com/ios/50/map-marker--v1.png"
-            alt="Danske blomster"
-            class="mb-s w-12 h-12"
-          />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
-            Danske blomster
-          </h3>
-          <p class="text-grøn-700 mb-s">
-            Vi prioriterer lokalt og dansk. Vores blomster dyrkes på friland
-            uden brug af kunstgødning eller sprøjtemidler, hvilket minimerer
-            transport og beskytter miljøet. Når du vælger danske blomster,
-            støtter du samtidig lokale avlere og bidrager til et sundere klima.
-          </p>
-        </div>
-
-        <!-- Kolonne 2 -->
-        <div class="flex flex-col items-center text-center flex-grow">
-          <img
-            src="https://img.icons8.com/ios/50/flower--v1.png"
-            alt="Friske overskudsblomster"
-            class="mb-s w-12 h-12"
-          />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
-            Friske overskudsblomster
-          </h3>
-          <p class="text-grøn-700 mb-s">
-            Vi forvandler overskud til elegance. Gennem eksklusive aftaler med
-            blomstertransportører redder vi blomster, der stadig er friske, men
-            ellers ville være gået til spilde. Disse overskudsblomster er kernen
-            i vores buketter, som er designet til at forene skønhed og
-            bæredygtighed.
-          </p>
-        </div>
-
-        <!-- Kolonne 3 -->
-        <div class="flex flex-col items-center text-center flex-grow">
-          <img
-            src="https://img.icons8.com/external-line-lima-studio/64/external-bouquet-event-line-lima-studio.png"
-            alt="Certificerede blomster"
-            class="mb-s w-12 h-12"
-          />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
-            Certificerede blomster
-          </h3>
-          <p class="text-grøn-700 mb-s">
-            Vores sortiment suppleres med blomster fra miljøcertificerede
-            gartnerier rundt om i verden. Disse gartnerier arbejder med respekt
-            for naturen, reducerer vandspild og sikrer gode arbejdsvilkår. Vi
-            prioriterer certificeringer som BIO, MPS og GLOBAL G.A.P., der
-            garanterer ansvarlig produktion.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-</MainLayout>
+  </section></MainLayout
+>
 
 <style>
-     .buketter-slider-item {
-        margin-bottom: 8rem;
-        transition: transform 0.5s, opacity 0.5s;
-        opacity: 0.7;
-      }
-      .buketter-slider-item.active {
-        margin-bottom: 5rem;
-        transform: scale(1.2);
-        z-index: 10;
-        opacity: 1;
-      }
-      .buketter-text {
-        transition: opacity 0.5s;
-        opacity: 0;
-      }
-      .buketter-text.active {
-        opacity: 1;
-      }
-         .carousel-container {
-      scroll-snap-type: x mandatory;
-      overflow-x: hidden;
-    }
-    .carousel-item {
-      scroll-snap-align: center;
-      flex-shrink: 0;
-    }
-    .carousel-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: transparent;
-      color: #28281A;
-      font-size: 2rem;
-      cursor: pointer;
-      border: none;
-    }
-    .carousel-button.left {
-      left: -4rem;
-    }
-    .carousel-button.right {
-      right: -4rem;
-    }
+  .buketter-slider-item {
+    margin-bottom: 8rem;
+    transition:
+      transform 0.5s,
+      opacity 0.5s;
+    opacity: 0.7;
+  }
+  .buketter-slider-item.active {
+    margin-bottom: 5rem;
+    transform: scale(1.2);
+    z-index: 10;
+    opacity: 1;
+  }
+  .buketter-text {
+    transition: opacity 0.5s;
+    opacity: 0;
+  }
+  .buketter-text.active {
+    opacity: 1;
+  }
+  .carousel-container {
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+  }
+  .carousel-item {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #28281a;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+  }
+  .carousel-button.left {
+    left: -4rem;
+  }
+  .carousel-button.right {
+    right: -4rem;
+  }
   .bg_image {
     position: relative;
     width: 100%;
@@ -511,6 +640,7 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
     opacity: 0.2;
   }
 </style>
+
 <script>
   const buketterCarousel = document.getElementById("buketter-carousel");
   const buketterPrevBtn = document.getElementById("buketter-prev-btn");
@@ -548,6 +678,7 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
 
   updateActiveSlide();
 </script>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const dynamicText = document.querySelector(".text-dynamic");
@@ -577,18 +708,20 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
   });
 </script>
 <script>
-  const carousel = document.getElementById('carousel');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+  const carousel = document.getElementById("carousel");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
   const scrollStep = 272; // Image width (250px) + gap (22px)
 
-  nextBtn.addEventListener('click', () => {
-    carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
+  nextBtn.addEventListener("click", () => {
+    carousel.scrollBy({ left: scrollStep, behavior: "smooth" });
   });
 
-  prevBtn.addEventListener('click', () => {
-    carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+  prevBtn.addEventListener("click", () => {
+    carousel.scrollBy({
+      left: -scrollStep,
+      behavior: "smooth",
+    });
   });
 </script>
-
