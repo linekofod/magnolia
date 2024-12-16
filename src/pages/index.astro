@@ -12,30 +12,6 @@ import index4 from "/public/imgs/index/index4.webp";
 import index5 from "/public/imgs/index/index5.webp";
 import index6 from "/public/imgs/index/index6.webp";
 ---
-<style>
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.swiper-button-next {
-  right: 0;
-}
-.swiper-button-prev {
-  left: 0;
-}
-</style>
-
-<head>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-</head>
-
 <MainLayout title="Magnolia">
   <!-- HERO -->
 
@@ -241,70 +217,7 @@ import index6 from "/public/imgs/index/index6.webp";
   </section>
 
   <!-- INSTAGRAM -->
-  <section class="py-10 md:py-16">
-    <div class="container max-w-screen-xl mx-auto px-4">
-      <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5 text-center" style="color: #6E744C">
-        Portfolio
-      </h1>
-  
-      <!-- Swiper container -->
-      <div class="relative">
-        <!-- Pile-knapper -->
-        <div
-          class="swiper-button-prev absolute left-0 z-10 w-10 h-10 bg-green-700 text-white flex items-center justify-center rounded-full hover:bg-green-600"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-        </div>
-  
-        <div
-          class="swiper-button-next absolute right-0 z-10 w-10 h-10 bg-green-700 text-white flex items-center justify-center rounded-full hover:bg-green-600"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png"
-            alt="Left Arrow"
-          />
-        </button>
 
-        <!-- Billeder -->
-        <div id="carousel" class="flex overflow-hidden space-x-4">
-          <!-- Billede 1 -->
-          <div class="min-w-[33%] flex-shrink-0">
-            <Image
-            src={index0}
-            alt="Blomsterbillede"
-            class="w-full max-w-[500px]h-auto md:w-[675px] md:h-[770px] object-cover"
-          />
-          </div>
-          <!-- Billede 2 -->
-          <div class="min-w-[33%] flex-shrink-0">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Blomster 2"
-              class="rounded-lg shadow-md"
-            />
-          </div>
-          <!-- Billede 3 -->
-          <div class="min-w-[33%] flex-shrink-0">
-            <Image
-        src={index0}
-        alt="Blomsterbillede"
-        class="w-full max-w-[250px]h-auto md:h-[250px] object-cover"
-      />
-          </div>
-          <!-- Billede 4 -->
-          <div class="min-w-[33%] flex-shrink-0">
-            <Image
-            src={index0}
-            alt="Blomsterbillede"
-            class="w-full max-w-[250px]h-auto md:h-[250px] object-cover"
-          />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ET GRØNNERE VALG -->
@@ -403,15 +316,4 @@ import index6 from "/public/imgs/index/index6.webp";
     setInterval(updateText, 1500); // Skift tekst hver 3. sekund
   });
 </script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
-<script>
-  const swiper = new swiper('.swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    loop: true,
-  });
-</script>
+
