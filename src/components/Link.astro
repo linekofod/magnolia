@@ -5,13 +5,14 @@ const {
   target = "_self",
   variant = "navLink",
   size = "standard",
+  color = "beige",
 } = Astro.props;
 
 const linkStyling = "font-light w-fit";
 
 const variantClasses = {
-  navLink: "uppercase text-beige-50",
-  textLink: "normal-case text-beige-50",
+  navLink: "uppercase",
+  textLink: "normal-case",
 };
 
 const sizeClasses = {
@@ -25,12 +26,22 @@ const sizeClasses = {
   small: "text-link_s hover:font-regular",
   xsmall: "text-body_s md:text-body_lg hover:font-regular",
 };
+
+const colorClasses = {
+  beige: "text-beige-50",
+  grøn: "text-grøn-700",
+};
 ---
 
 <a
   href={href}
   target={target}
-  class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}
+  class:list={[
+    linkStyling,
+    variantClasses[variant],
+    sizeClasses[size],
+    colorClasses[color],
+  ]}
 >
   <slot />
 </a>
