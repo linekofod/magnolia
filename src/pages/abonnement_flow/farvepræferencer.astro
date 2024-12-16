@@ -1,0 +1,168 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Button from "../../components/Button.astro";
+import Link from "../../components/Link.astro";
+---
+
+<MainLayout title="Farvepræferencer">
+  <section
+    class="bg-beige-50 h-fit w-full flex flex-col items-start px-s md:px-lg py-s md:py-lg text-grøn-700"
+  >
+    <div class="flex flex-col gap-ml mx-0 lg:mx-auto max-w-3xl">
+      <!-- Progress dots -->
+      <div
+        class="w-fit h-[1px] bg-grøn-500 flex items-center mt-m gap-sm md:gap-2xl lg:gap-4xl"
+      >
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-grøn-500"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+      </div>
+
+      <!-- Indhold -->
+      <div class="flex flex-col gap-m">
+        <div class="flex flex-col gap-2xs">
+          <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+            Hvad er dine farvepræference?
+          </h2>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Hvilken farve nuance foretrækker du i dine buketter?
+          </p>
+        </div>
+
+        <form
+          action="/abonnement_flow/leveringsfrekvens"
+          class="flex flex-col items-start gap-lg"
+        >
+          <div class="flex flex-wrap gap-xs">
+            <!-- Hvide -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="hvide"
+                class="hidden peer"
+              />
+              <label
+                for="hvide"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-neutrals-50 border-1 border-neutrals-200"
+                ></span>Hvide
+              </label>
+            </div>
+            <!-- Røde -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="røde"
+                class="hidden peer"
+              />
+              <label
+                for="røde"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-[#9B272C] border-1 border-neutrals-200"
+                ></span>Røde
+              </label>
+            </div>
+            <!-- Blå -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="blå"
+                class="hidden peer"
+              />
+              <label
+                for="blå"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-[#7289AE] border-1 border-neutrals-200"
+                ></span>Blå
+              </label>
+            </div>
+            <!-- Farverige -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="farverige"
+                class="hidden peer"
+              />
+              <label
+                for="farverige"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-gradient-to-b from-neutrals-50 from-10% via-[#9B272C] via-30 to-[#7289AE] to-90% border-1 border-neutrals-200"
+                ></span>Farverige
+              </label>
+            </div>
+            <!-- Overrask mig -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="farvenuancer"
+                id="overrask"
+                class="hidden peer"
+              />
+              <label
+                for="overrask"
+                class="inline-flex items-center gap-3xs w-fit p-2xs border-3 border-transparent text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:border-3 hover:border-lyserød-500 peer-checked:border-3 peer-checked:border-lyserød-500"
+                ><span
+                  class="inline-block w-m h-m rounded bg-[url('/public/imgs/ikoner/questionmark.png')] bg-contain border-1 border-neutrals-200"
+                ></span>Overrask mig
+              </label>
+            </div>
+          </div>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Se eksempler på de forskellige farvenuancer <a
+              href="#farvenuancer"
+              class="underline underline-offset-4 decoration-grøn-700 decoration-1"
+              >her.</a
+            >
+          </p>
+          <button type="submit">
+            <div class="block md:hidden">
+              <!-- Button for small screens -->
+              <Button size="small">Næste</Button>
+            </div>
+            <div class="hidden md:block">
+              <!-- Button for large screens -->
+              <Button size="large">Næste</Button>
+            </div>
+          </button>
+          <!-- Tilbage knap -->
+          <button class="flex gap-3xs">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="22"
+              viewBox="0 0 12 22"
+              fill="none"
+            >
+              <path
+                d="M12 1.77471L10.2153 6.84504e-05L0.494453 9.67188C0.337758 9.82686 0.213403 10.0111 0.128545 10.2141C0.0436863 10.4171 0 10.6348 0 10.8547C0 11.0746 0.0436863 11.2923 0.128545 11.4953C0.213403 11.6983 0.337758 11.8825 0.494453 12.0375L10.2153 21.7144L11.9983 19.9397L2.87462 10.8572L12 1.77471Z"
+                fill="#28281A"></path>
+            </svg>
+            <Link
+              size="small"
+              color="grøn"
+              variant="textLink"
+              href="/abonnement_flow/budget">Tilbage</Link
+            >
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</MainLayout>
