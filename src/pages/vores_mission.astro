@@ -158,13 +158,13 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
     </section>
 
     <!-- FREMTIDEN BLOMSTRER GRØNNERE -->
-    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 mt-xl">
-      <div class="p-4xl">
-        <h2 class="font-headline text-headline2_lg mb-xs">
+    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 gap-6 mt-xl">
+      <!-- Tekstkolonne -->
+      <div class="p-xl">
+        <h2 class="font-headline md:text-headline2_lg mb-xs text-headline2_s">
           Fremtiden blomstrer grønnere
         </h2>
-
-        <p class="text-body_lg font-light">
+        <p class="md:text-body_lg font-light text-body_s">
           For Magnolia er bæredygtighed ikke blot en ambition – det er selve
           kernen i alt, hvad vi gør. Vi prioriterer ansvarlige løsninger gennem
           hele værdikæden: fra reduktion af vores vandforbrug med over 90% til
@@ -175,11 +175,13 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
           planeten.
         </p>
       </div>
-
-      <div>
-        <Image src={mission4} alt="" class="w-[707px] h-[600px]" />
+    
+      <!-- Billedekolonne -->
+      <div class="flex justify-center items-center p-ml">
+        <Image src={mission4} alt="" class="w-[707px] h-[671px]" />
       </div>
     </section>
+    
   </section>
 </MainLayout>
 
