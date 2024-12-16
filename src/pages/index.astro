@@ -80,7 +80,105 @@ import hjem10 from "/public/imgs/blomster_hjem/hjem10.webp";
   </section>
 
   <!-- VORES BUKETTER -->
-  <section id="farvenuancer"></section>
+  <section class="bg-white flex items-center justify-center min-h-screen mb-4xl">
+    <section id="buketter-slider" class="text-center w-full max-w-6xl mx-auto">
+        <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">VORES BUKETTER</h2>
+      <div class="relative">
+        <!-- Venstre pil -->
+        <button
+          id="buketter-prev-btn"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M15 19L8 12L15 5"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <!-- Karrusel container -->
+        <div id="buketter-carousel" class="flex gap-4xl items-center overflow-hidden">
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+          <Image src={hjem1} alt="" 
+              class="w-[462px] h-[604px] object-cover"
+            />
+            <div class="text-left justify-start -ml-[3rem]">
+            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Farverige Nuancer</h3>
+            <p class="font-light text-body_lg text-grøn-700 mb-s">En buket fyldt med livlige og glade farver.</p>
+            </div>
+          </div>
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+            <Image src={hjem1} alt="" 
+            class="w-[462px] h-[604px] object-cover"
+          />
+          <div class="text-left justify-start -ml-[3rem]">
+            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Hvide Nuancer</h3>
+            <p class="font-light text-body_lg text-grøn-700 mb-s">En elegant og stilren buket med hvide blomster.</p>
+          </div>
+          </div>
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+          <Image src={hjem1} alt="" 
+             class="w-[462px] h-[604px] object-cover"
+            />
+            <div class="text-left justify-start -ml-[3rem]">
+            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Røde Nuancer</h3>
+            <p class="font-light text-body_lg text-grøn-700 mb-s">Romantiske og varme nuancer i smukke røde toner.</p>
+            </div>
+          </div>
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+          <Image src={hjem1} alt="" 
+           class="w-[462px] h-[604px] object-cover"
+            />
+            <div class="text-left justify-start -ml-[3rem]">
+            <h3 class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">Andre Nuancer</h3>
+            <p class="font-light text-body_lg text-grøn-700 mb-s">Unikke og kreative buketter med særlige blomster.</p>
+          </div>
+          </div>
+        </div>
+
+        <!-- Højre pil -->
+        <button
+          id="buketter-next-btn"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-ml"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M9 5L16 12L9 19"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+  </section>
+
 
   <!-- SKRÆDDERSY DIT ABONNOMENT -->
   <section class="grid grid-cols-1 md:grid-cols-2 text-grøn-700">
@@ -345,6 +443,24 @@ import hjem10 from "/public/imgs/blomster_hjem/hjem10.webp";
 </MainLayout>
 
 <style>
+     .buketter-slider-item {
+        margin-bottom: 8rem;
+        transition: transform 0.5s, opacity 0.5s;
+        opacity: 0.7;
+      }
+      .buketter-slider-item.active {
+        margin-bottom: 5rem;
+        transform: scale(1.2);
+        z-index: 10;
+        opacity: 1;
+      }
+      .buketter-text {
+        transition: opacity 0.5s;
+        opacity: 0;
+      }
+      .buketter-text.active {
+        opacity: 1;
+      }
          .carousel-container {
       scroll-snap-type: x mandatory;
       overflow-x: hidden;
@@ -390,7 +506,43 @@ import hjem10 from "/public/imgs/blomster_hjem/hjem10.webp";
     opacity: 0.2;
   }
 </style>
+<script>
+  const buketterCarousel = document.getElementById("buketter-carousel");
+  const buketterPrevBtn = document.getElementById("buketter-prev-btn");
+  const buketterNextBtn = document.getElementById("buketter-next-btn");
+  const buketterItems = document.querySelectorAll(".buketter-slider-item");
 
+  let currentIndex = 1;
+
+  function updateActiveSlide() {
+    buketterItems.forEach((item, index) => {
+      if (index === currentIndex) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }
+
+  function moveCarousel(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) currentIndex = buketterItems.length - 1;
+    if (currentIndex >= buketterItems.length) currentIndex = 0;
+
+    buketterItems[currentIndex].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+    });
+
+    updateActiveSlide();
+  }
+
+  buketterPrevBtn.addEventListener("click", () => moveCarousel(-1));
+  buketterNextBtn.addEventListener("click", () => moveCarousel(1));
+
+  updateActiveSlide();
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const dynamicText = document.querySelector(".text-dynamic");
