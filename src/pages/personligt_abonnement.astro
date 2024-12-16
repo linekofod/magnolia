@@ -39,9 +39,9 @@ import index1 from "/public/imgs/index/index1.webp";
       <div
         class="w-fit h-[1px] bg-grøn-500 flex items-center mt-m gap-sm md:gap-2xl lg:gap-4xl"
       >
-        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
-        ></span>
         <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-grøn-500"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
         ></span>
         <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
         ></span>
@@ -68,6 +68,7 @@ import index1 from "/public/imgs/index/index1.webp";
         <form
           action="#farvepræferencer"
           class="flex flex-col items-start gap-lg"
+          id="budget_form"
         >
           <div class="flex flex-wrap gap-xs">
             <!-- Maks 200 DKK -->
@@ -458,7 +459,7 @@ import index1 from "/public/imgs/index/index1.webp";
               type="date"
               id="levering"
               name="levering"
-              class="border-grøn-700"
+              class="border-grøn-700 cursor-pointer"
             />
           </div>
           <button type="submit">
@@ -532,13 +533,13 @@ import index1 from "/public/imgs/index/index1.webp";
         </div>
 
         <form action="#bekræftelse" class="flex flex-col items-start gap-lg">
-          <div class="flex flex-wrap gap-xs w-full">
-            <div class="flex flex-col md:flex-row w-full gap-m">
+          <div class="flex flex-wrap gap-s md:gap-sm w-full">
+            <div class="flex flex-col md:flex-row w-full gap-s">
               <!-- Fornavn -->
               <div class="flex flex-col w-full">
                 <label
                   for="fornavn"
-                  class="pb-4xs text-secondbody_s md:text-secondbody_lg font-light"
+                  class="pb-4xs text-body_s md:text-body_lg font-light"
                   >Fornavn*</label
                 >
                 <input
@@ -553,7 +554,7 @@ import index1 from "/public/imgs/index/index1.webp";
               <div class="flex flex-col w-full">
                 <label
                   for="efternavn"
-                  class="pb-4xs text-secondbody_s md:text-secondbody_lg font-light"
+                  class="pb-4xs text-body_s md:text-body_lg font-light"
                   >Efternavn*</label
                 >
                 <input
@@ -561,6 +562,68 @@ import index1 from "/public/imgs/index/index1.webp";
                   name="efternavn"
                   id="efternavn"
                   required
+                  class="border-1 w-full border-grøn-700 bg-transparent"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row w-full gap-s">
+              <!-- Adresse -->
+              <div class="flex flex-col w-full">
+                <label
+                  for="adresse"
+                  class="pb-4xs text-body_s md:text-body_lg font-light"
+                  >Adresse*</label
+                >
+                <input
+                  type="text"
+                  name="adresse"
+                  id="adresse"
+                  required
+                  class="border-1 w-full border-grøn-700 bg-transparent"
+                />
+              </div>
+              <!-- Postnummer og by -->
+              <div class="flex flex-col w-full">
+                <label
+                  for="postnummer"
+                  class="pb-4xs text-body_s md:text-body_lg font-light"
+                  >Postnummer og by*</label
+                >
+                <input
+                  type="text"
+                  name="postnummer"
+                  id="postnummer"
+                  required
+                  class="border-1 w-full border-grøn-700 bg-transparent"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row w-full gap-s">
+              <!-- Telefonnummer -->
+              <div class="flex flex-col w-full">
+                <label
+                  for="telefonnummer"
+                  class="pb-4xs text-body_s md:text-body_lg font-light"
+                  >Telefonnummer (til leveringsopdateringer)</label
+                >
+                <input
+                  type="text"
+                  name="telefonnummer"
+                  id="telefonnummer"
+                  class="border-1 w-full border-grøn-700 bg-transparent"
+                />
+              </div>
+              <!-- Email -->
+              <div class="flex flex-col w-full">
+                <label
+                  for="email"
+                  class="pb-4xs text-body_s md:text-body_lg font-light"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
                   class="border-1 w-full border-grøn-700 bg-transparent"
                 />
               </div>
@@ -594,6 +657,114 @@ import index1 from "/public/imgs/index/index1.webp";
             >
           </button>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEKRÆFTELSE PAGE -->
+  <section
+    class="bg-beige-50 h-fit w-full flex flex-col items-start p-s text-grøn-700"
+    id="bekræftelse"
+  >
+    <div class="flex flex-col gap-ml mx-0 lg:mx-auto max-w-3xl">
+      <!-- Progress dots -->
+      <div
+        class="w-fit h-[1px] bg-grøn-500 flex items-center mt-m gap-sm md:gap-2xl lg:gap-4xl"
+      >
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-grøn-500"
+        ></span>
+      </div>
+
+      <!-- Indhold -->
+      <div class="flex flex-col gap-m">
+        <div class="flex flex-col gap-2xs">
+          <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+            Bekræftelse og opsummering
+          </h2>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Din tilmelding er næsten færdig!
+          </p>
+        </div>
+
+        <div class="flex flex-col items-start gap-lg">
+          <div class="flex flex-col gap-xs">
+            <p>
+              <strong>Valgt budget:</strong>
+              <span x-text="budget"></span>
+            </p>
+            <p>
+              <strong>Farvepræference:</strong>
+              <span x-text="farvepræference"></span>
+            </p>
+          </div>
+          <button type="submit">
+            <div class="block md:hidden">
+              <!-- Button for small screens -->
+              <Button size="small">Bekræft og betal</Button>
+            </div>
+            <div class="hidden md:block">
+              <!-- Button for large screens -->
+              <Button size="large">Bekræft og betal</Button>
+            </div>
+          </button>
+          <!-- Tilbage knap -->
+          <button class="flex gap-3xs">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="22"
+              viewBox="0 0 12 22"
+              fill="none"
+            >
+              <path
+                d="M12 1.77471L10.2153 6.84504e-05L0.494453 9.67188C0.337758 9.82686 0.213403 10.0111 0.128545 10.2141C0.0436863 10.4171 0 10.6348 0 10.8547C0 11.0746 0.0436863 11.2923 0.128545 11.4953C0.213403 11.6983 0.337758 11.8825 0.494453 12.0375L10.2153 21.7144L11.9983 19.9397L2.87462 10.8572L12 1.77471Z"
+                fill="#28281A"></path>
+            </svg>
+            <Link size="small" color="grøn" variant="textLink" href="#levering"
+              >Tilbage</Link
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAK PAGE -->
+  <section
+    class="bg-beige-50 h-fit w-full flex flex-col items-start p-s text-grøn-700"
+    id="tak"
+  >
+    <div class="flex flex-col gap-ml mx-0 lg:mx-auto max-w-3xl">
+      <!-- Indhold -->
+      <div class="flex flex-col gap-m">
+        <div class="flex flex-col gap-2xs">
+          <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+            Tak fordi du valgte os!
+          </h2>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Vi glæder os til at levere smukke blomster til dig. <br />Du vil
+            snart modtage en bekræftelse på e-mail. <br />Har du spørgsmål, er
+            du altid velkommen til at kontakte os.
+          </p>
+        </div>
+
+        <p class="text-secondbody_s md:text-secondbody_lg font-light">
+          Ændringer i dit abonnement foretages via din private profil <a
+            href="/"
+            class="underline underline-offset-4 decoration-grøn-700 decoration-1"
+            >her.</a
+          >
+        </p>
       </div>
     </div>
   </section>
