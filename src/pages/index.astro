@@ -24,12 +24,24 @@ import hjem10 from "/public/imgs/blomster_hjem/hjem10.webp";
 import hvid from "/public/imgs/farvevalg_blomster/hvide_nuancer.webp";
 import farver from "/public/imgs/farvevalg_blomster/farverige_nuancer.webp";
 import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
+import blomst_1 from "/public/imgs/blomster_animation/blomst_1.webp";
+import blomst_2 from "/public/imgs/blomster_animation/blomst_2.webp";
+import blomst_3 from "/public/imgs/blomster_animation/blomst_3.webp";
+import blomst_4 from "/public/imgs/blomster_animation/blomst_4.webp";
+import blomst_5 from "/public/imgs/blomster_animation/blomst_5.webp";
+import blomst_6 from "/public/imgs/blomster_animation/blomst_6.webp";
+import blomst_7 from "/public/imgs/blomster_animation/blomst_7.webp";
+import blomst_8 from "/public/imgs/blomster_animation/blomst_8.webp";
+import blomst_9 from "/public/imgs/blomster_animation/blomst_9.webp";
+import blomst_10 from "/public/imgs/blomster_animation/blomst_10.webp";
+import blomst_11 from "/public/imgs/blomster_animation/blomst_11.webp";
+import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
 ---
 
 <MainLayout title="Magnolia">
   <!-- HERO -->
   <section
-    class="bg-grøn-500 w-full h-screen flex flex-col gap-lg items-center pt-6xl text-lyserød-500"
+    class="relative bg-grøn-500 w-full h-screen flex flex-col gap-lg items-center pt-7xl lg:pt-8xl xl:pt-7xl 2xl:justify-center 2xl:pt-0 text-lyserød-500 overflow-clip"
   >
     <div class="flex flex-col gap-4xs items-center">
       <h1 class="font-headline text-display_s md:text-display_lg uppercase">
@@ -39,7 +51,84 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
         Blomsterabonnement på dine betingelser
       </p>
     </div>
-    <Button variant="secondary">Skræddersy abonnement</Button>
+    <div class="block md:hidden">
+      <!-- Button for small screens -->
+      <Button size="small" variant="secondary" href="/abonnement_flow/budget"
+        >Skræddersy dit abonnemet nu</Button
+      >
+    </div>
+    <div class="hidden md:block">
+      <!-- Button for large screens -->
+      <Button size="large" variant="secondary" href="/abonnement_flow/budget"
+        >Skræddersy dit abonnemet nu</Button
+      >
+    </div>
+    <!-- Højre blomsterkrans -->
+    <div>
+      <Image
+        src={blomst_1}
+        alt=""
+        class="w-1/3 xl:w-1/4 absolute -right-[8%] xl:right-[17%] top-[53%] xl:-top-[27%] z-10"
+      />
+      <Image
+        src={blomst_2}
+        alt=""
+        class="w-1/3 absolute right-[13%] xl:-right-[6%] top-[56%] xl:-top-[35%]"
+      />
+      <Image
+        src={blomst_3}
+        alt=""
+        class="w-1/3 md:w-1/4 absolute right-[32%] xl:-right-[5%] top-[56%] xl:top-[4%]"
+      />
+      <Image
+        src={blomst_4}
+        alt=""
+        class="w-1/3 md:w-1/4 absolute right-[48%] xl:-right-[5%] top-[56%] xl:top-[30%] z-10"
+      />
+      <Image
+        src={blomst_5}
+        alt=""
+        class="w-1/3 xl:w-1/2 absolute right-[65%] xl:-right-[15%] top-[56%] xl:top-[25%]"
+      />
+      <Image
+        src={blomst_6}
+        alt=""
+        class="w-1/3 absolute -left-[10%] xl:left-[57%] top-[50%] xl:top-[53%]"
+      />
+    </div>
+    <!-- Venstre blomsterkrans -->
+    <div>
+      <Image
+        src={blomst_7}
+        alt=""
+        class="w-1/3 xl:w-1/4 absolute -right-[8%] xl:right-[60%] top-[8%] md:top-[0%] xl:-top-[24%] z-10"
+      />
+      <Image
+        src={blomst_8}
+        alt=""
+        class="w-1/3 md:w-1/4 absolute right-[12%] xl:right-[78%] top-[5%] md:top-[0%] xl:-top-[15%] z-30"
+      />
+      <Image
+        src={blomst_9}
+        alt=""
+        class="w-1/3 absolute right-[28%] xl:right-[78%] top-[3%] md:-top-[8%] xl:-top-[8%] z-20"
+      />
+      <Image
+        src={blomst_10}
+        alt=""
+        class="w-1/3 xl:w-1/4 absolute right-[46%] xl:right-[74%] top-[5%] md:-top-[5%] xl:top-[40%] z-10"
+      />
+      <Image
+        src={blomst_11}
+        alt=""
+        class="w-1/3 absolute left-[5%] xl:-left-[12%] top-[6%] md:-top-[4%] xl:top-[42%]"
+      />
+      <Image
+        src={blomst_12}
+        alt=""
+        class="w-1/4 xl:w-1/5 absolute -left-[7%] xl:left-[12%] top-[10%] md:top-[3%] xl:top-[70%] rotate-90 xl:rotate-0"
+      />
+    </div>
   </section>
 
   <!-- ROLLING BANNER -->
@@ -483,95 +572,6 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
                       </div>
                     </div>
                   </div>
-
-                  <!-- ET GRØNNERE VALG -->
-                  <section class="bg-beige-50 mx-auto py-xl">
-                    <div
-                      class="max-w-[1200px] h-[650px] px-[20px] mx-auto text-center"
-                    >
-                      <h2
-                        class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl"
-                      >
-                        Et grønnere valg
-                      </h2>
-                      <!-- Kolonner -->
-                      <div
-                        class="grid grid-cols-1 md:grid-cols-3 gap-2xl items-start"
-                      >
-                        <!-- Kolonne 1 -->
-                        <div
-                          class="flex flex-col items-center text-center flex-grow"
-                        >
-                          <img
-                            src="https://img.icons8.com/ios/50/map-marker--v1.png"
-                            alt="Danske blomster"
-                            class="mb-s w-12 h-12"
-                          />
-                          <h3
-                            class="font-headline text-headline3_s text-grøn-700 mb-lg"
-                          >
-                            Danske blomster
-                          </h3>
-                          <p class="text-grøn-700 mb-s">
-                            Vi prioriterer lokalt og dansk. Vores blomster
-                            dyrkes på friland uden brug af kunstgødning eller
-                            sprøjtemidler, hvilket minimerer transport og
-                            beskytter miljøet. Når du vælger danske blomster,
-                            støtter du samtidig lokale avlere og bidrager til et
-                            sundere klima.
-                          </p>
-                        </div>
-
-                        <!-- Kolonne 2 -->
-                        <div
-                          class="flex flex-col items-center text-center flex-grow"
-                        >
-                          <img
-                            src="https://img.icons8.com/ios/50/flower--v1.png"
-                            alt="Friske overskudsblomster"
-                            class="mb-s w-12 h-12"
-                          />
-                          <h3
-                            class="font-headline text-headline3_s text-grøn-700 mb-lg"
-                          >
-                            Friske overskudsblomster
-                          </h3>
-                          <p class="text-grøn-700 mb-s">
-                            Vi forvandler overskud til elegance. Gennem
-                            eksklusive aftaler med blomstertransportører redder
-                            vi blomster, der stadig er friske, men ellers ville
-                            være gået til spilde. Disse overskudsblomster er
-                            kernen i vores buketter, som er designet til at
-                            forene skønhed og bæredygtighed.
-                          </p>
-                        </div>
-
-                        <!-- Kolonne 3 -->
-                        <div
-                          class="flex flex-col items-center text-center flex-grow"
-                        >
-                          <img
-                            src="https://img.icons8.com/external-line-lima-studio/64/external-bouquet-event-line-lima-studio.png"
-                            alt="Certificerede blomster"
-                            class="mb-s w-12 h-12"
-                          />
-                          <h3
-                            class="font-headline text-headline3_s text-grøn-700 mb-lg"
-                          >
-                            Certificerede blomster
-                          </h3>
-                          <p class="text-grøn-700 mb-s">
-                            Vores sortiment suppleres med blomster fra
-                            miljøcertificerede gartnerier rundt om i verden.
-                            Disse gartnerier arbejder med respekt for naturen,
-                            reducerer vandspild og sikrer gode arbejdsvilkår. Vi
-                            prioriterer certificeringer som BIO, MPS og GLOBAL
-                            G.A.P., der garanterer ansvarlig produktion.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
                 </div>
               </div>
             </div>
@@ -579,8 +579,74 @@ import rød from "/public/imgs/farvevalg_blomster/rød_nuance.webp";
         </div>
       </div>
     </div>
-  </section></MainLayout
->
+  </section>
+  <!-- ET GRØNNERE VALG -->
+  <section class="bg-beige-50 mx-auto py-xl">
+    <div class="max-w-[1200px] h-[650px] px-[20px] mx-auto text-center">
+      <h2 class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl">
+        Et grønnere valg
+      </h2>
+      <!-- Kolonner -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2xl items-start">
+        <!-- Kolonne 1 -->
+        <div class="flex flex-col items-center text-center flex-grow">
+          <img
+            src="https://img.icons8.com/ios/50/map-marker--v1.png"
+            alt="Danske blomster"
+            class="mb-s w-12 h-12"
+          />
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Danske blomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vi prioriterer lokalt og dansk. Vores blomster dyrkes på friland
+            uden brug af kunstgødning eller sprøjtemidler, hvilket minimerer
+            transport og beskytter miljøet. Når du vælger danske blomster,
+            støtter du samtidig lokale avlere og bidrager til et sundere klima.
+          </p>
+        </div>
+
+        <!-- Kolonne 2 -->
+        <div class="flex flex-col items-center text-center flex-grow">
+          <img
+            src="https://img.icons8.com/ios/50/flower--v1.png"
+            alt="Friske overskudsblomster"
+            class="mb-s w-12 h-12"
+          />
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Friske overskudsblomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vi forvandler overskud til elegance. Gennem eksklusive aftaler med
+            blomstertransportører redder vi blomster, der stadig er friske, men
+            ellers ville være gået til spilde. Disse overskudsblomster er kernen
+            i vores buketter, som er designet til at forene skønhed og
+            bæredygtighed.
+          </p>
+        </div>
+
+        <!-- Kolonne 3 -->
+        <div class="flex flex-col items-center text-center flex-grow">
+          <img
+            src="https://img.icons8.com/external-line-lima-studio/64/external-bouquet-event-line-lima-studio.png"
+            alt="Certificerede blomster"
+            class="mb-s w-12 h-12"
+          />
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Certificerede blomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vores sortiment suppleres med blomster fra miljøcertificerede
+            gartnerier rundt om i verden. Disse gartnerier arbejder med respekt
+            for naturen, reducerer vandspild og sikrer gode arbejdsvilkår. Vi
+            prioriterer certificeringer som BIO, MPS og GLOBAL G.A.P., der
+            garanterer ansvarlig produktion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
 
 <style>
   .buketter-slider-item {
