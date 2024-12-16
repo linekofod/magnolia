@@ -7,18 +7,19 @@ const {
 } = Astro.props;
 
 const buttonStyling =
-  "uppercase font-light w-fit h-fit relative overflow-hidden";
+  "uppercase font-light w-fit h-fit relative overflow-hidden inline-block";
 
 const variantClasses = {
   primary:
-    "text-grøn-500 border-3 border-grøn-500 relative overflow-hidden before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-grøn-500 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-beige-50",
+    "text-grøn-500 border-2 border-grøn-500 relative overflow-hidden before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-grøn-500 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-beige-50",
   secondary:
-    "text-beige-50 border-3 border-beige-50 relative overflow-hidden before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-beige-50 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-grøn-500",
+    "text-beige-50 border-2 border-beige-50 relative overflow-hidden before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-beige-50 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-grøn-500",
 };
 
 const sizeClasses = {
-  small: "py-2xs px-s text-link_s",
   large: "py-2xs px-m text-link_lg",
+  small: "py-2xs px-s text-link_s",
+  xsmall: "py-3xs px-xs text-body_s",
 };
 ---
 

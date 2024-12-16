@@ -51,7 +51,8 @@ export default {
             "neutrals-300": "rgba(191, 191, 191, 1)",
             "neutrals-200": "rgba(217, 217, 217, 1)",
             "neutrals-100": "rgba(242, 242, 242, 1)",
-            "neutrals-50": "rgba(255, 255, 255, 1)"
+            "neutrals-50": "rgba(255, 255, 255, 1)",
+            "transparent": "rgba(0, 0, 0, 0)"
           },
 
         /* SPACING */
@@ -76,18 +77,6 @@ export default {
         "8xl": "320px",
         "9xl": "360px",
         "10xl": "424px",
-        "border-05px": "0.5px",
-        "border-1px": "1px",
-        "border-2px": "2px",
-        "border-3px": "3px",
-        "border-4px": "4px",
-        "border-5px": "5px",
-        "border-radius-0px": "0px",
-        "border-radius-10px": "10px",
-        "border-radius-20px": "20px",
-        "border-radius-30px": "30px",
-        "border-radius-40px": "40px",
-        "border-radius-100px": "100px"
         },
                   
           /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
@@ -99,22 +88,22 @@ export default {
 
         /* FONTSIZE */
         fontSize: {
-            link_s: ['1.375rem', { lineHeight: '150%' }],
-            link_lg: ['1.75rem', { lineHeight: '150%' }],
+            link_s: ['1rem', { lineHeight: '150%' }],
+            link_lg: ['1.25rem', { lineHeight: '150%' }],
             secondbody_s: ['1.125rem', { lineHeight: '150%' }],
-            secondbody_lg: ['1.75rem', { lineHeight: '150%' }],
+            secondbody_lg: ['1.375rem', { lineHeight: '150%' }],
             body_s: ['0.875rem', { lineHeight: '150%' }],
             body_lg: ['1rem', { lineHeight: '150%' }],
-            headline4_s: ['1.125rem', { lineHeight: '150%' }],
-            headline4_lg: ['1.5rem', { lineHeight: '150%' }],
-            headline3_s: ['1.5rem', { lineHeight: '150%' }],
-            headline3_lg: ['2.50rem', { lineHeight: '150%' }],
-            headline2_s: ['2.125rem', { lineHeight: '150%' }],
-            headline2_lg: ['3.375rem', { lineHeight: '150%' }],
-            headline1_s: ['3rem', { lineHeight: '150%' }],
-            headline1_lg: ['5.062rem', { lineHeight: '150%' }],
-            display_s: ['3.75rem', { lineHeight: '150%' }],
-            display_lg: ['9.3752rem', { lineHeight: '150%' }],
+            headline4_s: ['1.125rem', { lineHeight: '120%' }],
+            headline4_lg: ['1.5rem', { lineHeight: '120%' }],
+            headline3_s: ['1.5rem', { lineHeight: '120%' }],
+            headline3_lg: ['2.50rem', { lineHeight: '120%' }],
+            headline2_s: ['2.125rem', { lineHeight: '120%' }],
+            headline2_lg: ['3.375rem', { lineHeight: '120%' }],
+            headline1_s: ['3rem', { lineHeight: '120%' }],
+            headline1_lg: ['5.062rem', { lineHeight: '120%' }],
+            display_s: ['3.75rem', { lineHeight: '120%' }],
+            display_lg: ['9.3752rem', { lineHeight: '120%' }],
           },
 
         /* WEIGHT */
@@ -126,13 +115,13 @@ export default {
             bold: '700',
           },
 
-		extend: {
-            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
-
+        
         /* BORDERWIDTH */
         borderWidth: {
             DEFAULT: '1px',
             0: '0px',
+            0.5: '0.5px',
+            1: '1px',
             2: '2px',
             3: '3px',
             4: '4px',
@@ -156,6 +145,19 @@ export default {
             drop50: '4px 4px 4px 0 rgb(34 34 34 / 0.50)',  
             inner25: '5px 5px 5px 0 rgb(34 34 34 / 0.25) inset',
         },
+
+		extend: {
+            // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
+
+            animation: {
+                'infinite-scroll': 'infinite-scroll 25s linear infinite',
+              },
+              keyframes: {
+                'infinite-scroll': {
+                  from: { transform: 'translateX(0)' },
+                  to: { transform: 'translateX(-100%)' },
+                },
+              }
         },
 	},
 	plugins: [

@@ -1,6 +1,119 @@
 ---
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import Rollingbanner from "../components/Rollingbanner.astro";
+import { Image } from "astro:assets";
+import logo from "/public/imgs/logo.svg";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
+
+<div
+  class="flex flex-col bg-grøn-500 gap-xs h-fit w-full relative px-sm py-ml md:py-lg md:px-2xl text-beige-50 font-light"
+>
+  <div class="flex flex-col lg:flex-row justify-between gap-lg">
+    <!-- KONTAKT -->
+    <div class="flex flex-col gap-2xs">
+      <h3 class="font-headline text-headline3_s md:text-headline3_lg">
+        Kontakt
+      </h3>
+      <div class="flex flex-col gap-s">
+        <div class="flex flex-col gap-2xs">
+          <div class="flex flex-col gap-4xs">
+            <p class="text-body_s md:text-body_lg font-semibold">Telefon</p>
+            <p class="text-body_s md:text-body_lg">
+              +45 20 20 20 20 <br />Mandag til Fredag <br />Kl. 08:00 - 13:00
+            </p>
+          </div>
+          <p class="text-body_s">Vi leverer alle 365 dage året rundt.</p>
+        </div>
+        <div class="flex flex-col gap-4xs">
+          <p class="text-body_s md:text-body_lg font-semibold">Email</p>
+          <Link
+            size="xsmall"
+            href="mailto:support@magnolia.dk"
+            variant="textLink">support@magnolia.dk</Link
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- SOCIALE MEDIER -->
+    <div class="flex flex-col gap-2xs">
+      <h3 class="font-headline text-headline3_s md:text-headline3_lg">
+        Sociale medier
+      </h3>
+      <div class="flex flex-row items-center gap-2xs">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="33"
+          height="33"
+          viewBox="0 0 43 43"
+          fill="none"
+        >
+          <path
+            d="M21.5 30.6667C23.9311 30.6667 26.2627 29.7009 27.9818 27.9819C29.7009 26.2628 30.6666 23.9312 30.6666 21.5C30.6666 19.0689 29.7009 16.7373 27.9818 15.0182C26.2627 13.2991 23.9311 12.3334 21.5 12.3334C19.0688 12.3334 16.7373 13.2991 15.0182 15.0182C13.2991 16.7373 12.3333 19.0689 12.3333 21.5C12.3333 23.9312 13.2991 26.2628 15.0182 27.9819C16.7373 29.7009 19.0688 30.6667 21.5 30.6667Z"
+            stroke="#FBFAF8"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M0.875 30.6667V12.3333C0.875 9.29439 2.08221 6.37992 4.23107 4.23107C6.37992 2.08221 9.29439 0.875 12.3333 0.875H30.6667C33.7056 0.875 36.6201 2.08221 38.7689 4.23107C40.9178 6.37992 42.125 9.29439 42.125 12.3333V30.6667C42.125 33.7056 40.9178 36.6201 38.7689 38.7689C36.6201 40.9178 33.7056 42.125 30.6667 42.125H12.3333C9.29439 42.125 6.37992 40.9178 4.23107 38.7689C2.08221 36.6201 0.875 33.7056 0.875 30.6667Z"
+            stroke="#FBFAF8"
+            stroke-width="1.5"></path>
+          <path
+            d="M34.1042 8.91922L34.1275 8.89355"
+            stroke="#FBFAF8"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="42"
+          height="40"
+          viewBox="0 0 52 53"
+          fill="none"
+        >
+          <path
+            d="M47.6666 26.5C47.6666 14.54 37.96 4.83337 26 4.83337C14.04 4.83337 4.33331 14.54 4.33331 26.5C4.33331 36.9867 11.7866 45.7184 21.6666 47.7334V33H17.3333V26.5H21.6666V21.0834C21.6666 16.9017 25.0683 13.5 29.25 13.5H34.6666V20H30.3333C29.1416 20 28.1666 20.975 28.1666 22.1667V26.5H34.6666V33H28.1666V48.0584C39.1083 46.975 47.6666 37.745 47.6666 26.5Z"
+            fill="#FBFAF8"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- NYHEDSBREV -->
+    <div class="flex flex-col gap-lg md:w-[550px]">
+      <div class="flex flex-col gap-2xs">
+        <h3 class="font-headline text-headline3_s md:text-headline3_lg">
+          Tilmeld dig vores nyhedsbrev
+        </h3>
+        <div class="flex flex-col gap-s">
+          <p class="text-body_s md:text-body_lg">
+            Vil du vide mere om sæsonens blomster og hvordan du plejer dem?
+            Tilmeld dig vores nyhedsbrev og få tips, tricks og inspiration til
+            at gøre dit hjem endnu mere blomstrende!
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-s relative">
+        <form>
+          <input
+            class="appearance-none bg-transparent border-none focus:outline-none focus:ring-0 w-full px-0 placeholder:text-beige-50"
+            type="text"
+            placeholder="Email"
+            id="email"
+          />
+          <span class="block w-full border-b-1 border-beige-50"></span>
+        </form>
+        <div class="flex justify-end">
+          <Button variant="secondary" size="xsmall">Tilmeld</Button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGO -->
+  <div id="logo" class="">
+    <a href="/"><Image src={logo} alt="Magnolia logo" /></a>
+  </div>
 </div>
-  
+<Rollingbanner />

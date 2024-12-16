@@ -1,5 +1,147 @@
 ---
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import logo from "/public/imgs/logo.svg";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div class="flex items-center h-fit w-full static">
+  <div x-data="{ showmenu: false }" class="w-full bg-grøn-500 z-50">
+    <div
+      id="navbar"
+      class="flex flex-row justify-between py-2xs px-sm items-center"
+    >
+      <!-- LOGO -->
+      <div id="logo">
+        <a href="/"><Image src={logo} alt="Magnolia logo" width="50px" /></a>
+      </div>
+
+      <div class="flex flex-row items-center gap-s">
+        <!-- DESKTOP MENU -->
+        <nav id="desktopmenu" class="hidden xl:block">
+          <ul class="flex flex-row gap-s">
+            <div class="relative group">
+              <li><Link href="/">Abonnement</Link></li>
+              <!-- Dropdown -->
+              <div
+                class="hidden group-hover:block absolute bg-grøn-500 p-s top-[33px] w-full"
+              >
+                <li class="py-3xs">
+                  <Link href="/gave_abonnement" size="small">Gave</Link>
+                </li>
+                <li class="py-3xs">
+                  <Link href="/personligt_abonnement" size="small"
+                    >Personligt</Link
+                  >
+                </li>
+                <li class="py-3xs">
+                  <Link href="/erhvervs_abonnement" size="small">Erhverv</Link>
+                </li>
+              </div>
+            </div>
+            <li><Link href="/vores_mission">Vores mission</Link></li>
+            <li><Link href="/kontakt">Kontakt</Link></li>
+          </ul>
+        </nav>
+
+        <!-- Profil ikon -->
+        <div class="hidden xl:block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="33"
+            viewBox="0 0 31 39"
+            fill="none"
+          >
+            <path
+              d="M1 38.5278V36.9167C1 33.4983 2.35793 30.22 4.77507 27.8029C7.1922 25.3857 10.4705 24.0278 13.8889 24.0278H17.1111C20.5295 24.0278 23.8078 25.3857 26.2249 27.8029C28.6421 30.22 30 33.4983 30 36.9167V38.5278M23.5556 9.52778C23.5556 11.6643 22.7068 13.7132 21.1961 15.2239C19.6854 16.7346 17.6365 17.5833 15.5 17.5833C13.3635 17.5833 11.3146 16.7346 9.80386 15.2239C8.29315 13.7132 7.44444 11.6643 7.44444 9.52778C7.44444 7.39132 8.29315 5.34236 9.80386 3.83165C11.3146 2.32094 13.3635 1.47223 15.5 1.47223C17.6365 1.47223 19.6854 2.32094 21.1961 3.83165C22.7068 5.34236 23.5556 7.39132 23.5556 9.52778Z"
+              stroke="#FBFAF8"
+              stroke-width="2"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- BURGER MENU -->
+      <button
+        id="burgermenu"
+        class="z-50 cursor-pointer xl:hidden"
+        x-on:click="showmenu = ! showmenu"
+      >
+        <!-- Burger icon -->
+        <svg
+          x-show="!showmenu"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.2"
+          stroke="rgba(251, 250, 248, 1)"
+          class="size-lg"
+        >
+          <path
+            stroke-linecap=""
+            stroke-linejoin=""
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+
+        <!-- Cross icon -->
+        <svg
+          x-show="showmenu"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.2"
+          stroke="rgba(251, 250, 248, 1)"
+          class="size-lg"
+        >
+          <path stroke-linecap="" stroke-linejoin="" d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- MOBIL MENU -->
+    <nav
+      id="mobilmenu"
+      class="flex flex-col gap-xs bg-grøn-500 h-screen w-full pl-lg pt-5xl absolute top-0 z-10"
+      x-show="showmenu"
+      x-transition
+      x-on:click="showmenu = false"
+      x-on:click.outside="showmenu = false"
+    >
+      <ul class="">
+        <li class="py-3xs">
+          <Link href="/" size="small">Abonnement</Link>
+        </li>
+        <li class="py-4xs pl-sm">
+          <Link href="/gave_abonnement" size="xsmall">Gave</Link>
+        </li>
+        <li class="py-4xs pl-sm">
+          <Link href="/personligt_abonnement" size="xsmall">Personligt</Link>
+        </li>
+        <li class="py-4xs pl-sm">
+          <Link href="/erhvervs_abonnement" size="xsmall">Erhverv</Link>
+        </li>
+        <li class="pt-s pb-2xs">
+          <Link href="/vores_mission" size="small">Vores mission</Link>
+        </li>
+        <li class="py-2xs">
+          <Link href="/kontakt" size="small">Kontakt</Link>
+        </li>
+      </ul>
+      <!-- Profil ikon -->
+      <div class="">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="29"
+          height="37"
+          viewBox="0 0 31 39"
+          fill="none"
+        >
+          <path
+            d="M1 38.5278V36.9167C1 33.4983 2.35793 30.22 4.77507 27.8029C7.1922 25.3857 10.4705 24.0278 13.8889 24.0278H17.1111C20.5295 24.0278 23.8078 25.3857 26.2249 27.8029C28.6421 30.22 30 33.4983 30 36.9167V38.5278M23.5556 9.52778C23.5556 11.6643 22.7068 13.7132 21.1961 15.2239C19.6854 16.7346 17.6365 17.5833 15.5 17.5833C13.3635 17.5833 11.3146 16.7346 9.80386 15.2239C8.29315 13.7132 7.44444 11.6643 7.44444 9.52778C7.44444 7.39132 8.29315 5.34236 9.80386 3.83165C11.3146 2.32094 13.3635 1.47223 15.5 1.47223C17.6365 1.47223 19.6854 2.32094 21.1961 3.83165C22.7068 5.34236 23.5556 7.39132 23.5556 9.52778Z"
+            stroke="#FBFAF8"
+            stroke-width="2"></path>
+        </svg>
+      </div>
+    </nav>
+  </div>
 </div>
