@@ -16,7 +16,7 @@ import index5 from "/public/imgs/index/index5.webp";
   <!-- HERO -->
 
   <!-- ROLLING BANNER -->
-    <Indexbanner></Indexbanner>
+  <Indexbanner />
 
   <!-- OM OS -->
   <section class="px-4xl">
@@ -179,7 +179,7 @@ import index5 from "/public/imgs/index/index5.webp";
     <!-- Højre side med billede -->
     <div class="flex justify-center items-center">
       <Image
-        src={index0}
+        src={index6}
         alt="Blomsterbillede"
         class="w-full max-w-[500px]h-auto md:w-[675px] md:h-[770px] object-cover"
       />
@@ -218,7 +218,7 @@ import index5 from "/public/imgs/index/index5.webp";
 
   <!-- INSTAGRAM -->
 
-    <!-- Container til karrusel -->
+  <!-- Container til karrusel -->
   <section class="py-16 bg-white mx-auto">
     <div class="max-w-[1200px] px-4 mx-auto text-center">
       <!-- Overskrift -->
@@ -229,8 +229,14 @@ import index5 from "/public/imgs/index/index5.webp";
       <!-- Karrusel -->
       <div class="relative flex items-center">
         <!-- Venstre pil -->
-        <button id="prevBtn" class="absolute left-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">
-          <img src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png" alt="Left Arrow" />
+        <button
+          id="prevBtn"
+          class="absolute left-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png"
+            alt="Left Arrow"
+          />
         </button>
 
         <!-- Billeder -->
@@ -270,8 +276,14 @@ import index5 from "/public/imgs/index/index5.webp";
         </div>
 
         <!-- Højre pil -->
-        <button id="nextBtn" class="absolute right-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">
-          <img src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png" alt="Right Arrow" />
+        <button
+          id="nextBtn"
+          class="absolute right-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png"
+            alt="Right Arrow"
+          />
         </button>
       </div>
     </div>
@@ -280,7 +292,9 @@ import index5 from "/public/imgs/index/index5.webp";
   <!-- ET GRØNNERE VALG -->
   <section class="bg-beige-50 mx-auto py-xl">
     <div class="max-w-[1200px] h-[650px] px-[20px] mx-auto text-center">
-      <h2 class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl">Et grønnere valg</h2>
+      <h2 class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl">
+        Et grønnere valg
+      </h2>
       <!-- Kolonner -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-2xl items-start">
         <!-- Kolonne 1 -->
@@ -290,14 +304,17 @@ import index5 from "/public/imgs/index/index5.webp";
             alt="Danske blomster"
             class="mb-s w-12 h-12"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">Danske blomster</h3>
-          <p class="text-grøn-700 mb-s font-light">
-            Vi prioriterer lokalt og dansk. Vores blomster dyrkes på friland uden brug af kunstgødning
-            eller sprøjtemidler, hvilket minimerer transport og beskytter miljøet. Når du vælger danske
-            blomster, støtter du samtidig lokale avlere og bidrager til et sundere klima.
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Danske blomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vi prioriterer lokalt og dansk. Vores blomster dyrkes på friland
+            uden brug af kunstgødning eller sprøjtemidler, hvilket minimerer
+            transport og beskytter miljøet. Når du vælger danske blomster,
+            støtter du samtidig lokale avlere og bidrager til et sundere klima.
           </p>
         </div>
-  
+
         <!-- Kolonne 2 -->
         <div class="flex flex-col items-center text-center flex-grow">
           <img
@@ -305,15 +322,18 @@ import index5 from "/public/imgs/index/index5.webp";
             alt="Friske overskudsblomster"
             class="mb-s w-12 h-12"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">Friske overskudsblomster</h3>
-          <p class="text-grøn-700 mb-s font-light">
-            Vi forvandler overskud til elegance. Gennem eksklusive aftaler med blomstertransportører
-            redder vi blomster, der stadig er friske, men ellers ville være gået til spilde. Disse
-            overskudsblomster er kernen i vores buketter, som er designet til at forene skønhed og
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Friske overskudsblomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vi forvandler overskud til elegance. Gennem eksklusive aftaler med
+            blomstertransportører redder vi blomster, der stadig er friske, men
+            ellers ville være gået til spilde. Disse overskudsblomster er kernen
+            i vores buketter, som er designet til at forene skønhed og
             bæredygtighed.
           </p>
         </div>
-  
+
         <!-- Kolonne 3 -->
         <div class="flex flex-col items-center text-center flex-grow">
           <img
@@ -321,19 +341,20 @@ import index5 from "/public/imgs/index/index5.webp";
             alt="Certificerede blomster"
             class="mb-s w-12 h-12"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">Certificerede blomster</h3>
-          <p class="text-grøn-700 mb-s font-light">
-            Vores sortiment suppleres med blomster fra miljøcertificerede gartnerier rundt om i verden.
-            Disse gartnerier arbejder med respekt for naturen, reducerer vandspild og sikrer gode
-            arbejdsvilkår. Vi prioriterer certificeringer som BIO, MPS og GLOBAL G.A.P., der garanterer
-            ansvarlig produktion.
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Certificerede blomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vores sortiment suppleres med blomster fra miljøcertificerede
+            gartnerier rundt om i verden. Disse gartnerier arbejder med respekt
+            for naturen, reducerer vandspild og sikrer gode arbejdsvilkår. Vi
+            prioriterer certificeringer som BIO, MPS og GLOBAL G.A.P., der
+            garanterer ansvarlig produktion.
           </p>
         </div>
       </div>
     </div>
   </section>
-
- 
 </MainLayout>
 
 <script>
@@ -365,26 +386,26 @@ import index5 from "/public/imgs/index/index5.webp";
   });
 </script>
 <script>
-  const carousel = document.getElementById('carousel');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+  const carousel = document.getElementById("carousel");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
   let scrollPosition = 0;
   const scrollAmount = carousel.offsetWidth / 3; // Scroll ét billede ad gangen
 
-  nextBtn.addEventListener('click', () => {
+  nextBtn.addEventListener("click", () => {
     scrollPosition += scrollAmount;
     if (scrollPosition > carousel.scrollWidth - carousel.offsetWidth) {
       scrollPosition = 0;
     }
-    carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+    carousel.scrollTo({ left: scrollPosition, behavior: "smooth" });
   });
 
-  prevBtn.addEventListener('click', () => {
+  prevBtn.addEventListener("click", () => {
     scrollPosition -= scrollAmount;
     if (scrollPosition < 0) {
       scrollPosition = carousel.scrollWidth - carousel.offsetWidth;
     }
-    carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+    carousel.scrollTo({ left: scrollPosition, behavior: "smooth" });
   });
 </script>
