@@ -1,0 +1,116 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Button from "../../components/Button.astro";
+import Link from "../../components/Link.astro";
+---
+
+<MainLayout title="Bekræftelse">
+  <section
+    class="bg-beige-50 h-fit w-full flex flex-col items-start px-s md:px-lg py-s md:py-lg text-grøn-700"
+  >
+    <div class="flex flex-col gap-ml mx-0 lg:mx-auto max-w-3xl">
+      <!-- Progress dots -->
+      <div
+        class="w-fit h-[1px] bg-grøn-500 flex items-center mt-m gap-sm md:gap-2xl lg:gap-4xl"
+      >
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-grøn-500"
+        ></span>
+      </div>
+
+      <!-- Indhold -->
+      <div class="flex flex-col gap-m">
+        <div class="flex flex-col gap-2xs">
+          <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+            Bekræftelse og opsummering
+          </h2>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Din tilmelding er næsten færdig!
+          </p>
+        </div>
+
+        <div class="flex flex-col items-start gap-lg">
+          <div class="flex flex-col gap-xs">
+            <div class="flex gap-3xs">
+              <p class="text-secondbody_s md:text-secondbody_lg font-light">
+                Budget:
+              </p>
+              <p class="text-secondbody_s md:text-secondbody_lg">
+                [Maks 400 DKK]
+              </p>
+            </div>
+            <div class="flex gap-3xs">
+              <p class="text-secondbody_s md:text-secondbody_lg font-light">
+                Farvepræference:
+              </p>
+              <p class="text-secondbody_s md:text-secondbody_lg">[Hvide]</p>
+            </div>
+            <div class="flex gap-3xs">
+              <p class="text-secondbody_s md:text-secondbody_lg font-light">
+                Leveringsfrekvens:
+              </p>
+              <p class="text-secondbody_s md:text-secondbody_lg">[Månedligt]</p>
+            </div>
+            <div class="flex gap-3xs">
+              <p class="text-secondbody_s md:text-secondbody_lg font-light">
+                Første levering:
+              </p>
+              <p class="text-secondbody_s md:text-secondbody_lg">[20/2/2025]</p>
+            </div>
+            <div class="flex gap-3xs">
+              <p class="text-secondbody_s md:text-secondbody_lg font-light">
+                Adresse:
+              </p>
+              <p class="text-secondbody_s md:text-secondbody_lg">
+                [Gothersgade 50, 2. Tv. 1123 København]
+              </p>
+            </div>
+          </div>
+          <button>
+            <div class="block md:hidden">
+              <!-- Button for small screens -->
+              <Button size="small" href="/abonnement_flow/tak"
+                >Bekræft og betal</Button
+              >
+            </div>
+            <div class="hidden md:block">
+              <!-- Button for large screens -->
+              <Button size="large" href="/abonnement_flow/tak"
+                >Bekræft og betal</Button
+              >
+            </div>
+          </button>
+          <!-- Tilbage knap -->
+          <button class="flex gap-3xs">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="22"
+              viewBox="0 0 12 22"
+              fill="none"
+            >
+              <path
+                d="M12 1.77471L10.2153 6.84504e-05L0.494453 9.67188C0.337758 9.82686 0.213403 10.0111 0.128545 10.2141C0.0436863 10.4171 0 10.6348 0 10.8547C0 11.0746 0.0436863 11.2923 0.128545 11.4953C0.213403 11.6983 0.337758 11.8825 0.494453 12.0375L10.2153 21.7144L11.9983 19.9397L2.87462 10.8572L12 1.77471Z"
+                fill="#28281A"></path>
+            </svg>
+            <Link
+              size="small"
+              color="grøn"
+              variant="textLink"
+              href="/abonnement_flow/informationer">Tilbage</Link
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

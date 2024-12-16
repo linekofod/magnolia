@@ -1,0 +1,118 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Button from "../../components/Button.astro";
+import Link from "../../components/Link.astro";
+---
+
+<MainLayout title="Budget">
+  <section
+    class="bg-beige-50 h-screen w-full flex flex-col items-start px-s md:px-lg py-s md:py-lg text-grøn-700"
+  >
+    <div class="flex flex-col gap-ml mx-0 lg:mx-auto max-w-3xl">
+      <!-- Progress dots -->
+      <div
+        class="w-fit h-[1px] bg-grøn-500 flex items-center mt-m gap-sm md:gap-2xl lg:gap-4xl"
+      >
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-grøn-500"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+        <span class="inline-block w-s h-s md:w-m md:h-m rounded bg-neutrals-200"
+        ></span>
+      </div>
+
+      <!-- Indhold -->
+      <div class="flex flex-col gap-m">
+        <div class="flex flex-col gap-2xs">
+          <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+            Hvad er dit budget?
+          </h2>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Vælg det budget, der passer til dig. <br />Du kan altid ændre det
+            senere.
+          </p>
+        </div>
+
+        <form
+          action="/abonnement_flow/farvepræferencer"
+          class="flex flex-col items-start gap-lg"
+        >
+          <div class="flex flex-wrap gap-xs">
+            <!-- Maks 200 DKK -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="budget"
+                id="maks200"
+                class="hidden peer"
+              />
+              <label
+                for="maks200"
+                class="inline-flex border-3 w-fit border-lyserød-500 p-2xs text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:bg-lyserød-500 peer-checked:bg-lyserød-500"
+                >Maks 200 DKK</label
+              >
+            </div>
+            <!-- Maks 300 DKK -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="budget"
+                id="maks300"
+                class="hidden peer"
+              />
+              <label
+                for="maks300"
+                class="inline-flex border-3 w-fit border-lyserød-500 p-2xs text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:bg-lyserød-500 peer-checked:bg-lyserød-500"
+                >Maks 300 DKK</label
+              >
+            </div>
+            <!-- Maks 400 DKK -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="budget"
+                id="maks400"
+                class="hidden peer"
+              />
+              <label
+                for="maks400"
+                class="inline-flex border-3 w-fit border-lyserød-500 p-2xs text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:bg-lyserød-500 peer-checked:bg-lyserød-500"
+                >Maks 400 DKK</label
+              >
+            </div>
+            <!-- Maks 500 DKK -->
+            <div class="flex">
+              <input
+                type="radio"
+                name="budget"
+                id="maks500"
+                class="hidden peer"
+              />
+              <label
+                for="maks500"
+                class="inline-flex border-3 w-fit border-lyserød-500 p-2xs text-secondbody_s md:text-secondbody_lg font-light cursor-pointer hover:bg-lyserød-500 peer-checked:bg-lyserød-500"
+                >Maks 500 DKK</label
+              >
+            </div>
+          </div>
+          <button type="submit">
+            <div class="block md:hidden">
+              <!-- Button for small screens -->
+              <Button size="small">Næste</Button>
+            </div>
+            <div class="hidden md:block">
+              <!-- Button for large screens -->
+              <Button size="large">Næste</Button>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</MainLayout>
