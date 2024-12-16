@@ -12,6 +12,48 @@ import index4 from "/public/imgs/index/index4.webp";
 import index5 from "/public/imgs/index/index5.webp";
 import index6 from "/public/imgs/index/index6.webp";
 ---
+<style>
+  .carousel-container {
+  position: relative;
+  width: 300px; /* Juster bredde */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button:hover {
+  color: #777;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+</style>
+
 <MainLayout title="Magnolia">
   <!-- HERO -->
 
@@ -72,6 +114,7 @@ import index6 from "/public/imgs/index/index6.webp";
   </section>
 
   <!-- VORES BUKETTER -->
+   <section id="farvenuancer"></section>
 
   <!-- SKRÆDDERSY DIT ABONNOMENT -->
   <section class="grid grid-cols-1 md:grid-cols-2 text-grøn-700">
@@ -218,6 +261,24 @@ import index6 from "/public/imgs/index/index6.webp";
 
   <!-- INSTAGRAM -->
 
+  <section class="carousel-section">
+    <h2>JERES BLOMSTER I HJEMMET</h2>
+    <div class="carousel-container">
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <div class="carousel-slides">
+        <Image
+        src={index6}
+        alt="Blomsterbillede" class="slide"></Image>
+        <Image
+        src={index6}
+        alt="Blomsterbillede" class="slide"></Image>
+        <Image
+        src={index6}
+        alt="Blomsterbillede" class="slide"></Image> 
+      </div>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+  </section>
 
 
   <!-- ET GRØNNERE VALG -->
@@ -315,5 +376,16 @@ import index6 from "/public/imgs/index/index6.webp";
 
     setInterval(updateText, 1500); // Skift tekst hver 3. sekund
   });
+</script>
+<script>
+  let slideIndex = 0;
+
+function changeSlide(direction) {
+  const slides = document.querySelectorAll('.slide');
+  slideIndex = (slideIndex + direction + slides.length) % slides.length;
+
+  const offset = -slideIndex * 100;
+  document.querySelector('.carousel-slides').style.transform = `translateX(${offset}%)`;
+}
 </script>
 
