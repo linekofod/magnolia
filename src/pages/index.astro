@@ -10,13 +10,13 @@ import index2 from "/public/imgs/index/index2.webp";
 import index3 from "/public/imgs/index/index3.webp";
 import index4 from "/public/imgs/index/index4.webp";
 import index5 from "/public/imgs/index/index5.webp";
+import index6 from "/public/imgs/index/index6.webp";
 ---
-
 <MainLayout title="Magnolia">
   <!-- HERO -->
 
   <!-- ROLLING BANNER -->
-    <Indexbanner></Indexbanner>
+  <Indexbanner />
 
   <!-- OM OS -->
   <section class="px-4xl">
@@ -72,12 +72,13 @@ import index5 from "/public/imgs/index/index5.webp";
   </section>
 
   <!-- VORES BUKETTER -->
+   <section id="farvenuancer"></section>
 
   <!-- SKRÆDDERSY DIT ABONNOMENT -->
   <section class="grid grid-cols-1 md:grid-cols-2 text-grøn-700">
     <!-- Venstre side med tekst -->
     <div class="ml-2xl">
-      <h1 class="font-headline text-headline2_lg mt-ml">
+      <h1 class="font-headline text-headline2_lg mt-s">
         Dit personlige blomsterabonnement
       </h1>
 
@@ -110,7 +111,7 @@ import index5 from "/public/imgs/index/index5.webp";
           </svg>
 
           <p class="text-body_s font-light mt-xs mb-s">
-            <span class=""></span> Vælg dit budget
+            <span class=""></span> Budget
           </p>
 
           <!-- Farver-->
@@ -179,7 +180,7 @@ import index5 from "/public/imgs/index/index5.webp";
     <!-- Højre side med billede -->
     <div class="flex justify-center items-center">
       <Image
-        src={index0}
+        src={index6}
         alt="Blomsterbillede"
         class="w-full max-w-[500px]h-auto md:w-[675px] md:h-[770px] object-cover"
       />
@@ -189,98 +190,42 @@ import index5 from "/public/imgs/index/index5.webp";
   <!-- BESTIL ABONNOMENT -->
 
   <section
-    class="relative bg-cover bg-center bg-no-repeat h-[708px]"
-    style="background-image: url('/public/imgs/index/index1.webp');"
+    class="bg_image relative bg-cover bg-center bg-no-repeat h-[708px] mt-2xl"
   >
-    <div class="absolute inset-0 bg-white bg-opacity-25"></div>
+    <!-- <div class="absolute inset-0 bg-white bg-opacity-25"></div> -->
 
     <div
       class="relative flex flex-col items-center justify-center h-full text-center"
     >
       <!-- Overskrift -->
-      <h2 class="font-headline text-headline2_lg text-beige-700 mb-lg">
+      <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">
         Bestil din buket her
       </h2>
 
       <!-- Knapper -->
       <div class="flex justify-center space-x-4 gap-lg">
         <!-- Gave abonnement -->
-        <Button class="">Gave abonnement</Button>
+        <Button>Gave abonnement</Button>
 
         <!-- Personligt abonnement -->
-        <Button class="">Personligt abonnement</Button>
+        <Button>Personligt abonnement</Button>
 
         <!-- Erhvervs abonnement -->
-        <Button class="">Erhvervs abonnement</Button>
+        <Button>Erhvervs abonnement</Button>
       </div>
     </div>
   </section>
 
   <!-- INSTAGRAM -->
 
-    <!-- Container til karrusel -->
-  <section class="py-16 bg-white mx-auto">
-    <div class="max-w-[1200px] px-4 mx-auto text-center">
-      <!-- Overskrift -->
-      <h2 class="text-headline2_lg font-headline text-grøn-700 mb-8">
-        Jeres blomster i hjemmet
-      </h2>
 
-      <!-- Karrusel -->
-      <div class="relative flex items-center">
-        <!-- Venstre pil -->
-        <button id="prevBtn" class="absolute left-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">
-          <img src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png" alt="Left Arrow" />
-        </button>
-
-        <!-- Billeder -->
-        <div id="carousel" class="flex overflow-hidden space-x-4">
-          <!-- Billede 1 -->
-          <div class="min-w-[33%] flex-shrink-0">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Blomster 1"
-              class="rounded-lg shadow-md"
-            />
-          </div>
-          <!-- Billede 2 -->
-          <div class="min-w-[33%] flex-shrink-0">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Blomster 2"
-              class="rounded-lg shadow-md"
-            />
-          </div>
-          <!-- Billede 3 -->
-          <div class="min-w-[33%] flex-shrink-0">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Blomster 3"
-              class="rounded-lg shadow-md"
-            />
-          </div>
-          <!-- Billede 4 -->
-          <div class="min-w-[33%] flex-shrink-0">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Blomster 4"
-              class="rounded-lg shadow-md"
-            />
-          </div>
-        </div>
-
-        <!-- Højre pil -->
-        <button id="nextBtn" class="absolute right-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">
-          <img src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png" alt="Right Arrow" />
-        </button>
-      </div>
-    </div>
-  </section>
 
   <!-- ET GRØNNERE VALG -->
   <section class="bg-beige-50 mx-auto py-xl">
     <div class="max-w-[1200px] h-[650px] px-[20px] mx-auto text-center">
-      <h2 class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl">Et grønnere valg</h2>
+      <h2 class="text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl">
+        Et grønnere valg
+      </h2>
       <!-- Kolonner -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-2xl items-start">
         <!-- Kolonne 1 -->
@@ -290,14 +235,17 @@ import index5 from "/public/imgs/index/index5.webp";
             alt="Danske blomster"
             class="mb-s w-12 h-12"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">Danske blomster</h3>
-          <p class="text-grøn-700 mb-s font-light">
-            Vi prioriterer lokalt og dansk. Vores blomster dyrkes på friland uden brug af kunstgødning
-            eller sprøjtemidler, hvilket minimerer transport og beskytter miljøet. Når du vælger danske
-            blomster, støtter du samtidig lokale avlere og bidrager til et sundere klima.
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Danske blomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vi prioriterer lokalt og dansk. Vores blomster dyrkes på friland
+            uden brug af kunstgødning eller sprøjtemidler, hvilket minimerer
+            transport og beskytter miljøet. Når du vælger danske blomster,
+            støtter du samtidig lokale avlere og bidrager til et sundere klima.
           </p>
         </div>
-  
+
         <!-- Kolonne 2 -->
         <div class="flex flex-col items-center text-center flex-grow">
           <img
@@ -305,15 +253,18 @@ import index5 from "/public/imgs/index/index5.webp";
             alt="Friske overskudsblomster"
             class="mb-s w-12 h-12"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">Friske overskudsblomster</h3>
-          <p class="text-grøn-700 mb-s font-light">
-            Vi forvandler overskud til elegance. Gennem eksklusive aftaler med blomstertransportører
-            redder vi blomster, der stadig er friske, men ellers ville være gået til spilde. Disse
-            overskudsblomster er kernen i vores buketter, som er designet til at forene skønhed og
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Friske overskudsblomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vi forvandler overskud til elegance. Gennem eksklusive aftaler med
+            blomstertransportører redder vi blomster, der stadig er friske, men
+            ellers ville være gået til spilde. Disse overskudsblomster er kernen
+            i vores buketter, som er designet til at forene skønhed og
             bæredygtighed.
           </p>
         </div>
-  
+
         <!-- Kolonne 3 -->
         <div class="flex flex-col items-center text-center flex-grow">
           <img
@@ -321,20 +272,44 @@ import index5 from "/public/imgs/index/index5.webp";
             alt="Certificerede blomster"
             class="mb-s w-12 h-12"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">Certificerede blomster</h3>
-          <p class="text-grøn-700 mb-s font-light">
-            Vores sortiment suppleres med blomster fra miljøcertificerede gartnerier rundt om i verden.
-            Disse gartnerier arbejder med respekt for naturen, reducerer vandspild og sikrer gode
-            arbejdsvilkår. Vi prioriterer certificeringer som BIO, MPS og GLOBAL G.A.P., der garanterer
-            ansvarlig produktion.
+          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+            Certificerede blomster
+          </h3>
+          <p class="text-grøn-700 mb-s">
+            Vores sortiment suppleres med blomster fra miljøcertificerede
+            gartnerier rundt om i verden. Disse gartnerier arbejder med respekt
+            for naturen, reducerer vandspild og sikrer gode arbejdsvilkår. Vi
+            prioriterer certificeringer som BIO, MPS og GLOBAL G.A.P., der
+            garanterer ansvarlig produktion.
           </p>
         </div>
       </div>
     </div>
   </section>
-
- 
 </MainLayout>
+
+<style>
+  .bg_image {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+  }
+  .bg_image:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/public/imgs/index/index1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+  }
+</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -364,27 +339,4 @@ import index5 from "/public/imgs/index/index5.webp";
     setInterval(updateText, 1500); // Skift tekst hver 3. sekund
   });
 </script>
-<script>
-  const carousel = document.getElementById('carousel');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
 
-  let scrollPosition = 0;
-  const scrollAmount = carousel.offsetWidth / 3; // Scroll ét billede ad gangen
-
-  nextBtn.addEventListener('click', () => {
-    scrollPosition += scrollAmount;
-    if (scrollPosition > carousel.scrollWidth - carousel.offsetWidth) {
-      scrollPosition = 0;
-    }
-    carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-  });
-
-  prevBtn.addEventListener('click', () => {
-    scrollPosition -= scrollAmount;
-    if (scrollPosition < 0) {
-      scrollPosition = carousel.scrollWidth - carousel.offsetWidth;
-    }
-    carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-  });
-</script>
