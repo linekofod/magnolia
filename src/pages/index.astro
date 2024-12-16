@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Indexbanner from "../components/Indexbanner.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import index0 from "/public/imgs/index/index_0.webp";
@@ -12,113 +13,178 @@ import index5 from "/public/imgs/index/index5.webp";
 ---
 
 <MainLayout title="Magnolia">
+  <!-- HERO -->
 
-    <!-- HERO -->
+  <!-- ROLLING BANNER -->
 
-    <!-- ROLLING BANNER -->
+  <!-- OM OS -->
 
-    <!-- OM OS -->
-
-    <section class="px-4xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
-        <!-- Billede (venstre kolonne) -->
-        <div>
-          <Image
-            src={index0}
-            alt=""
-            class="w-[764px] h-[687px]"
-          />
-        </div>
-    
-        <!-- Tekst (højre kolonne) -->
-        <div>
-          <h2 class="font-headline text-headline2_lg text-grøn-700 mb-4xs">MAGNOLIA</h2>
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
-            blomsterabonnement på dine betingelser
-          </h3>
-          <p class="text-grøn-700 mb-s">
-            Hos Magnolia tilbyder vi et unikt blomsterabonnement, der kombinerer
-            bæredygtighed og skønhed. Vores buketter er ikke kun designet til at
-            bringe glæde til dit hjem, men også til at skabe en grønnere fremtid. Vi
-            forener overskudsblomster, miljøcertificerede valg og lokale avlere,
-            hvilket gør vores abonnement både ansvarligt og smukt.
-          </p>
-          <p class="text-grøn-700 mb-s">
-            Oplev hvordan blomster kan være en del af en bæredygtig livsstil – altid
-            på dine betingelser, og leveret direkte til døren. Vi skaber smukke
-            øjeblikke med omtanke for planeten.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- DYNAMISK TEKSTUDSKIFTNING -->
-
-    <section class="px-4xl py-lg bg-beige-50 mt-6xl mb-6xl h-[484px] flex items-center justify-left text-left">
+  <section class="px-4xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+      <!-- Billede (venstre kolonne) -->
       <div>
-        <h2 class="font-headline text-headline3_lg text-grøn-700">
-          HAR DU HUSKET AT FORKÆLE
-          <span class="text-dynamic font-headline text-headline2_md text-beige-500">
-          </span>
-        </h2>
-        <h2 class="font-headline text-headline3_lg text-grøn-700 mt-md">
-          MED ET BLOMSTERABONNEMENT
-        </h2>
-        <h2 class="font-headline text-headline3_lg text-grøn-700 mt-md">
-          HOS MAGNOLIA?
-        </h2>
+        <Image src={index0} alt="" class="w-[764px] h-[687px]" />
       </div>
-    </section>
 
-    <!-- VORES BUKETTER -->
-
-    <!-- SKRÆDDERSY DIT ABONNOMENT  -->
-
-    <!-- BESTIL ABONNOMENT -->
-
-    <section class="relative bg-cover bg-center bg-no-repeat h-[708px]" style="background-image: url('/public/imgs/index/index1.webp');">
-      <div class="absolute inset-0 bg-white bg-opacity-25"></div>
-
-      <div class="relative flex flex-col items-center justify-center h-full text-center">
-        <!-- Overskrift -->
-        <h2 class="font-headline text-headline2_lg text-grøn-700 mb-lg">Bestil din buket her</h2>
-        
-        <!-- Knapper -->
-        <div class="flex justify-center space-x-4 gap-lg">
-
-          <!-- Gave abonnement -->
-          <Button class="">Gave abonnement</Button>
-          
-          <!-- Personligt abonnement -->
-          <Button class="">Personligt abonnement</Button>
-          
-          <!-- Erhvervs abonnement -->
-          <Button class="">Erhvervs abonnement</Button>
-        </div>
+      <!-- Tekst (højre kolonne) -->
+      <div>
+        <h2 class="font-headline text-headline2_lg text-beige-700 mb-4xs">
+          MAGNOLIA
+        </h2>
+        <h3 class="font-headline text-headline3_s text-beige-700 mb-lg">
+          blomsterabonnement på dine betingelser
+        </h3>
+        <p class="text-beige-700 mb-s">
+          Hos Magnolia tilbyder vi et unikt blomsterabonnement, der kombinerer
+          bæredygtighed og skønhed. Vores buketter er ikke kun designet til at
+          bringe glæde til dit hjem, men også til at skabe en grønnere fremtid.
+          Vi forener overskudsblomster, miljøcertificerede valg og lokale
+          avlere, hvilket gør vores abonnement både ansvarligt og smukt.
+        </p>
+        <p class="text-beige-700 mb-s">
+          Oplev hvordan blomster kan være en del af en bæredygtig livsstil –
+          altid på dine betingelser, og leveret direkte til døren. Vi skaber
+          smukke øjeblikke med omtanke for planeten.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- INSTAGRAM -->
+  <!-- DYNAMISK TEKSTUDSKIFTNING -->
 
-    <!-- ET GRØNNERE VALG -->
+  <section
+    class="px-4xl py-lg bg-beige-50 mt-6xl mb-6xl h-[484px] flex items-center justify-left text-left"
+  >
+    <div>
+      <h2 class="font-headline text-headline3_lg text-beige-700">
+        HAR DU HUSKET AT FORKÆLE
+        <span
+          class="text-dynamic font-headline text-headline2_md text-beige-500"
+        >
+        </span>
+      </h2>
+      <h2 class="font-headline text-headline3_lg text-beige-700 mt-md">
+        MED ET BLOMSTERABONNEMENT
+      </h2>
+      <h2 class="font-headline text-headline3_lg text-beige-700 mt-md">
+        HOS MAGNOLIA?
+      </h2>
+    </div>
+  </section>
 
+  <!-- VORES BUKETTER -->
 
+  <!-- SKRÆDDERSY DIT ABONNOMENT -->
+  <section class="mx-auto grid grid-cols-1 md:grid-cols-2 mt-10 text-grøn-700">
+    <!-- Venstre side med tekst -->
+    <div class="p-6 md:pl-10 lg:pl-20 mr-4xl">
+      <h1 class="font-headline text-headline1_lg mt-6">
+        Dit personlige blomsterabonnement
+      </h1>
+
+      <p class="text-body_lg font-light mt-4">
+        Gør dit hjem smukkere med et blomsterabonnement, der er tilpasset dine
+        ønsker.
+      </p>
+      <div>
+        <!-- Ikoner og tekst -->
+        <p class="text-body_s font-light mt-2xs flex items-center">
+          <span class="mr-2"></span> Vælg dit budget
+        </p>
+        <p class="text-body_s font-light mt-2xs flex items-center">
+          <span class="mr-2"></span> Farvepræferencer
+        </p>
+        <p class="text-body_s font-light mt-2xs flex items-center">
+          <span class="items-center"></span> Leveringsdato
+        </p>
+      </div>
+      <p class="text-body_lg font-light mt-6">
+        Skulle du ønske at pause dit abonnement, springe leveringer over eller
+        opsige det, gør vi processen enkel og smertefri. Start dit abonnement i
+        dag, og oplev glæden ved altid at have friske, smukke blomster i dit
+        hjem.
+      </p>
+
+      <p class="text-body_lg font-light mt-4">
+        Bestil dit abonnement i dag og lad Magnolia bringe skønhed og ansvar ind
+        i din hverdag.
+      </p>
+    </div>
+
+    <!-- Højre side med billede -->
+    <div class="flex justify-center items-center">
+      <Image
+        src={index0}
+        alt="Blomsterbillede"
+        class="w-full max-w-[500px]h-auto md:w-[675px] md:h-[770px] object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- BESTIL ABONNOMENT -->
+
+  <section
+    class="relative bg-cover bg-center bg-no-repeat h-[708px]"
+    style="background-image: url('/public/imgs/index/index1.webp');"
+  >
+    <div class="absolute inset-0 bg-white bg-opacity-25"></div>
+
+    <div
+      class="relative flex flex-col items-center justify-center h-full text-center"
+    >
+      <!-- Overskrift -->
+      <h2 class="font-headline text-headline2_lg text-beige-700 mb-lg">
+        Bestil din buket her
+      </h2>
+
+      <!-- Knapper -->
+      <div class="flex justify-center space-x-4 gap-lg">
+        <!-- Gave abonnement -->
+        <Button class="">Gave abonnement</Button>
+
+        <!-- Personligt abonnement -->
+        <Button class="">Personligt abonnement</Button>
+
+        <!-- Erhvervs abonnement -->
+        <Button class="">Erhvervs abonnement</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+
+  <!-- ET GRØNNERE VALG -->
+
+  <!-- FOOTER -->
+
+  <!-- SAMARBEJDSPARTNERE -->
 </MainLayout>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-  const dynamicText = document.querySelector(".text-dynamic");
-  const phrases = [
-   "DEN NYBAGTE MOR", "FØDSELAREN", "TEAMET", "DIN KÆRE", "DIN MOR", "JUBILAREN", "ARBEJDSPLADSEN", "DIN MORMOR", "DIN SØSTER", "KONTORET", "STUDENTEN", "DINE KOLLEGAER"
-  ];
+    const dynamicText = document.querySelector(".text-dynamic");
+    const phrases = [
+      "DEN NYBAGTE MOR",
+      "FØDSELAREN",
+      "TEAMET",
+      "DIN KÆRE",
+      "DIN MOR",
+      "JUBILAREN",
+      "ARBEJDSPLADSEN",
+      "DIN MORMOR",
+      "DIN SØSTER",
+      "KONTORET",
+      "STUDENTEN",
+      "DINE KOLLEGAER",
+    ];
 
-  let index = 0;
+    let index = 0;
 
-  function updateText() {
-    dynamicText.textContent = phrases[index];
-    index = (index + 1) % phrases.length; // Loop tilbage til start
-  }
+    function updateText() {
+      dynamicText.textContent = phrases[index];
+      index = (index + 1) % phrases.length; // Loop tilbage til start
+    }
 
-  setInterval(updateText, 1500); // Skift tekst hver 3. sekund
-});
+    setInterval(updateText, 1500); // Skift tekst hver 3. sekund
+  });
 </script>
