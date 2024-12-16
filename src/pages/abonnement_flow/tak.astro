@@ -1,0 +1,36 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Button from "../../components/Button.astro";
+import Link from "../../components/Link.astro";
+---
+
+<MainLayout title="Bekræftelse">
+  <section
+    class="bg-beige-50 h-screen w-full flex flex-col items-start px-s md:px-lg py-s md:py-lg text-grøn-700"
+    id="tak"
+  >
+    <div class="flex flex-col gap-ml mx-0 lg:mx-auto max-w-3xl">
+      <!-- Indhold -->
+      <div class="flex flex-col gap-m">
+        <div class="flex flex-col gap-2xs">
+          <h2 class="font-headline text-headline2_s md:text-headline2_lg">
+            Tak fordi du valgte os!
+          </h2>
+          <p class="text-secondbody_s md:text-secondbody_lg font-light">
+            Vi glæder os til at levere smukke blomster til dig. <br />Du vil
+            snart modtage en bekræftelse på e-mail. <br />Har du spørgsmål, er
+            du altid velkommen til at kontakte os.
+          </p>
+        </div>
+
+        <p class="text-secondbody_s md:text-secondbody_lg font-light">
+          Ændringer i dit abonnement foretages via din private profil <a
+            href="/"
+            class="underline underline-offset-4 decoration-grøn-700 decoration-1"
+            >her.</a
+          >
+        </p>
+      </div>
+    </div>
+  </section>
+</MainLayout>
