@@ -190,8 +190,7 @@ import index6 from "/public/imgs/index/index6.webp";
   <!-- BESTIL ABONNOMENT -->
 
   <section
-    class="relative bg-cover bg-center bg-no-repeat h-[708px]"
-    style="background-image: url('/public/imgs/index/index1.webp') ; "
+    class="bg_image relative bg-cover bg-center bg-no-repeat h-[708px] mt-2xl"
   >
     <!-- <div class="absolute inset-0 bg-white bg-opacity-25"></div> -->
 
@@ -286,6 +285,29 @@ import index6 from "/public/imgs/index/index6.webp";
     </div>
   </section>
 </MainLayout>
+
+<style>
+  .bg_image {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+  }
+  .bg_image:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/public/imgs/index/index1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+  }
+</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
