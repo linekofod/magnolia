@@ -7,3 +7,9 @@
     @apply max-w-prose;
   }
 }
+
+@layer utilities {
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    @apply cursor-pointer;
+  }
+}
