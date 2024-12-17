@@ -65,69 +65,69 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       >
     </div>
     <!-- Højre blomsterkrans -->
-    <div>
+    <div class="mangeelementerinview">
       <Image
         src={blomst_1}
         alt=""
-        class="w-1/3 xl:w-1/4 absolute -right-[8%] xl:right-[17%] top-[53%] xl:-top-[27%] z-10"
+        class="w-1/3 xl:w-1/4 absolute -right-[8%] xl:right-[17%] top-[53%] xl:-top-[27%] z-10 mangeelementer1"
       />
       <Image
         src={blomst_2}
         alt=""
-        class="w-1/3 absolute right-[13%] xl:-right-[6%] top-[56%] xl:-top-[35%]"
+        class="w-1/3 absolute right-[13%] xl:-right-[6%] top-[56%] xl:-top-[35%] mangeelementer2"
       />
       <Image
         src={blomst_3}
         alt=""
-        class="w-1/3 md:w-1/4 absolute right-[32%] xl:-right-[5%] top-[56%] xl:top-[4%]"
+        class="w-1/3 md:w-1/4 absolute right-[32%] xl:-right-[5%] top-[56%] xl:top-[4%] mangeelementer3"
       />
       <Image
         src={blomst_4}
         alt=""
-        class="w-1/3 md:w-1/4 absolute right-[48%] xl:-right-[5%] top-[56%] xl:top-[30%] z-10"
+        class="w-1/3 md:w-1/4 absolute right-[48%] xl:-right-[5%] top-[56%] xl:top-[30%] z-10 mangeelementer4"
       />
       <Image
         src={blomst_5}
         alt=""
-        class="w-1/3 xl:w-1/2 absolute right-[65%] xl:-right-[15%] top-[56%] xl:top-[25%]"
+        class="w-1/3 xl:w-1/2 absolute right-[65%] xl:-right-[15%] top-[56%] xl:top-[25%] mangeelementer5"
       />
       <Image
         src={blomst_6}
         alt=""
-        class="w-1/3 absolute -left-[10%] xl:left-[57%] top-[50%] xl:top-[53%]"
+        class="w-1/3 absolute -left-[10%] xl:left-[57%] top-[50%] xl:top-[53%] mangeelementer6"
       />
     </div>
     <!-- Venstre blomsterkrans -->
-    <div>
+    <div class="mangeelementerinview">
       <Image
         src={blomst_7}
         alt=""
-        class="w-1/3 xl:w-1/4 absolute -right-[8%] xl:right-[60%] top-[8%] md:top-[0%] xl:-top-[24%] z-10"
+        class="w-1/3 xl:w-1/4 absolute -right-[8%] xl:right-[60%] top-[8%] md:top-[0%] xl:-top-[24%] z-10 mangeelementer7"
       />
       <Image
         src={blomst_8}
         alt=""
-        class="w-1/3 md:w-1/4 absolute right-[12%] xl:right-[78%] top-[5%] md:top-[0%] xl:-top-[15%] z-30"
+        class="w-1/3 md:w-1/4 absolute right-[12%] xl:right-[78%] top-[5%] md:top-[0%] xl:-top-[15%] z-30 mangeelementer8"
       />
       <Image
         src={blomst_9}
         alt=""
-        class="w-1/3 absolute right-[28%] xl:right-[78%] top-[3%] md:-top-[8%] xl:-top-[8%] z-20"
+        class="w-1/3 absolute right-[28%] xl:right-[78%] top-[3%] md:-top-[8%] xl:-top-[8%] z-20 mangeelementer9"
       />
       <Image
         src={blomst_10}
         alt=""
-        class="w-1/3 xl:w-1/4 absolute right-[46%] xl:right-[74%] top-[5%] md:-top-[5%] xl:top-[40%] z-10"
+        class="w-1/3 xl:w-1/4 absolute right-[46%] xl:right-[74%] top-[5%] md:-top-[5%] xl:top-[40%] z-10 mangeelementer10"
       />
       <Image
         src={blomst_11}
         alt=""
-        class="w-1/3 absolute left-[5%] xl:-left-[12%] top-[6%] md:-top-[4%] xl:top-[42%]"
+        class="w-1/3 absolute left-[5%] xl:-left-[12%] top-[6%] md:-top-[4%] xl:top-[42%] mangeelementer11"
       />
       <Image
         src={blomst_12}
         alt=""
-        class="w-1/4 xl:w-1/5 absolute -left-[7%] xl:left-[12%] top-[10%] md:top-[3%] xl:top-[70%] rotate-90 xl:rotate-0"
+        class="w-1/4 xl:w-1/5 absolute -left-[7%] xl:left-[12%] top-[10%] md:top-[3%] xl:top-[70%] rotate-90 xl:rotate-0 mangeelementer12"
       />
     </div>
   </section>
@@ -924,12 +924,86 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   const fadein = document.querySelector(".fadein");
 
   inView(fadein, () => {
-    fadein.classList.add("animate__animated", "animate__fadeIn");
+    fadein.classList.add(
+      "animate__animated",
+      "animate__fadeIn",
+      "animate__slower"
+    );
   });
 
   const fadein2 = document.querySelector(".fadein2");
 
   inView(fadein2, () => {
-    fadein2.classList.add("animate__animated", "animate__fadeIn");
+    fadein2.classList.add(
+      "animate__animated",
+      "animate__fadeIn",
+      "animate__slower"
+    );
+  });
+
+  // HERO BLOMSTER ANIMATION
+
+  /* Mange elementer der animerer ind */
+  inView(".mangeelementerinview", () => {
+    animate(
+      ".mangeelementer1",
+      { x: [-200, 0], y: [0, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer2",
+      { x: [-100, 0], y: [0, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer3",
+      { x: [-300, 0], y: [0, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer4",
+      { x: [-580, 0], y: [-50, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer5",
+      { x: [-100, 0], y: [0, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer6",
+      { x: [-200, 0], y: [-100, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer7",
+      { x: [200, 0], y: [200, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer8",
+      { x: [100, 0], y: [0, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer9",
+      { x: [300, 0], y: [0, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer10",
+      { x: [-100, 0], y: [0, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer11",
+      { x: [400, 0], y: [0, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
+    animate(
+      ".mangeelementer12",
+      { x: [500, 0], y: [-100, 0], scale: [1.5, 1] },
+      { duration: 5 }
+    );
   });
 </script>

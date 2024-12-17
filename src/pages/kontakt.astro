@@ -67,6 +67,10 @@ import kontakt from "/public/imgs/kontakt/kontakt.webp";
   const fadein = document.querySelector(".fadein");
 
   inView(fadein, () => {
-    fadein.classList.add("animate__animated", "animate__fadeIn");
+    fadein.classList.add(
+      "animate__animated",
+      "animate__fadeIn",
+      "animate__slower"
+    );
   });
 </script>
