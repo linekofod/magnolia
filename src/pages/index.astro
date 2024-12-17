@@ -187,7 +187,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       >
         HAR DU HUSKET AT FORKÆLE
         <span
-          class="text-dynamic font-headline text-headline2_md text-grøn-200"
+          class="text-dynamic font-headline text-headline2_md text-beige-600"
         >
         </span>
       </h2>
@@ -654,7 +654,9 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         class="grid grid-cols-1 md:grid-cols-3 gap-s md:gap-2xl items-baseline"
       >
         <!-- Kolonne 1 -->
-        <div class="flex flex-col items-center text-center flex-grow">
+        <div
+          class="flex flex-col items-center text-center flex-grow inviewfadein1 opacity-0"
+        >
           <img
             src="https://img.icons8.com/ios/50/map-marker--v1.png"
             alt="Danske blomster"
@@ -672,7 +674,9 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         </div>
 
         <!-- Kolonne 2 -->
-        <div class="flex flex-col items-center text-center flex-grow">
+        <div
+          class="flex flex-col items-center text-center flex-grow inviewfadein2 opacity-0"
+        >
           <img
             src="https://img.icons8.com/ios/50/flower--v1.png"
             alt="Friske overskudsblomster"
@@ -691,7 +695,9 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         </div>
 
         <!-- Kolonne 3 -->
-        <div class="flex flex-col items-center text-center flex-grow">
+        <div
+          class="flex flex-col items-center text-center flex-grow inviewfadein3 opacity-0"
+        >
           <img
             src="https://img.icons8.com/external-line-lima-studio/64/external-bouquet-event-line-lima-studio.png"
             alt="Certificerede blomster"
@@ -781,6 +787,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
 </style>
 
 <script>
+  // CAROUSEL
   const buketterCarousel = document.getElementById("buketter-carousel");
   const buketterPrevBtn = document.getElementById("buketter-prev-btn");
   const buketterNextBtn = document.getElementById("buketter-next-btn");
@@ -816,9 +823,8 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   buketterNextBtn.addEventListener("click", () => moveCarousel(1));
 
   updateActiveSlide();
-</script>
 
-<script>
+  // DYNAMISK TEKSTSKIFT
   document.addEventListener("DOMContentLoaded", () => {
     const dynamicText = document.querySelector(".text-dynamic");
     const phrases = [
@@ -845,8 +851,8 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
 
     setInterval(updateText, 1500); // Skift tekst hver 3. sekund
   });
-</script>
-<script>
+
+  // INSTAGRAM CAROUSEL
   const carousel = document.getElementById("carousel");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
@@ -862,5 +868,30 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       left: -scrollStep,
       behavior: "smooth",
     });
+  });
+
+  // ANIMATIONER
+  import { inView, animate } from "motion";
+
+  /* inView & return på grønnere valg */
+  inView(".inviewfadein1", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
+  });
+
+  inView(".inviewfadein2", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { delay: 0.5, duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
+  });
+
+  inView(".inviewfadein3", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { delay: 1, duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
   });
 </script>
