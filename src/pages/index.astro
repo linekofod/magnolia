@@ -132,11 +132,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   </section>
 
   <!-- ROLLING BANNER -->
-  <Indexbanner />
+  <div class="mb-lg md:mb-4xl">
+    <Indexbanner />
+  </div>
 
   <!-- OM OS -->
-  <section class="px-xs md:px-4xl">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+  <section class="px-xs md:px-4xl mb-xl md:mb-4xl">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-sm md:gap-xl items-center">
       <!-- Billede (venstre kolonne) -->
       <div>
         <Image
@@ -153,28 +155,31 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         >
           MAGNOLIA
         </h2>
-        <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+        <h3 class="font-headline text-headline3_s text-grøn-700 mb-m">
           blomsterabonnement på dine betingelser
         </h3>
-        <p class="text-grøn-700 mb-s font-light">
-          Hos Magnolia tilbyder vi et unikt blomsterabonnement, der kombinerer
-          bæredygtighed og skønhed. Vores buketter er ikke kun designet til at
-          bringe glæde til dit hjem, men også til at skabe en grønnere fremtid.
-          Vi forener overskudsblomster, miljøcertificerede valg og lokale
-          avlere, hvilket gør vores abonnement både ansvarligt og smukt.
-        </p>
-        <p class="text-grøn-700 mb-s font-light">
-          Oplev hvordan blomster kan være en del af en bæredygtig livsstil –
-          altid på dine betingelser, og leveret direkte til døren. Vi skaber
-          smukke øjeblikke med omtanke for planeten.
-        </p>
+        <div class="flex flex-col gap-s">
+          <p class="text-grøn-700 font-light">
+            Hos Magnolia tilbyder vi et unikt blomsterabonnement, der kombinerer
+            bæredygtighed og skønhed. Vores buketter er ikke kun designet til at
+            bringe glæde til dit hjem, men også til at skabe en grønnere
+            fremtid. Vi forener overskudsblomster, miljøcertificerede valg og
+            lokale avlere, hvilket gør vores abonnement både ansvarligt og
+            smukt.
+          </p>
+          <p class="text-grøn-700 font-light">
+            Oplev hvordan blomster kan være en del af en bæredygtig livsstil –
+            altid på dine betingelser, og leveret direkte til døren. Vi skaber
+            smukke øjeblikke med omtanke for planeten.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- DYNAMISK TEKSTUDSKIFTNING -->
   <section
-    class="px-xl md:px-4xl py-lg bg-beige-50 mt-xl mb-xl ml:mt-6xl ml:mb-6xl h-fit ml:h-[484px] flex items-center justify-left text-left"
+    class="px-xl md:px-4xl py-lg md:py-4xl bg-beige-50 h-fit flex items-center justify-left text-left mb-xl md:mb-4xl"
   >
     <div>
       <h2
@@ -196,13 +201,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
 
   <!-- VORES BUKETTER -->
   <section
-    class="bg-white flex items-center justify-center min-h-screen mb-4xl"
+    class="bg-neutral-50 flex items-center justify-center min-h-screen mb-xl md:mb-4xl"
   >
     <section id="buketter-slider" class="text-center w-full max-w-6xl mx-auto">
       <h2
-        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-lg"
+        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-sm md:mb-lg"
       >
-        VORES BUKETTER
+        Vores buketter
       </h2>
       <div class="relative">
         <!-- Venstre pil -->
@@ -335,103 +340,109 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
 
   <!-- SKRÆDDERSY DIT ABONNOMENT -->
   <section
-    class="grid grid-cols-1 md:grid-cols-2 gap-sm ml:gap-0 text-grøn-700"
+    class="grid grid-cols-1 lg:grid-cols-2 gap-sm text-grøn-700 px-s mb-xl md:mb-4xl"
   >
     <!-- Venstre side med tekst -->
-    <div class="ml-s ml:ml-2xl">
-      <h1 class="font-headline text-headline2_s md:text-headline2_lg mt-s">
-        Dit personlige blomsterabonnement
+    <div class="md:ml-m">
+      <h1
+        class="font-headline text-headline2_s md:text-headline2_lg mt-s mb-sm md:mb-m"
+      >
+        Dit personlige blomster abonnement
       </h1>
 
-      <div class="mt-lg">
-        <p class="text-body_lg font-light mt-s">
+      <div class="flex flex-col gap-s">
+        <p class="text-body_s md:text-body_lg font-light">
           Gør dit hjem smukkere med et blomsterabonnement, der er <br /> tilpasset
           dine ønsker.
         </p>
 
         <!-- Ikoner -->
+        <div
+          class="flex flex-col gap-sm justify-center items-center -ml-2xl mb-xs"
+        >
+          <!-- Budget -->
+          <div class="flex flex-col gap-3xs items-center">
+            <svg
+              class="w-[37px] h-[37px]"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.9"
+                d="M17 8H5m12 0a1 1 0 0 1 1 1v2.6M17 8l-4-4M5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.6M5 8l4-4 4 4m6 4h-4a2 2 0 1 0 0 4h4a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1Z"
+              ></path>
+            </svg>
 
-        <!-- budget -->
-        <div class="flex-col flex justify-center items-center mt-s -ml-xl">
-          <svg
-            class="w-[37px] h-[37px] text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="0.9"
-              d="M17 8H5m12 0a1 1 0 0 1 1 1v2.6M17 8l-4-4M5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.6M5 8l4-4 4 4m6 4h-4a2 2 0 1 0 0 4h4a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1Z"
-            ></path>
-          </svg>
-
-          <p class="text-body_s font-light mt-xs mb-s">
-            <span class=""></span> Budget
-          </p>
+            <p class="text-body_s font-light">
+              <span class=""></span> Budget
+            </p>
+          </div>
 
           <!-- Farver-->
+          <div class="flex flex-col gap-3xs items-center">
+            <svg
+              class="w-[37px] h-[37px]"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.9"
+                d="M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"
+              ></path>
+            </svg>
 
-          <svg
-            class="w-[37px] h-[37px] text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="0.9"
-              d="M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"
-            ></path>
-          </svg>
+            <p class="text-body_s font-light">
+              <span class=""></span> Farvepræferencer
+            </p>
+          </div>
 
-          <p class="text-body_s font-light mt-xs mb-s">
-            <span class=""></span> Farvepræferencer
-          </p>
+          <!-- Levering -->
+          <div class="flex flex-col gap-3xs items-center">
+            <svg
+              class="w-[37px] h-[37px]"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.9"
+                d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+              ></path>
+            </svg>
 
-          <!-- levering -->
-
-          <svg
-            class="w-[37px] h-[37px] text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="0.9"
-              d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
-            ></path>
-          </svg>
-
-          <p class="text-body_s font-light mt-xs mb-s">
-            <span class=""></span> Leveringsdato
-          </p>
+            <p class="text-body_s font-light">
+              <span class=""></span> Leveringsdato
+            </p>
+          </div>
         </div>
 
-        <p class="text-body_lg font-light mb-s ml:mr-4xl mt-s">
+        <p class="text-body_s md:text-body_lg font-light">
           Skulle du ønske at pause dit abonnement, springe leveringer over eller
           opsige det, gør vi processen enkel og smertefri. Start dit abonnement
           i dag, og oplev glæden ved altid at have friske, smukke blomster i dit
           hjem.
         </p>
-
-        <p class="text-body_lg font-light ml:mr-4xl">
+        <p class="text-body_s md:text-body_lg font-light">
           Bestil dit abonnement i dag og lad Magnolia bringe skønhed og ansvar
           ind i din hverdag.
         </p>
@@ -443,42 +454,37 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       <Image
         src={index6}
         alt="Blomsterbillede"
-        class="w-full max-w-[500px]h-auto md:w-[675px] md:h-[770px] object-cover"
+        class="w-full h-full aspect-[1/1] object-cover"
       />
     </div>
   </section>
 
   <!-- BESTIL ABONNOMENT -->
-
-  <section
-    class="bg_image relative bg-cover bg-center bg-no-repeat h-[708px] mt-2xl"
-  >
+  <section class="bg_image mb-xl md:mb-4xl">
     <!-- <div class="absolute inset-0 bg-white bg-opacity-25"></div> -->
 
     <div
-      class="relative flex flex-col items-center justify-center h-full text-center"
+      class="relative flex flex-col items-center justify-center h-full text-center px-m py-4xl"
     >
       <!-- Overskrift -->
       <h2
-        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-lg"
+        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-sm md:mb-lg"
       >
         Bestil din buket her
       </h2>
 
       <!-- Knapper -->
-      <div
-        class="flex flex-col md:flex-row justify-center space-x-4 gap-2xs md:gap-lg"
-      >
+      <div class="flex flex-col md:flex-row justify-center gap-2xs md:gap-m">
         <div>
           <div class="block md:hidden">
             <!-- Button for small screens -->
-            <Button size="small" href="/abonnement_flow/budget"
+            <Button size="small" href="/personligt_abonnement"
               >Personligt abonnement</Button
             >
           </div>
           <div class="hidden md:block">
             <!-- Button for large screens -->
-            <Button size="large" href="/abonnement_flow/budget"
+            <Button size="large" href="/personligt_abonnement"
               >Personligt abonnement</Button
             >
           </div>
@@ -486,13 +492,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         <div>
           <div class="block md:hidden">
             <!-- Button for small screens -->
-            <Button size="small" href="/abonnement_flow/budget"
+            <Button size="small" href="/personligt_abonnement"
               >Gave abonnenemt</Button
             >
           </div>
           <div class="hidden md:block">
             <!-- Button for large screens -->
-            <Button size="large" href="/abonnement_flow/budget"
+            <Button size="large" href="/personligt_abonnement"
               >Gave abonnenemt</Button
             >
           </div>
@@ -500,13 +506,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         <div>
           <div class="block md:hidden">
             <!-- Button for small screens -->
-            <Button size="small" href="/abonnement_flow/budget"
+            <Button size="small" href="/personligt_abonnement"
               >Erhvervs abonnement</Button
             >
           </div>
           <div class="hidden md:block">
             <!-- Button for large screens -->
-            <Button size="large" href="/abonnement_flow/budget"
+            <Button size="large" href="/personligt_abonnement"
               >Erhvervs abonnement</Button
             >
           </div>
@@ -516,12 +522,12 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   </section>
 
   <!-- INSTAGRAM -->
-  <section class="bg-white flex items-center justify-center min-h-screen">
+  <section class="bg-white flex justify-center mb-xl md:mb-4xl">
     <div class="text-center">
       <h2
-        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-lg"
+        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-sm md:mb-lg"
       >
-        JERES BLOMSTER I HJEMMET
+        Jeres blomster i hjemmet
       </h2>
       <div class="relative w- max-w-5xl mx-auto">
         <!-- Left Arrow -->
@@ -634,27 +640,30 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       </div>
     </div>
   </section>
+
   <!-- ET GRØNNERE VALG -->
-  <section class="bg-beige-50 mx-auto py-xl">
-    <div class="max-w-[1200px] h-[650px] px-[20px] mx-auto text-center">
+  <section class="bg-beige-50 mx-auto py-xl mb-xl md:mb-4xl text-grøn-700">
+    <div class="max-w-[1200px] px-sm md:px-s mx-auto text-center">
       <h2
-        class="text-headline2_s md:text-headline2_lg font-headline text-grøn-700 pt-xl mb-3xl"
+        class="text-headline2_s md:text-headline2_lg font-headline mb-sm md:mb-m"
       >
         Et grønnere valg
       </h2>
       <!-- Kolonner -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-2xl items-start">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-s md:gap-2xl items-baseline"
+      >
         <!-- Kolonne 1 -->
         <div class="flex flex-col items-center text-center flex-grow">
           <img
             src="https://img.icons8.com/ios/50/map-marker--v1.png"
             alt="Danske blomster"
-            class="mb-s w-12 h-12"
+            class="mb-2xs md:mb-s"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+          <h3 class="font-headline text-headline3_s mb-2xs md:mb-s">
             Danske blomster
           </h3>
-          <p class="text-grøn-700 mb-s">
+          <p class="mb-s text-body_s md:text-body_s font-light">
             Vi prioriterer lokalt og dansk. Vores blomster dyrkes på friland
             uden brug af kunstgødning eller sprøjtemidler, hvilket minimerer
             transport og beskytter miljøet. Når du vælger danske blomster,
@@ -667,12 +676,12 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           <img
             src="https://img.icons8.com/ios/50/flower--v1.png"
             alt="Friske overskudsblomster"
-            class="mb-s w-12 h-12"
+            class="mb-2xs md:mb-s"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+          <h3 class="font-headline text-headline3_s mb-2xs md:mb-s">
             Friske overskudsblomster
           </h3>
-          <p class="text-grøn-700 mb-s">
+          <p class="mb-s text-body_s md:text-body_s font-light">
             Vi forvandler overskud til elegance. Gennem eksklusive aftaler med
             blomstertransportører redder vi blomster, der stadig er friske, men
             ellers ville være gået til spilde. Disse overskudsblomster er kernen
@@ -686,12 +695,12 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           <img
             src="https://img.icons8.com/external-line-lima-studio/64/external-bouquet-event-line-lima-studio.png"
             alt="Certificerede blomster"
-            class="mb-s w-12 h-12"
+            class="mb-2xs md:mb-s"
           />
-          <h3 class="font-headline text-headline3_s text-grøn-700 mb-lg">
+          <h3 class="font-headline text-headline3_s mb-2xs md:mb-s">
             Certificerede blomster
           </h3>
-          <p class="text-grøn-700 mb-s">
+          <p class="mb-s text-body_s md:text-body_s font-light">
             Vores sortiment suppleres med blomster fra miljøcertificerede
             gartnerier rundt om i verden. Disse gartnerier arbejder med respekt
             for naturen, reducerer vandspild og sikrer gode arbejdsvilkår. Vi
@@ -752,7 +761,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   .bg_image {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
   }
