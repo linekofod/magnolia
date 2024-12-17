@@ -5,27 +5,120 @@ import "../styles/tailwind.css";
 import "animate.css";
 const { title } = Astro.props;
 ---
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/public/imgs/favicon.png" />
     <link rel="stylesheet" href="https://use.typekit.net/khh5qru.css" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{Astro.props.title}</title>
   </head>
   <body>
-    <header>
-      <Header />
-    </header>
 
-    <main>
-      <slot />
-    </main>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+      <header>
+        <Header />
+      </header>
 
-    <footer>
-      <Footer />
-    </footer>
+      <main>
+        <slot />
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+
   </body>
 </html>
+
+<style>
+    /* Progress-bar */
+  .progress-bar {
+  width: 8px; 
+  height: 0%; 
+  position: fixed;
+  top: 0;
+  right: 0;
+  background:#45452D;
+  transition: width 0.25s ease-out;
+  z-index: 9999;
+}
+
+/* Custom cursor */
+
+/* Standard custom cursor */
+.custom-cursor {
+  width: 50px; /* Størrelse på cursoren */
+  height: 50px;
+  background-image: url('/public/imgs/custom_cursor/cursor.png'); /* Standard cursor-billede */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: background-image 0.2s ease-in-out; /* Blød overgang mellem billeder */
+}
+
+/* Hover-status */
+.custom-cursor.hover {
+  background-image: url('/public/imgs/custom_cursor/pointer.png'); /* hover-billede */
+}
+
+/* Områder, der trigger cursorændring */
+.hover-area {
+  margin: 20px;
+  padding: 50px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  text-align: center;
+  cursor: none; /* Skjul standard-cursor */
+}
+</style>
+<script>
+  // PROGRESS-BAR
+
+ // Hent progress-bar elementet
+const progressBar = document.getElementById('progress-bar');
+
+// Funktion til at opdatere progress bar baseret på scroll
+function updateProgressBar() {
+  // Beregn dokumentets samlede højde og hvor langt der er scrollt
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercentage = (scrollTop / docHeight) * 100;
+
+  // Opdater progress barens højde som en procentdel af scroll-positionen
+  progressBar.style.height = scrollPercentage + "%";
+}
+
+// Lyt efter scroll-hændelser og opdater progress bar
+window.addEventListener('scroll', updateProgressBar);
+
+  // CUSTOM CURSOR
+
+// Find cursor-elementet
+const customCursor = document.querySelector('.custom-cursor');
+
+// Opdater cursorens position ved musens bevægelse
+document.addEventListener('mousemove', (e) => {
+  customCursor.style.left = `${e.pageX}px`;
+  customCursor.style.top = `${e.pageY}px`;
+});
+
+// Tilføj eller fjern hover-status, når musen går ind i eller forlader hover-områder
+const hoverAreas = document.querySelectorAll('.hover-area');
+
+hoverAreas.forEach((area) => {
+  area.addEventListener('mouseenter', () => {
+    customCursor.classList.add('hover'); // Tilføj hover-status
+  });
+  area.addEventListener('mouseleave', () => {
+    customCursor.classList.remove('hover'); // Fjern hover-status
+  });
+});
+</script>
