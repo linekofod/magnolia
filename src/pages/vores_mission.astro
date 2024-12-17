@@ -13,13 +13,13 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
   <section class="text-grøn-700">
     <!-- OVERSKRIFT -->
     <section class="mx-ml">
-      <h1 class="font-headline text-headline1_lg text-center mb-ml">
+      <h1 class="font-headline text-headline1_lg text-center mb-3xl mt-3xl">
         VORES MISSION
       </h1>
     </section>
 
     <!-- MAGNOLIA - SKØNHED MED OMTANKE -->
-    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 text-grøn-700 mt-xl">
+    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 text-grøn-700 mt-xl">
       <div>
         <Image src={mission1} alt="" class="w-[707px] h-[685px]" />
       </div>
@@ -39,7 +39,7 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
     </section>
 
     <!-- BLOMSTER MED ANSVAR -->
-    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 mt-xl">
+    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 mt-xl text-grøn-700">
       <div class="p-4xl">
         <h2 class="font-headline text-headline2_lg mb-xs">
           Blomster med ansvar
@@ -61,13 +61,13 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
     </section>
 
     <!-- EN GRØNNERE BUKET -->
-    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 mt-xl">
+    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 mt-xl">
       <div>
         <Image src={mission3} alt="" class="w-[707px] h-[685px]" />
       </div>
 
       <div class="p-4xl">
-        <h2 class="font-headline text-headline2_lg mt-xl">En grønnere buket</h2>
+        <h2 class="font-headline text-headline2_lg mt-xl mb-xs">En grønnere buket</h2>
 
         <p class="text-body_lg font-light">
           Hos Magnolia er vi stolte af at gøre en forskel. En uafhængig
@@ -81,87 +81,108 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
 
     <!-- VORES MISSION -->
 
-    <section class="bg-beige-50 mx-auto py-xl h-[684px]">
+    <section class="bg-beige-50 mx-auto py-xl mt-xl">
       <div class="text-center justify-center mb-lg">
-      <h2 class="font-headline text-headline2_lg mt-xl text-grøn-700">VORES BÆREDYGTIGE PRINCIPPER</h2>
-    </div>
-      <div id="carousel" class="carousel-container justify-center flex gap-lg h-[350px] mt-6xl">
-        <!-- Kolonne 1 -->
-        <div class="flex flex-col items-center text-center carousel-item w-[234px] h-[201px]">
-          <img
-          class="mb-s w-[50px] h-[50px]"
-          src="https://img.icons8.com/ios/50/flower--v1.png"
-          alt="flower--v1"
-        />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">Overskudsblomster</h3>
-          <p class="text-body_s font-light text-grøn-700">Vi forvandler overskud til smukke buketter og reducerer blomsterspild.</p>
-        </div>
-      
-        <!-- Kolonne 2 -->
-        <div class="flex flex-col items-center text-center carousel-item w-[234px] h-[201px]">
-          <img
-                class="mb-s w-[50px] h-[50px]"
-                src="https://img.icons8.com/ios/50/map-marker--v1.png"
-                alt="Danske blomster"
-              />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">Danske blomster</h3>
-          <p class="text-body_s font-light text-grøn-700">Lokalt dyrkede blomster, der støtter danske avlere og minimerer transportens klimaaftryk.</p>
-        </div>
-      
-        <!-- Midterste Kolonne -->
-        <div class="flex flex-col items-center text-center carousel-item active w-[234px] h-[201px]">
-          <img
-                class="mb-s w-[50px] h-[50px]"
-                src="https://img.icons8.com/ios/50/leaf--v1.png"
-                alt="leaf--v1"
-              />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">Miljøcertificerede blomster</h3>
-          <p class="text-body_s font-light text-grøn-700">Et nøje udvalgt sortiment dyrket med omtanke for naturen.</p>
-        </div>
-      
-        <!-- Kolonne 4 -->
-        <div class="flex flex-col items-center text-center carousel-item w-[234px] h-[201px]">
-          <img
-                class="mb-s w-[50px] h-[50px]"
-                src="https://img.icons8.com/ios/50/green-earth.png"
-                alt="green-earth"
-              />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">Minimal emballage</h3>
-          <p class="text-body_s font-light text-grøn-700">Enkel og elegant indpakning uden unødvendigt materiale.</p>
-        </div>
-      
-        <!-- Kolonne 5 -->
-        <div class="flex flex-col items-center text-center carousel-item w-[234px] h-[201px]">
-          <img
-                class="mb-s w-[50px] h-[50px]"
-                src="https://img.icons8.com/ios/50/search--v1.png"
-                alt="search--v1"
-              />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">Gennemsigtighed</h3>
-          <p class="text-body_s font-light text-grøn-700">Vi arbejder åbent og ærligt for at informere om vores tiltag og udfordringer.</p>
-        </div>
+        <h2 class="font-headline text-headline2_lg mt-xl text-grøn-700">
+          VORES BÆREDYGTIGE PRINCIPPER
+        </h2>
       </div>
-      
-      <!-- Pilene nedenunder -->
-      <div class="carousel-buttons flex justify-center gap-m mt-m">
-        <button id="prevBtn" class="arrow-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
-            <path d="M21 3.60563L17.8768 0.5L0.865293 17.4257C0.591077 17.6969 0.373455 18.0194 0.224953 18.3746C0.076451 18.7299 0 19.1108 0 19.4956C0 19.8804 0.076451 20.2613 0.224953 20.6166C0.373455 20.9718 0.591077 21.2943 0.865293 21.5655L17.8768 38.5L20.9971 35.3944L5.03059 19.5L21 3.60563Z" fill="#28281A"/>
-            </svg>
-        </button>
-        <button id="nextBtn" class="arrow-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
-            <path d="M0 3.60563L3.12323 0.5L20.1347 17.4257C20.4089 17.6969 20.6265 18.0194 20.775 18.3746C20.9235 18.7299 21 19.1108 21 19.4956C21 19.8804 20.9235 20.2613 20.775 20.6166C20.6265 20.9718 20.4089 21.2943 20.1347 21.5655L3.12323 38.5L0.00294304 35.3944L15.9694 19.5L0 3.60563Z" fill="#28281A"/>
-            </svg>
-        </button>
+    
+      <!-- Flex container til kolonnerne -->
+      <div class="flex justify-center gap-lg mt-2xl">
+        <!-- Kolonne 1 -->
+        <div
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp"
+          style="animation-delay: 0.2s"
+        >
+          <img
+            class="mb-s w-[50px] h-[50px]"
+            src="https://img.icons8.com/ios/50/flower--v1.png"
+            alt="flower--v1"
+          />
+          <h3 class="font-headline text-lg mb-s text-grøn-700">Overskudsblomster</h3>
+          <p class="text-body_s font-light text-grøn-700">
+            Vi forvandler overskud til smukke buketter og reducerer blomsterspild.
+          </p>
+        </div>
+    
+        <!-- Kolonne 2 -->
+        <div
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp"
+          style="animation-delay: 0.4s"
+        >
+          <img
+            class="mb-s w-[50px] h-[50px]"
+            src="https://img.icons8.com/ios/50/map-marker--v1.png"
+            alt="Danske blomster"
+          />
+          <h3 class="font-headline text-lg mb-s text-grøn-700">Danske blomster</h3>
+          <p class="text-body_s font-light text-grøn-700">
+            Lokalt dyrkede blomster, der støtter danske avlere og minimerer
+            transportens klimaaftryk.
+          </p>
+        </div>
+    
+        <!-- Kolonne 3 -->
+        <div
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp"
+          style="animation-delay: 0.6s"
+        >
+          <img
+            class="mb-s w-[50px] h-[50px]"
+            src="https://img.icons8.com/ios/50/leaf--v1.png"
+            alt="leaf--v1"
+          />
+          <h3 class="font-headline text-lg mb-s text-grøn-700">
+            Miljøcertificerede blomster
+          </h3>
+          <p class="text-body_s font-light text-grøn-700">
+            Et nøje udvalgt sortiment dyrket med omtanke for naturen.
+          </p>
+        </div>
+    
+        <!-- Kolonne 4 -->
+        <div
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp"
+          style="animation-delay: 0.8s"
+        >
+          <img
+            class="mb-s w-[50px] h-[50px]"
+            src="https://img.icons8.com/ios/50/green-earth.png"
+            alt="green-earth"
+          />
+          <h3 class="font-headline text-lg mb-s text-grøn-700">
+            Minimal emballage
+          </h3>
+          <p class="text-body_s font-light text-grøn-700">
+            Enkel og elegant indpakning uden unødvendigt materiale.
+          </p>
+        </div>
+    
+        <!-- Kolonne 5 -->
+        <div
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp"
+          style="animation-delay: 1s"
+        >
+          <img
+            class="mb-s w-[50px] h-[50px]"
+            src="https://img.icons8.com/ios/50/search--v1.png"
+            alt="search--v1"
+          />
+          <h3 class="font-headline text-lg mb-s text-grøn-700">Gennemsigtighed</h3>
+          <p class="text-body_s font-light text-grøn-700">
+            Vi arbejder åbent og ærligt for at informere om vores tiltag og
+            udfordringer.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- FREMTIDEN BLOMSTRER GRØNNERE -->
-    <section class="mx-ml grid grid-cols-1 md:grid-cols-2 gap-6 mt-xl">
+    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 gap-6 mt-xl mb-xl">
       <!-- Tekstkolonne -->
       <div class="p-xl">
-        <h2 class="font-headline md:text-headline2_lg mb-xs text-headline2_s">
+        <h2 class="font-headline md:text-headline2_lg mb-xs mt-xl text-headline2_s">
           Fremtiden blomstrer grønnere
         </h2>
         <p class="md:text-body_lg font-light text-body_s">
@@ -186,84 +207,18 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
 </MainLayout>
 
 <style>
-  .carousel-container {
-  display: flex;
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
-}
-
-.carousel-item {
-  scroll-snap-align: center;
-  flex-shrink: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0.5; /* Standard for inaktive kolonner */
-  transform: scale(0.9); /* Mindre størrelse */
-}
-
-.carousel-item.active {
-  opacity: 1; /* Fuldt synlig */
-  transform: scale(1.2); /* Større størrelse for midterste kolonne */
-}
-
-.carousel-item img {
-  transition: transform 0.5s ease;
-}
-
-.carousel-item.active img {
-  margin-top:25px;
-  margin-bottom: 10px;
-  transform: scale(1.1); /* Gør billedet større i aktiv kolonne */
-}
-.carousel-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* Afstand mellem pilene */
-  margin-top: -10rem;
-}
-
-.arrow-btn {
-  margin-top:40px;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>
-
-<script>
-const carousel = document.getElementById("carousel");
-const items = document.querySelectorAll(".carousel-item");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-let currentIndex = 2; // Start med midterste kolonne
-
-function updateCarousel() {
-  items.forEach((item, index) => {
-    item.classList.remove("active");
-    item.style.opacity = "0.5"; // Reducer opacity
-    item.style.transform = "scale(0.9)"; // Mindre størrelse
-    if (index === currentIndex) {
-      item.classList.add("active");
-      item.style.opacity = "1";
-      item.style.transform = "scale(1.2)";
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
     }
-  });
-}
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % items.length;
-  updateCarousel();
-  carousel.scrollBy({ left: 272, behavior: "smooth" });
-});
-
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + items.length) % items.length;
-  updateCarousel();
-  carousel.scrollBy({ left: -272, behavior: "smooth" });
-});
-
-// Initial opdatering
-updateCarousel();
-</script>
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+</style>
