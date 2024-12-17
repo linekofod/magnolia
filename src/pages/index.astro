@@ -52,13 +52,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         Blomsterabonnement på dine betingelser
       </p>
     </div>
-    <div class="block md:hidden">
+    <div class="block md:hidden hover-area">
       <!-- Button for small screens -->
       <Button size="small" variant="secondary" href="/personligt_abonnement"
         >Skræddersy dit abonnemet nu</Button
       >
     </div>
-    <div class="hidden md:block">
+    <div class="hidden md:block hover-area">
       <!-- Button for large screens -->
       <Button size="large" variant="secondary" href="/personligt_abonnement"
         >Skræddersy dit abonnemet nu</Button
@@ -201,7 +201,6 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   </section>
  
   <!-- VORES BUKETTER -->
-  <!-- VORES BUKETTER -->
  <section
  class="bg-neutral-50 flex items-center justify-center min-h-250vh] mb-xl md:mb-4xl]">
  <section id="buketter-slider" class="text-center w-full max-w-3xl mx-auto">
@@ -213,7 +212,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
      <!-- Venstre pil -->
      <button
        id="buketter-prev-btn"
-       class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full">
+       class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover-area">
        <svg
          xmlns="http://www.w3.org/2000/svg"
          width="24"
@@ -323,7 +322,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
      <!-- Højre pil -->
      <button
        id="buketter-next-btn"
-       class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-ml">
+       class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-ml hover-area">
        <svg
          xmlns="http://www.w3.org/2000/svg"
          width="24"
@@ -481,13 +480,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       <!-- Knapper -->
       <div class="flex flex-col md:flex-row justify-center gap-2xs md:gap-m">
         <div>
-          <div class="block md:hidden">
+          <div class="block md:hidden hover-area">
             <!-- Button for small screens -->
             <Button size="small" href="/personligt_abonnement"
               >Personligt abonnement</Button
             >
           </div>
-          <div class="hidden md:block">
+          <div class="hidden md:block hover-area">
             <!-- Button for large screens -->
             <Button size="large" href="/personligt_abonnement"
               >Personligt abonnement</Button
@@ -495,7 +494,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           </div>
         </div>
         <div>
-          <div class="block md:hidden">
+          <div class="block md:hidden hover-area">
             <!-- Button for small screens -->
             <Button size="small" href="/personligt_abonnement"
               >Gave abonnement</Button
@@ -747,10 +746,10 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
  }
 
  .badge {
- position: absolute; /* Placer badget relativt til sin container */
- top: 2rem; /* Afstand fra toppen */
- padding: 0.25rem 0.75rem; /* Polstring inde i badget */
- z-index: 25; /* Sørger for, at badget er over andre elementer */
+ position: absolute; 
+ top: 2rem; 
+ padding: 0.25rem 0.75rem; 
+ z-index: 25; 
 }
 
 
@@ -798,6 +797,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
     background-size: cover;
     opacity: 0.2;
   }
+
  </style>
  
  <script>
