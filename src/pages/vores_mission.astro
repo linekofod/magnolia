@@ -11,24 +11,24 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
 
 <MainLayout title="Vores mission">
   <section class="text-grøn-700">
+
     <!-- OVERSKRIFT -->
     <section class="mx-ml">
-      <h1 class="font-headline text-headline1_lg text-center mb-3xl mt-3xl">
+      <h1 class="font-headline md:text-headline1_lg text-headline1_s text-center mb-3xl mt-3xl">
         VORES MISSION
       </h1>
     </section>
-
+  
     <!-- MAGNOLIA - SKØNHED MED OMTANKE -->
     <section class="mx-lg grid grid-cols-1 md:grid-cols-2 text-grøn-700 mt-xl">
       <div>
-        <Image src={mission1} alt="" class="w-[707px] h-[685px]" />
+        <Image src={mission1} alt="" class="w-full max-w-[707px] h-auto mx-auto" />
       </div>
-
-      <div class="p-4xl">
-        <h2 class="font-headline text-headline2_lg mb-xs">
+  
+      <div class="p-xl md:p-4xl">
+        <h2 class="font-headline md:text-headline2_lg text-headline2_s mb-xs">
           Magnolia – Skønhed med omtanke
         </h2>
-
         <p class="text-body_lg font-light">
           Magnolia blev grundlagt i 2020 med en ambition om at skabe en
           blomstervirksomhed, der forener elegance og ansvar. Vores mission er
@@ -37,14 +37,13 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
         </p>
       </div>
     </section>
-
+  
     <!-- BLOMSTER MED ANSVAR -->
     <section class="mx-lg grid grid-cols-1 md:grid-cols-2 mt-xl text-grøn-700">
-      <div class="p-4xl">
-        <h2 class="font-headline text-headline2_lg mb-xs">
+      <div class="p-xl md:p-4xl">
+        <h2 class="font-headline md:text-headline2_lg text-headline2_s mb-xs">
           Blomster med ansvar
         </h2>
-
         <p class="text-body_lg font-light">
           Siden dag ét har vi brugt overskudsblomster som fundamentet for vores
           buketter. Disse smukke blomster, der ellers ville gå til spilde,
@@ -54,21 +53,20 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
           både kvalitet og bæredygtighed.
         </p>
       </div>
-
+  
       <div>
-        <Image src={mission2} alt="" class="w-[707px] h-[685px]" />
+        <Image src={mission2} alt="" class="w-full max-w-[707px] h-auto mx-auto" />
       </div>
     </section>
-
+  
     <!-- EN GRØNNERE BUKET -->
     <section class="mx-lg grid grid-cols-1 md:grid-cols-2 mt-xl">
       <div>
-        <Image src={mission3} alt="" class="w-[707px] h-[685px]" />
+        <Image src={mission3} alt="" class="w-full max-w-[707px] h-auto mx-auto" />
       </div>
-
-      <div class="p-4xl">
-        <h2 class="font-headline text-headline2_lg mt-xl mb-xs">En grønnere buket</h2>
-
+  
+      <div class="p-xl md:p-4xl">
+        <h2 class="font-headline md:text-headline2_lg text-headline2_s mt-xl mb-xs">En grønnere buket</h2>
         <p class="text-body_lg font-light">
           Hos Magnolia er vi stolte af at gøre en forskel. En uafhængig
           livscyklusanalyse foretaget af Teknologisk Institut dokumenterer, at
@@ -79,17 +77,17 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
       </div>
     </section>
 
-    <!-- VORES MISSION -->
-
-    <section class="bg-beige-50 mx-auto py-xl mt-xl">
+    <section class="bg-beige-50 mx-auto py-xl mt-3xl">
       <div class="text-center justify-center mb-lg">
-        <h2 class="font-headline text-headline2_lg mt-xl text-grøn-700">
+        <h2 class="font-headline md:text-headline2_lg text-headline2_s mt-xl text-grøn-700">
           VORES BÆREDYGTIGE PRINCIPPER
         </h2>
       </div>
     
-      <!-- Flex container til kolonnerne -->
-      <div class="flex justify-center gap-lg mt-2xl">
+      <!-- Grid container til kolonnerne -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-lg mt-2xl justify-items-center p-lg"
+      >
         <!-- Kolonne 1 -->
         <div
           class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp"
@@ -100,7 +98,7 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             src="https://img.icons8.com/ios/50/flower--v1.png"
             alt="flower--v1"
           />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">Overskudsblomster</h3>
+          <h3 class="font-headline text-headline3_s text-lg mb-s text-grøn-700">Overskudsblomster</h3>
           <p class="text-body_s font-light text-grøn-700">
             Vi forvandler overskud til smukke buketter og reducerer blomsterspild.
           </p>
@@ -116,7 +114,7 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             src="https://img.icons8.com/ios/50/map-marker--v1.png"
             alt="Danske blomster"
           />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">Danske blomster</h3>
+          <h3 class="font-headline text-lg mb-s text-headline3_s text-grøn-700">Danske blomster</h3>
           <p class="text-body_s font-light text-grøn-700">
             Lokalt dyrkede blomster, der støtter danske avlere og minimerer
             transportens klimaaftryk.
@@ -133,7 +131,7 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             src="https://img.icons8.com/ios/50/leaf--v1.png"
             alt="leaf--v1"
           />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">
+          <h3 class="font-headline text-headline3_s text-lg mb-s text-grøn-700">
             Miljøcertificerede blomster
           </h3>
           <p class="text-body_s font-light text-grøn-700">
@@ -151,7 +149,7 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             src="https://img.icons8.com/ios/50/green-earth.png"
             alt="green-earth"
           />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">
+          <h3 class="font-headline text-headline3_s text-lg mb-s text-grøn-700">
             Minimal emballage
           </h3>
           <p class="text-body_s font-light text-grøn-700">
@@ -169,7 +167,7 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             src="https://img.icons8.com/ios/50/search--v1.png"
             alt="search--v1"
           />
-          <h3 class="font-headline text-lg mb-s text-grøn-700">Gennemsigtighed</h3>
+          <h3 class="font-headline text-headline3_s text-lg mb-s text-grøn-700">Gennemsigtighed</h3>
           <p class="text-body_s font-light text-grøn-700">
             Vi arbejder åbent og ærligt for at informere om vores tiltag og
             udfordringer.
@@ -177,12 +175,12 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
         </div>
       </div>
     </section>
-
+  
     <!-- FREMTIDEN BLOMSTRER GRØNNERE -->
-    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 gap-6 mt-xl mb-xl">
+    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 mt-xl mb-xl">
       <!-- Tekstkolonne -->
-      <div class="p-xl">
-        <h2 class="font-headline md:text-headline2_lg mb-xs mt-xl text-headline2_s">
+      <div class="p-xl md:p-2xl">
+        <h2 class="font-headline mb-xs mt-xl md:text-headline2_lg text-headline2_s">
           Fremtiden blomstrer grønnere
         </h2>
         <p class="md:text-body_lg font-light text-body_s">
@@ -198,11 +196,10 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
       </div>
     
       <!-- Billedekolonne -->
-      <div class="flex justify-center items-center p-ml">
-        <Image src={mission4} alt="" class="w-[707px] h-[671px]" />
+      <div class="flex justify-center items-center p-xxs">
+        <Image src={mission4} alt="" class="w-full max-w-[707px] h-auto mx-auto" />
       </div>
     </section>
-    
   </section>
 </MainLayout>
 
