@@ -10,22 +10,29 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
 ---
 
 <MainLayout title="Vores mission">
-  <section class="text-grøn-700">
-
+  <section class="text-grøn-700 relative">
     <!-- OVERSKRIFT -->
-    <section class="mx-ml">
-      <h1 class="font-headline md:text-headline1_lg text-headline1_s text-center mb-3xl mt-3xl">
+    <section class="mx-s md:mx-ml">
+      <h1
+        class="font-headline md:text-headline1_lg text-headline1_s text-center my-ml md:my-3xl"
+      >
         VORES MISSION
       </h1>
     </section>
-  
+
     <!-- MAGNOLIA - SKØNHED MED OMTANKE -->
-    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 text-grøn-700 mt-xl">
+    <section
+      class="mx-lg grid grid-cols-1 lg:grid-cols-2 text-grøn-700 mt-ml md:mt-xl"
+    >
       <div>
-        <Image src={mission1} alt="" class="w-full max-w-[707px] h-auto mx-auto" />
+        <Image
+          src={mission1}
+          alt=""
+          class="w-full max-w-[707px] h-auto mx-auto fadein"
+        />
       </div>
-  
-      <div class="p-xl md:p-4xl">
+
+      <div class="p-0 pt-s md:p-ml xl:p-4xl">
         <h2 class="font-headline md:text-headline2_lg text-headline2_s mb-xs">
           Magnolia – Skønhed med omtanke
         </h2>
@@ -37,10 +44,12 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
         </p>
       </div>
     </section>
-  
+
     <!-- BLOMSTER MED ANSVAR -->
-    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 mt-xl text-grøn-700">
-      <div class="p-xl md:p-4xl">
+    <section
+      class="mx-lg grid grid-cols-1 lg:grid-cols-2 mt-xl text-grøn-700 relative"
+    >
+      <div class="p-0 pt-s md:p-ml xl:p-4xl order-2 lg:order-none">
         <h2 class="font-headline md:text-headline2_lg text-headline2_s mb-xs">
           Blomster med ansvar
         </h2>
@@ -53,20 +62,30 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
           både kvalitet og bæredygtighed.
         </p>
       </div>
-  
+
       <div>
-        <Image src={mission2} alt="" class="w-full max-w-[707px] h-auto mx-auto" />
+        <Image
+          src={mission2}
+          alt=""
+          class="w-full max-w-[707px] h-auto mx-auto fadein2"
+        />
       </div>
     </section>
-  
+
     <!-- EN GRØNNERE BUKET -->
-    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 mt-xl">
+    <section class="mx-lg grid grid-cols-1 lg:grid-cols-2 mt-xl">
       <div>
-        <Image src={mission3} alt="" class="w-full max-w-[707px] h-auto mx-auto" />
+        <Image
+          src={mission3}
+          alt=""
+          class="w-full max-w-[707px] h-auto mx-auto fadein3"
+        />
       </div>
-  
-      <div class="p-xl md:p-4xl">
-        <h2 class="font-headline md:text-headline2_lg text-headline2_s mt-xl mb-xs">En grønnere buket</h2>
+
+      <div class="p-0 pt-s md:p-ml xl:p-4xl">
+        <h2 class="font-headline md:text-headline2_lg text-headline2_s mb-xs">
+          En grønnere buket
+        </h2>
         <p class="text-body_lg font-light">
           Hos Magnolia er vi stolte af at gøre en forskel. En uafhængig
           livscyklusanalyse foretaget af Teknologisk Institut dokumenterer, at
@@ -77,23 +96,24 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
       </div>
     </section>
 
-
     <!-- VORES BÆREDYGTIGE PRINCIPPER -->
 
     <section class="bg-beige-50 mx-auto py-xl mt-3xl">
       <div class="text-center justify-center mb-lg">
-        <h2 class="font-headline md:text-headline2_lg text-headline2_s mt-xl text-grøn-700">
-          VORES BÆREDYGTIGE PRINCIPPER
+        <h2
+          class="font-headline md:text-headline2_lg text-headline2_s text-grøn-700"
+        >
+          Vores bæredygtige principper
         </h2>
       </div>
-    
+
       <!-- Grid container til kolonnerne -->
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-lg mt-2xl justify-items-center p-lg"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-lg justify-items-center p-lg"
       >
         <!-- Kolonne 1 -->
         <div
-          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp Inview-return"
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 inviewfadein1"
           style="animation-delay: 0.2s"
         >
           <img
@@ -101,15 +121,18 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             src="https://img.icons8.com/ios/50/flower--v1.png"
             alt="flower--v1"
           />
-          <h3 class="font-headline text-headline3_s text-lg mb-s text-grøn-700">Overskudsblomster</h3>
+          <h3 class="font-headline text-headline3_s text-lg mb-s text-grøn-700">
+            Overskudsblomster
+          </h3>
           <p class="text-body_s font-light text-grøn-700">
-            Vi forvandler overskud til smukke buketter og reducerer blomsterspild.
+            Vi forvandler overskud til smukke buketter og reducerer
+            blomsterspild.
           </p>
         </div>
-    
+
         <!-- Kolonne 2 -->
         <div
-          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp Inview-return"
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 inviewfadein2"
           style="animation-delay: 0.4s"
         >
           <img
@@ -117,16 +140,18 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             src="https://img.icons8.com/ios/50/map-marker--v1.png"
             alt="Danske blomster"
           />
-          <h3 class="font-headline text-lg mb-s text-headline3_s text-grøn-700">Danske blomster</h3>
+          <h3 class="font-headline text-lg mb-s text-headline3_s text-grøn-700">
+            Danske blomster
+          </h3>
           <p class="text-body_s font-light text-grøn-700">
             Lokalt dyrkede blomster, der støtter danske avlere og minimerer
             transportens klimaaftryk.
           </p>
         </div>
-    
+
         <!-- Kolonne 3 -->
         <div
-          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp Inview-return"
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 inviewfadein3"
           style="animation-delay: 0.6s"
         >
           <img
@@ -141,10 +166,10 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             Et nøje udvalgt sortiment dyrket med omtanke for naturen.
           </p>
         </div>
-    
+
         <!-- Kolonne 4 -->
         <div
-          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp Inview-return"
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 inviewfadein4"
           style="animation-delay: 0.8s"
         >
           <img
@@ -159,10 +184,10 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             Enkel og elegant indpakning uden unødvendigt materiale.
           </p>
         </div>
-    
+
         <!-- Kolonne 5 -->
         <div
-          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 animate-fadeInUp Inview-return"
+          class="flex flex-col items-center text-center w-[234px] h-[201px] opacity-0 inviewfadein5"
           style="animation-delay: 1s"
         >
           <img
@@ -170,7 +195,9 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
             src="https://img.icons8.com/ios/50/search--v1.png"
             alt="search--v1"
           />
-          <h3 class="font-headline text-headline3_s text-lg mb-s text-grøn-700">Gennemsigtighed</h3>
+          <h3 class="font-headline text-headline3_s text-lg mb-s text-grøn-700">
+            Gennemsigtighed
+          </h3>
           <p class="text-body_s font-light text-grøn-700">
             Vi arbejder åbent og ærligt for at informere om vores tiltag og
             udfordringer.
@@ -178,15 +205,15 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
         </div>
       </div>
     </section>
-  
+
     <!-- FREMTIDEN BLOMSTRER GRØNNERE -->
-    <section class="mx-lg grid grid-cols-1 md:grid-cols-2 mt-xl mb-xl">
+    <section class="mx-lg grid grid-cols-1 lg:grid-cols-2 mt-xl mb-xl">
       <!-- Tekstkolonne -->
-      <div class="p-xl md:p-2xl">
-        <h2 class="font-headline mb-xs mt-xl md:text-headline2_lg text-headline2_s">
+      <div class="p-0 md:p-ml xl:p-4xl">
+        <h2 class="font-headline mb-xs md:text-headline2_lg text-headline2_s">
           Fremtiden blomstrer grønnere
         </h2>
-        <p class="md:text-body_lg font-light text-body_s">
+        <p class="md:text-body_lg font-light text-body_s mb-s">
           For Magnolia er bæredygtighed ikke blot en ambition – det er selve
           kernen i alt, hvad vi gør. Vi prioriterer ansvarlige løsninger gennem
           hele værdikæden: fra reduktion af vores vandforbrug med over 90% til
@@ -197,30 +224,81 @@ import mission4 from "/public/imgs/vores_mission/mission4.webp";
           planeten.
         </p>
       </div>
-    
+
       <!-- Billedekolonne -->
       <div class="flex justify-center items-center p-xxs">
-        <Image src={mission4} alt="" class="w-full max-w-[707px] h-auto mx-auto" />
+        <Image
+          src={mission4}
+          alt=""
+          class="w-full max-w-[707px] h-auto mx-auto fadein4"
+        />
       </div>
     </section>
   </section>
 </MainLayout>
 
-<style>
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+<script>
+  // ANIMATIONER
+  import { inView, animate } from "motion";
 
-  .animate-fadeInUp {
-    animation: fadeInUp 1s ease-out forwards;
-  }
-</style>
+  /* inView & return på grønnere valg */
+  inView(".inviewfadein1", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
+  });
 
+  inView(".inviewfadein2", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { delay: 0.5, duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
+  });
 
+  inView(".inviewfadein3", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { delay: 1, duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
+  });
+
+  inView(".inviewfadein4", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { delay: 1.5, duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
+  });
+
+  inView(".inviewfadein5", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { delay: 2, duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
+  });
+
+  //   InView animation
+  const fadein = document.querySelector(".fadein");
+
+  inView(fadein, () => {
+    fadein.classList.add("animate__animated", "animate__fadeIn");
+  });
+
+  const fadein2 = document.querySelector(".fadein2");
+
+  inView(fadein2, () => {
+    fadein2.classList.add("animate__animated", "animate__fadeIn");
+  });
+
+  const fadein3 = document.querySelector(".fadein3");
+
+  inView(fadein3, () => {
+    fadein3.classList.add("animate__animated", "animate__fadeIn");
+  });
+
+  const fadein4 = document.querySelector(".fadein4");
+
+  inView(fadein4, () => {
+    fadein4.classList.add("animate__animated", "animate__fadeIn");
+  });
+</script>

@@ -150,7 +150,7 @@ export default {
             // Hvis du placerer noget herinde, så vil du ikke erstatte Tailwinds styling, men blot tilføje til det.
 
             animation: {
-                'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                'infinite-scroll': 'infinite-scroll 30s linear infinite',
               },
               keyframes: {
                 'infinite-scroll': {

@@ -144,7 +144,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         <Image
           src={index0}
           alt=""
-          class="w-full h-full aspect-[4/5] object-cover"
+          class="w-full h-full aspect-[4/5] object-cover fadein"
         />
       </div>
 
@@ -454,7 +454,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       <Image
         src={index6}
         alt="Blomsterbillede"
-        class="w-full h-full aspect-[1/1] object-cover"
+        class="w-full h-full aspect-[1/1] object-cover fadein2"
       />
     </div>
   </section>
@@ -493,13 +493,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           <div class="block md:hidden">
             <!-- Button for small screens -->
             <Button size="small" href="/personligt_abonnement"
-              >Gave abonnenemt</Button
+              >Gave abonnement</Button
             >
           </div>
           <div class="hidden md:block">
             <!-- Button for large screens -->
             <Button size="large" href="/personligt_abonnement"
-              >Gave abonnenemt</Button
+              >Gave abonnement</Button
             >
           </div>
         </div>
@@ -665,7 +665,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           <h3 class="font-headline text-headline3_s mb-2xs md:mb-s">
             Danske blomster
           </h3>
-          <p class="mb-s text-body_s md:text-body_s font-light">
+          <p class="mb-s text-body_s md:text-body_lg font-light">
             Vi prioriterer lokalt og dansk. Vores blomster dyrkes på friland
             uden brug af kunstgødning eller sprøjtemidler, hvilket minimerer
             transport og beskytter miljøet. Når du vælger danske blomster,
@@ -685,7 +685,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           <h3 class="font-headline text-headline3_s mb-2xs md:mb-s">
             Friske overskudsblomster
           </h3>
-          <p class="mb-s text-body_s md:text-body_s font-light">
+          <p class="mb-s text-body_s md:text-body_lg font-light">
             Vi forvandler overskud til elegance. Gennem eksklusive aftaler med
             blomstertransportører redder vi blomster, der stadig er friske, men
             ellers ville være gået til spilde. Disse overskudsblomster er kernen
@@ -706,7 +706,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           <h3 class="font-headline text-headline3_s mb-2xs md:mb-s">
             Certificerede blomster
           </h3>
-          <p class="mb-s text-body_s md:text-body_s font-light">
+          <p class="mb-s text-body_s md:text-body_lg font-light">
             Vores sortiment suppleres med blomster fra miljøcertificerede
             gartnerier rundt om i verden. Disse gartnerier arbejder med respekt
             for naturen, reducerer vandspild og sikrer gode arbejdsvilkår. Vi
@@ -893,5 +893,18 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
     return () => {
       animate(target, { opacity: 1 });
     };
+  });
+
+  //   InView animation
+  const fadein = document.querySelector(".fadein");
+
+  inView(fadein, () => {
+    fadein.classList.add("animate__animated", "animate__fadeIn");
+  });
+
+  const fadein2 = document.querySelector(".fadein2");
+
+  inView(fadein2, () => {
+    fadein2.classList.add("animate__animated", "animate__fadeIn");
   });
 </script>

@@ -14,7 +14,7 @@ import kontakt from "/public/imgs/kontakt/kontakt.webp";
       <Image
         src={kontakt}
         alt=""
-        class="w-full h-full aspect-[1/1] object-cover"
+        class="w-full h-full aspect-[1/1] object-cover fadein"
       />
     </div>
 
@@ -58,3 +58,15 @@ import kontakt from "/public/imgs/kontakt/kontakt.webp";
     </div>
   </section>
 </MainLayout>
+
+<script>
+  // ANIMATIONER
+  import { inView, animate } from "motion";
+
+  //   InView animation
+  const fadein = document.querySelector(".fadein");
+
+  inView(fadein, () => {
+    fadein.classList.add("animate__animated", "animate__fadeIn");
+  });
+</script>
