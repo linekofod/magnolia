@@ -131,12 +131,12 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       />
     </div>
   </section>
- 
+
   <!-- ROLLING BANNER -->
   <div class="mb-lg md:mb-4xl">
     <Indexbanner />
   </div>
- 
+
   <!-- OM OS -->
   <section class="mx-xs md:mx-4xl mb-xl md:mb-4xl">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-sm md:gap-xl items-center">
@@ -148,7 +148,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
           class="w-full h-full aspect-[4/5] object-cover fadein"
         />
       </div>
- 
+
       <!-- Tekst (højre kolonne) -->
       <div>
         <h2
@@ -177,7 +177,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       </div>
     </div>
   </section>
- 
+
   <!-- DYNAMISK TEKSTUDSKIFTNING -->
   <section
     class="px-xl md:px-4xl py-lg md:py-4xl bg-beige-50 h-fit flex items-center justify-left text-left mb-xl md:mb-4xl"
@@ -199,149 +199,160 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       </h2>
     </div>
   </section>
- 
+
   <!-- VORES BUKETTER -->
- <section
- class="bg-neutral-50 flex items-center justify-center min-h-250vh] mb-xl md:mb-4xl]">
- <section id="buketter-slider" class="text-center w-full max-w-3xl mx-auto">
-   <h2
-     class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-xs md:mb-sm">
-     Vores buketter
-   </h2>
-   <div class="relative">
-     <!-- Venstre pil -->
-     <button
-       id="buketter-prev-btn"
-       class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover-area">
-       <svg
-         xmlns="http://www.w3.org/2000/svg"
-         width="24"
-         height="24"
-         viewBox="0 0 24 24"
-         fill="none">
-         <path
-           d="M15 19L8 12L15 5"
-           stroke="#000"
-           stroke-width="2"
-           stroke-linecap="round"
-           stroke-linejoin="round"></path>
-       </svg>
-     </button>
+  <section
+    class="bg-neutral-50 flex items-center justify-center min-h-250vh] mb-xl md:mb-4xl]"
+  >
+    <section id="buketter-slider" class="text-center w-full max-w-3xl mx-auto">
+      <h2
+        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-xs md:mb-sm"
+      >
+        Vores buketter
+      </h2>
+      <div class="relative">
+        <!-- Venstre pil -->
+        <button
+          id="buketter-prev-btn"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover-area"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M15 19L8 12L15 5"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
 
+        <!-- Karrusel container -->
+        <div
+          id="buketter-carousel"
+          class="flex gap-xl items-center overflow-hidden"
+        >
+          <!-- Farverige nuancer -->
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-ml"
+          >
+            <Image
+              src={farver}
+              alt=""
+              class="w-[362px] h-[504px] object-cover"
+            />
+            <div class="text-left justify-start">
+              <h3
+                class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs"
+              >
+                Farverige Nuancer
+              </h3>
+              <p class="font-light text-body_s text-grøn-700 mb-xs w-[362px]">
+                Livlige og glædesfyldte buketter i et smukt spil af farver.
+                Perfekt til at bringe energi og elegance ind i dit hjem – en
+                farverig hyldest til skønheden i blomster.
+              </p>
+            </div>
+          </div>
 
-     <!-- Karrusel container -->
-     <div
-       id="buketter-carousel"
-       class="flex gap-xl items-center overflow-hidden">
-       <!-- Farverige nuancer -->
-       <div
-         class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-ml">
-         <Image
-           src={farver}
-           alt=""
-           class="w-[362px] h-[504px] object-cover" />
-         <div class="text-left justify-start">
-           <h3
-             class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">
-             Farverige Nuancer
-           </h3>
-           <p class="font-light text-body_s text-grøn-700 mb-xs w-[362px]">
-             Livlige og glædesfyldte buketter i et smukt spil af farver. Perfekt til at bringe energi og elegance ind i dit hjem – en farverig hyldest til skønheden i blomster.
-           </p>
-         </div>
-       </div>
+          <!-- Hvide nuancer med badge -->
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center relative"
+          >
+            <!-- Badge -->
+            <div
+              class="badge absolute top-4 right-0 bg-beige-50 text-grøn-700 text-body_s uppercase font-light"
+            >
+              Mest populære
+            </div>
 
+            <!-- Image -->
+            <Image src={hvid} alt="" class="w-[362px] h-[504px] object-cover" />
 
-       <!-- Hvide nuancer med badge -->
-       <div
-       class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center relative">
-       <!-- Badge -->
-       <div
-         class="badge absolute top-4 right-0 bg-beige-50 text-grøn-700 text-body_s uppercase font-light">
-        Mest populære
-       </div>
-    
-       <!-- Image -->
-       <Image
-         src={hvid}
-         alt=""
-         class="w-[362px] h-[504px] object-cover" />
-      
-       <!-- Text -->
-       <div class="text-left justify-start">
-         <h3
-           class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">
-           Hvide Nuancer
-         </h3>
-         <p class="font-light text-body_s text-grøn-700 mb-xs w-[362px]">
-           Elegante og tidløse buketter, der bringer ro og renhed ind i dit hjem. En harmonisk kombination af klassiske hvide blomster og bløde grønne detaljer – et strejf af enkelhed og luksus til hverdagen.
-         </p>
-       </div>
-     </div>
+            <!-- Text -->
+            <div class="text-left justify-start">
+              <h3
+                class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs"
+              >
+                Hvide Nuancer
+              </h3>
+              <p class="font-light text-body_s text-grøn-700 mb-xs w-[362px]">
+                Elegante og tidløse buketter, der bringer ro og renhed ind i dit
+                hjem. En harmonisk kombination af klassiske hvide blomster og
+                bløde grønne detaljer – et strejf af enkelhed og luksus til
+                hverdagen.
+              </p>
+            </div>
+          </div>
 
+          <!-- Røde nuancer -->
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+            <Image src={rød} alt="" class="w-[362px] h-[504px] object-cover" />
+            <div class="text-left justify-start">
+              <h3
+                class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs"
+              >
+                Røde Nuancer
+              </h3>
+              <p class="font-light text-body_s text-grøn-700 mb-xs w-[362px]">
+                Blidhed og raffineret skønhed forenes i vores røde buketter.
+                Disse varme og elegante kreationer tilføjer en romantisk og
+                indbydende atmosfære til ethvert rum.
+              </p>
+            </div>
+          </div>
 
-       <!-- Røde nuancer -->
-       <div
-         class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center">
-         <Image
-           src={rød}
-           alt=""
-           class="w-[362px] h-[504px] object-cover" />
-         <div class="text-left justify-start">
-           <h3
-             class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">
-             Røde Nuancer
-           </h3>
-           <p class="font-light text-body_s text-grøn-700 mb-xs w-[362px]">
-             Blidhed og raffineret skønhed forenes i vores røde buketter. Disse varme og elegante kreationer tilføjer en romantisk og indbydende atmosfære til ethvert rum.
-           </p>
-         </div>
-       </div>
+          <!-- Blå nuancer -->
+          <div
+            class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center"
+          >
+            <Image src={blå} alt="" class="w-[362px] h-[504px] object-cover" />
+            <div class="text-left justify-start">
+              <h3
+                class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs"
+              >
+                Blå Nuancer
+              </h3>
+              <p class="font-light text-body_s text-grøn-700 mb-xs w-[362px]">
+                En følelse af ro og fordybelse møder dig i vores blå buketter.
+                Med deres kølige og sofistikerede toner skaber de et elegant
+                udtryk og en behagelig atmosfære.
+              </p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Højre pil -->
+        <button
+          id="buketter-next-btn"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-ml hover-area"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M9 5L16 12L9 19"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </section>
 
-       <!-- Blå nuancer -->
-       <div
-         class="buketter-slider-item flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center">
-         <Image
-           src={blå}
-           alt=""
-           class="w-[362px] h-[504px] object-cover" />
-         <div class="text-left justify-start">
-           <h3
-             class="font-headline text-headline3_s text-grøn-700 mb-xs mt-xs">
-             Blå Nuancer
-           </h3>
-           <p class="font-light text-body_s text-grøn-700 mb-xs w-[362px]">
-             En følelse af ro og fordybelse møder dig i vores blå buketter. Med deres kølige og sofistikerede toner skaber de et elegant udtryk og en behagelig atmosfære.
-           </p>
-         </div>
-       </div>
-     </div>
-
-
-     <!-- Højre pil -->
-     <button
-       id="buketter-next-btn"
-       class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-ml hover-area">
-       <svg
-         xmlns="http://www.w3.org/2000/svg"
-         width="24"
-         height="24"
-         viewBox="0 0 24 24"
-         fill="none">
-         <path
-           d="M9 5L16 12L9 19"
-           stroke="#000"
-           stroke-width="2"
-           stroke-linecap="round"
-           stroke-linejoin="round"></path>
-       </svg>
-     </button>
-   </div>
- </section>
-</section>
-
- 
   <!-- SKRÆDDERSY DIT ABONNOMENT -->
   <section
     class="grid grid-cols-1 lg:grid-cols-2 gap-m text-grøn-700 mx-xs md:mx-4xl mb-xl md:mb-4xl"
@@ -353,13 +364,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       >
         Dit personlige blomster abonnement
       </h1>
- 
+
       <div class="flex flex-col gap-s">
         <p class="text-body_s md:text-body_lg font-light">
           Gør dit hjem smukkere med et blomsterabonnement, der er <br /> tilpasset
           dine ønsker.
         </p>
- 
+
         <!-- Ikoner -->
         <div
           class="flex flex-col gap-sm justify-center items-center -ml-2xl mb-xs"
@@ -383,12 +394,12 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
                 d="M17 8H5m12 0a1 1 0 0 1 1 1v2.6M17 8l-4-4M5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.6M5 8l4-4 4 4m6 4h-4a2 2 0 1 0 0 4h4a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1Z"
               ></path>
             </svg>
- 
+
             <p class="text-body_s font-light">
               <span class=""></span> Budget
             </p>
           </div>
- 
+
           <!-- Farver-->
           <div class="flex flex-col gap-3xs items-center">
             <svg
@@ -408,12 +419,12 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
                 d="M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"
               ></path>
             </svg>
- 
+
             <p class="text-body_s font-light">
               <span class=""></span> Farvepræferencer
             </p>
           </div>
- 
+
           <!-- Levering -->
           <div class="flex flex-col gap-3xs items-center">
             <svg
@@ -433,13 +444,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
                 d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
               ></path>
             </svg>
- 
+
             <p class="text-body_s font-light">
               <span class=""></span> Leveringsdato
             </p>
           </div>
         </div>
- 
+
         <p class="text-body_s md:text-body_lg font-light">
           Skulle du ønske at pause dit abonnement, springe leveringer over eller
           opsige det, gør vi processen enkel og smertefri. Start dit abonnement
@@ -452,7 +463,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
         </p>
       </div>
     </div>
- 
+
     <!-- Højre side med billede -->
     <div class="flex justify-center items-center">
       <Image
@@ -462,11 +473,11 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       />
     </div>
   </section>
- 
+
   <!-- BESTIL ABONNOMENT -->
   <section class="bg_image mb-xl md:mb-4xl">
     <!-- <div class="absolute inset-0 bg-white bg-opacity-25"></div> -->
- 
+
     <div
       class="relative flex flex-col items-center justify-center h-full text-center px-m py-4xl"
     >
@@ -476,7 +487,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       >
         Bestil din buket her
       </h2>
- 
+
       <!-- Knapper -->
       <div class="flex flex-col md:flex-row justify-center gap-2xs md:gap-m">
         <div>
@@ -524,7 +535,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       </div>
     </div>
   </section>
- 
+
   <!-- INSTAGRAM -->
   <section class="bg-white flex justify-center mb-xl md:mb-4xl">
     <div class="text-center">
@@ -548,11 +559,13 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
               fill="#28281A"></path>
           </svg>
         </button>
- 
+
         <!-- Carousel Container -->
         <div id="carousel" class="carousel-container flex gap-xl">
           <!-- Carousel Items -->
-          <div class="carousel-item w-64 h-64 flex items-center justify-center gap-lg">
+          <div
+            class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
+          >
             <Image
               src={hjem9}
               alt=""
@@ -615,7 +628,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
                             class="w-[300px] h-[300px] object-cover"
                           />
                         </div>
- 
+
                         <!-- Right Arrow -->
                         <button
                           id="nextBtn"
@@ -644,7 +657,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       </div>
     </div>
   </section>
- 
+
   <!-- ET GRØNNERE VALG -->
   <section class="bg-beige-50 mx-auto py-xl mb-xl md:mb-4xl text-grøn-700">
     <div class="max-w-[1200px] px-sm md:px-s mx-auto text-center">
@@ -676,7 +689,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
             støtter du samtidig lokale avlere og bidrager til et sundere klima.
           </p>
         </div>
- 
+
         <!-- Kolonne 2 -->
         <div
           class="flex flex-col items-center text-center flex-grow inviewfadein2 opacity-0"
@@ -697,7 +710,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
             bæredygtighed.
           </p>
         </div>
- 
+
         <!-- Kolonne 3 -->
         <div
           class="flex flex-col items-center text-center flex-grow inviewfadein3 opacity-0"
@@ -721,37 +734,36 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       </div>
     </div>
   </section>
- </MainLayout>
- 
- <style>
-   .buketter-slider-item {
-   margin-bottom: 8rem;
-   transition:
-     transform 0.5s,
-     opacity 0.5s;
-   opacity: 0.4;
- }
- .buketter-slider-item.active {
-   margin-bottom: 5rem;
-   transform: scale(1.1);
-   z-index: 10;
-   opacity: 1;
- }
- .buketter-text {
-   transition: opacity 0.5s;
-   opacity: 0;
- }
- .buketter-text.active {
-   opacity: 1;
- }
+</MainLayout>
 
- .badge {
- position: absolute; 
- top: 2rem; 
- padding: 0.25rem 0.75rem; 
- z-index: 25; 
-}
+<style>
+  .buketter-slider-item {
+    margin-bottom: 8rem;
+    transition:
+      transform 0.5s,
+      opacity 0.5s;
+    opacity: 0.4;
+  }
+  .buketter-slider-item.active {
+    margin-bottom: 5rem;
+    transform: scale(1.1);
+    z-index: 10;
+    opacity: 1;
+  }
+  .buketter-text {
+    transition: opacity 0.5s;
+    opacity: 0;
+  }
+  .buketter-text.active {
+    opacity: 1;
+  }
 
+  .badge {
+    position: absolute;
+    top: 2rem;
+    padding: 0.25rem 0.75rem;
+    z-index: 25;
+  }
 
   .carousel-container {
     scroll-snap-type: x mandatory;
@@ -797,55 +809,46 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
     background-size: cover;
     opacity: 0.2;
   }
+</style>
 
- </style>
- 
- <script>
+<script>
   // CAROUSEL
   const buketterCarousel = document.getElementById("buketter-carousel");
- const buketterPrevBtn = document.getElementById("buketter-prev-btn");
- const buketterNextBtn = document.getElementById("buketter-next-btn");
- const buketterItems = document.querySelectorAll(".buketter-slider-item");
+  const buketterPrevBtn = document.getElementById("buketter-prev-btn");
+  const buketterNextBtn = document.getElementById("buketter-next-btn");
+  const buketterItems = document.querySelectorAll(".buketter-slider-item");
 
+  let currentIndex = 1;
 
- let currentIndex = 1;
+  function updateActiveSlide() {
+    buketterItems.forEach((item, index) => {
+      if (index === currentIndex) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }
 
+  function moveCarousel(direction) {
+    currentIndex += direction;
 
- function updateActiveSlide() {
- buketterItems.forEach((item, index) => {
-   if (index === currentIndex) {
-     item.classList.add("active");
-   } else {
-     item.classList.remove("active");
-   }
- });
-}
+    if (currentIndex < 0) currentIndex = buketterItems.length - 1;
+    if (currentIndex >= buketterItems.length) currentIndex = 0;
 
+    buketterItems[currentIndex].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+    });
 
- function moveCarousel(direction) {
-   currentIndex += direction;
+    updateActiveSlide();
+  }
 
+  buketterPrevBtn.addEventListener("click", () => moveCarousel(-1));
+  buketterNextBtn.addEventListener("click", () => moveCarousel(1));
 
-   if (currentIndex < 0) currentIndex = buketterItems.length - 1;
-   if (currentIndex >= buketterItems.length) currentIndex = 0;
+  updateActiveSlide();
 
-
-   buketterItems[currentIndex].scrollIntoView({
-     behavior: "smooth",
-     inline: "center",
-   });
-
-
-   updateActiveSlide();
- }
-
-
- buketterPrevBtn.addEventListener("click", () => moveCarousel(-1));
- buketterNextBtn.addEventListener("click", () => moveCarousel(1));
-
-
- updateActiveSlide();
- 
   // DYNAMISK TEKSTSKIFT
   document.addEventListener("DOMContentLoaded", () => {
     const dynamicText = document.querySelector(".text-dynamic");
@@ -863,38 +866,38 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       "STUDENTEN",
       "DINE KOLLEGAER",
     ];
- 
+
     let index = 0;
- 
+
     function updateText() {
       dynamicText.textContent = phrases[index];
       index = (index + 1) % phrases.length; // Loop tilbage til start
     }
- 
+
     setInterval(updateText, 1500); // Skift tekst hver 3. sekund
   });
- 
+
   // INSTAGRAM CAROUSEL
   const carousel = document.getElementById("carousel");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
- 
+
   const scrollStep = 272; // Image width (250px) + gap (22px)
- 
+
   nextBtn.addEventListener("click", () => {
     carousel.scrollBy({ left: scrollStep, behavior: "smooth" });
   });
- 
+
   prevBtn.addEventListener("click", () => {
     carousel.scrollBy({
       left: -scrollStep,
       behavior: "smooth",
     });
   });
- 
+
   // ANIMATIONER
   import { inView, animate } from "motion";
- 
+
   /* inView & return på grønnere valg */
   inView(".inviewfadein1", ({ target }) => {
     animate(target, { opacity: [0, 1] }, { duration: 1 });
@@ -902,31 +905,31 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       animate(target, { opacity: 1 });
     };
   });
- 
+
   inView(".inviewfadein2", ({ target }) => {
     animate(target, { opacity: [0, 1] }, { delay: 0.5, duration: 1 });
     return () => {
       animate(target, { opacity: 1 });
     };
   });
- 
+
   inView(".inviewfadein3", ({ target }) => {
     animate(target, { opacity: [0, 1] }, { delay: 1, duration: 1 });
     return () => {
       animate(target, { opacity: 1 });
     };
   });
- 
+
   //   InView animation
   const fadein = document.querySelector(".fadein");
- 
+
   inView(fadein, () => {
     fadein.classList.add("animate__animated", "animate__fadeIn");
   });
- 
+
   const fadein2 = document.querySelector(".fadein2");
- 
+
   inView(fadein2, () => {
     fadein2.classList.add("animate__animated", "animate__fadeIn");
   });
- </script>
+</script>
