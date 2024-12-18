@@ -538,124 +538,71 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   </section>
 
   <!-- INSTAGRAM -->
-  <section class="bg-white flex justify-center mb-xl md:mb-4xl">
+
+  <section class="relative overflow-hidden w-full mb-3xl">
     <div class="text-center">
       <h2
-        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-sm md:mb-lg"
-      >
-        Jeres blomster i hjemmet
-      </h2>
-      <div class="relative w- max-w-5xl mx-auto">
-        <!-- Left Arrow -->
-        <button id="prevBtn" class="carousel-button left gap-3xl">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="38"
-            viewBox="0 0 21 38"
-            fill="none"
-          >
-            <path
-              d="M21 3.10563L17.8768 0L0.865293 16.9257C0.591077 17.1969 0.373455 17.5194 0.224953 17.8746C0.076451 18.2299 0 18.6108 0 18.9956C0 19.3804 0.076451 19.7613 0.224953 20.1166C0.373455 20.4718 0.591077 20.7943 0.865293 21.0655L17.8768 38L20.9971 34.8944L5.03059 19L21 3.10563Z"
-              fill="#28281A"></path>
-          </svg>
-        </button>
+        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-sm md:mb-lg">Jeres blomster i hjemmet</h2>
 
-        <!-- Carousel Container -->
-        <div id="carousel" class="carousel-container flex gap-xl">
-          <!-- Carousel Items -->
-          <div
-            class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
-          >
-            <Image
-              src={hjem9}
-              alt=""
-              class="w-[300px] h-[300px] object-cover"
-            />
-            <div
-              class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
-            >
-              <Image
-                src={hjem7}
-                alt=""
-                class="w-[300px] h-[300px] object-cover"
-              />
-              <div
-                class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
-              >
-                <Image
-                  src={hjem3}
-                  alt=""
-                  class="w-[300px] h-[300px] object-cover"
-                />
-                <div
-                  class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
-                >
-                  <Image
-                    src={hjem4}
-                    alt=""
-                    class="w-[300px] h-[300px] object-cover"
-                  />
-                  <div
-                    class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
-                  >
-                    <Image
-                      src={hjem5}
-                      alt=""
-                      class="w-[300px] h-[300px] object-cover"
-                    />
-                    <div
-                      class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
-                    >
-                      <Image
-                        src={hjem6}
-                        alt=""
-                        class="w-[300px] h-[300px] object-cover"
-                      />
-                      <div
-                        class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
-                      >
-                        <Image
-                          src={hjem7}
-                          alt=""
-                          class="w-[300px] h-[300px] object-cover"
-                        />
-                        <div
-                          class="carousel-item w-64 h-64 flex items-center justify-center gap-lg"
-                        >
-                          <Image
-                            src={hjem8}
-                            alt=""
-                            class="w-[300px] h-[300px] object-cover"
-                          />
-                        </div>
-
-                        <!-- Right Arrow -->
-                        <button
-                          id="nextBtn"
-                          class="carousel-button right gap-ml"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="38"
-                            viewBox="0 0 22 38"
-                            fill="none"
-                          >
-                            <path
-                              d="M0.953247 3.10563L4.07648 0L21.088 16.9257C21.3622 17.1969 21.5798 17.5194 21.7283 17.8746C21.8768 18.2299 21.9532 18.6108 21.9532 18.9956C21.9532 19.3804 21.8768 19.7613 21.7283 20.1166C21.5798 20.4718 21.3622 20.7943 21.088 21.0655L4.07648 38L0.95619 34.8944L16.9227 19L0.953247 3.10563Z"
-                              fill="#28281A"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- Wrapper til karrusel -->
+      <div class="flex justify-center">
+        <div
+          id="carousel"
+          class="flex gap-lg w-[1030px] overflow-x-auto scroll-smooth snap-x snap-mandatory"
+        >
+          <!-- Billeder -->
+          <Image
+            src={hjem9}
+            alt=""
+            class="w-[300px] h-[300px] flex-shrink-0 snap-start"
+          />
+          <Image
+            src={hjem7}
+            alt=""
+            class="w-[300px] h-[300px] flex-shrink-0 snap-start"
+          />
+          <Image
+            src={hjem3}
+            alt=""
+            class="w-[300px] h-[300px] flex-shrink-0 snap-start"
+          />
+          <div class="w-[300px] h-[300px] flex-shrink-0 snap-start ">
+          <Image
+            src={hjem1}
+            alt=""
+            class="w-full h-full object-cover"
+          />
           </div>
+          <Image
+            src={hjem2}
+            alt=""
+            class="w-[300px] h-[300px] flex-shrink-0 snap-start"
+          />
+          <Image
+            src={hjem4}
+            alt=""
+            class="w-[300px] h-[300px] flex-shrink-0 snap-start"
+          />
+          <Image
+            src={hjem5}
+            alt=""
+            class="w-[300px] h-[300px] flex-shrink-0 snap-start"
+          />
+          <Image
+            src={hjem6}
+            alt=""
+            class="w-[300px] h-[300px] flex-shrink-0 snap-start"
+          />
+          <div class="w-[300px] h-[300px] flex-shrink-0 snap-start ">
+          <Image
+            src={hjem8}
+            alt=""
+            class="w-full h-full object-cover"
+            />
+            </div>
         </div>
       </div>
+  
     </div>
   </section>
 
@@ -765,31 +712,6 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
     padding: 0.25rem 0.75rem;
     z-index: 25;
   }
-
-  .carousel-container {
-    scroll-snap-type: x mandatory;
-    overflow-x: hidden;
-  }
-  .carousel-item {
-    scroll-snap-align: center;
-    flex-shrink: 0;
-  }
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: #28281a;
-    font-size: 2rem;
-    cursor: pointer;
-    border: none;
-  }
-  .carousel-button.left {
-    left: -4rem;
-  }
-  .carousel-button.right {
-    right: -4rem;
-  }
   .bg_image {
     position: relative;
     width: 100%;
@@ -879,21 +801,32 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   });
 
   // INSTAGRAM CAROUSEL
-  const carousel = document.getElementById("carousel");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
 
-  const scrollStep = 272; // Image width (250px) + gap (22px)
+  const carousel = document.getElementById('carousel');
+  const scrollByAmount = carousel.clientWidth;
+  let autoScrollInterval;
 
-  nextBtn.addEventListener("click", () => {
-    carousel.scrollBy({ left: scrollStep, behavior: "smooth" });
-  });
+  // Funktion til automatisk rulning
+  const autoScroll = () => {
+    carousel.scrollBy({ left: scrollByAmount, behavior: 'smooth' });
 
-  prevBtn.addEventListener("click", () => {
-    carousel.scrollBy({
-      left: -scrollStep,
-      behavior: "smooth",
-    });
+  // Tjek om vi er ved slutningen og reset til start
+  if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+    setTimeout(() => {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    }, 600); // Pause før reset
+  }
+};
+
+  // Start automatisk rulning
+  autoScrollInterval = setInterval(autoScroll, 6000); // Skifter hvert 6. sekund
+
+  // Stop rulning ved hover
+  carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+
+  // Genoptag rulning når musen forlader karrusellen
+  carousel.addEventListener('mouseleave', () => {
+    autoScrollInterval = setInterval(autoScroll, 3000);
   });
 
   // ANIMATIONER
