@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import BuketCard from "../components/BuketCard.astro";
 import { Image } from "astro:assets";
 import kontakt from "/public/imgs/kontakt/kontakt.webp";
 ---
@@ -58,61 +57,7 @@ import kontakt from "/public/imgs/kontakt/kontakt.webp";
       >
     </div>
   </section>
-  <section class="mx-0 md:mx-xl mb-4xl">
-    <!-- Vi har brugt Flickity JavaScript-bibliotek til at lave vores karusel -->
-    <div class="js-flickity" data-flickity-options='{ "wrapAround": true }'>
-      <div class="carousel-cell ml-xl">
-        <BuketCard
-          cardimage="/public/imgs/farvevalg_blomster/hvide_nuancer.webp"
-          cardimagealt="Hvid buket blomster"
-          badgepopulaere="true"
-          farvenuance="Hvide nuancer"
-          beskrivelse="Elegante og tidløse buketter, der bringer ro og renhed ind i dit hjem. En harmonisk kombination af klassiske hvide blomster og bløde grønne detaljer - et strejf af enkelthed og luksus til hverdagen"
-        />
-      </div>
-      <div class="carousel-cell ml-xl">
-        <BuketCard
-          cardimage="/public/imgs/farvevalg_blomster/røde_nuancer.webp"
-          cardimagealt="Rød buket blomster"
-          badgepopulaere="false"
-          farvenuance="Røde nuancer"
-          beskrivelse="Blidhed og raffineret skønhed forenes i vores røde buketter. Disse varme og elegante kreationer tilføjer en romantisk og indbydende atmosfære til ethvert rum."
-        />
-      </div>
-      <div class="carousel-cell ml-xl">
-        <BuketCard
-          cardimage="/public/imgs/farvevalg_blomster/blå_nuancer.webp"
-          cardimagealt="Blå buket blomster"
-          badgepopulaere="false"
-          farvenuance="Blå nuancer"
-          beskrivelse="En følelse af ro og fordybelse møder dig i vores blå buketter. Med deres kølige og sofistikerede toner skaber de et elegant udtryk og en behagelig atmosfære."
-        />
-      </div>
-      <div class="carousel-cell ml-xl">
-        <BuketCard
-          cardimage="/public/imgs/farvevalg_blomster/farverige_nuancer.webp"
-          cardimagealt="Farverig buket blomster"
-          badgepopulaere="false"
-          farvenuance="Farverige nuancer"
-          beskrivelse="Livlige og glædesfyldte buketter i et smukt spil af farver. Perfekt til at bringe energi og elegance ind i dit hjem - en farverig hyldest til skønheden i blomster."
-        />
-      </div>
-    </div>
-  </section>
 </MainLayout>
-
-<style>
-  .carousel-cell.is-selected {
-    opacity: 1;
-  }
-
-  @media only screen and (min-width: 900px) {
-    .carousel-cell:not(.is-selected) {
-      opacity: 0.4;
-      margin-top: 40px;
-    }
-  }
-</style>
 
 <script>
   // ANIMATIONER
