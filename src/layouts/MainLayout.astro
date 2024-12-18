@@ -15,8 +15,6 @@ const { title } = Astro.props;
     <title>{Astro.props.title}</title>
   </head>
   <body>
-    <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
     <header>
       <Header />
     </header>
@@ -43,95 +41,7 @@ const { title } = Astro.props;
   body::-webkit-scrollbar {
     display: none;
   }
-  /* Progress-bar */
-  /* .progress-bar {
-    width: 8px;
-    height: 0%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background: #45452d;
-    transition: width 0.25s ease-out;
-    z-index: 9999;
-  } */
-
-  /* Custom cursor */
-
-  /* Standard custom cursor */
-  .custom-cursor {
-    width: 50px; /* Størrelse på cursoren */
-    height: 50px;
-    background-image: url("/public/imgs/custom_cursor/cursor.png"); /* Standard cursor-billede */
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: background-image 0.2s ease-in-out; /* Blød overgang mellem billeder */
-  }
-
-  /* Hover-status */
-  .custom-cursor.hover {
-    background-image: url("/public/imgs/custom_cursor/pointer.png"); /* hover-billede */
-  }
-
-  /* Områder, der trigger cursorændring */
-  .hover-area {
-    margin: 20px;
-    padding: 50px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    text-align: center;
-    cursor: none; /* Skjul standard-cursor */
-  }
 </style>
-<!-- <script>
-  // PROGRESS-BAR
-
-  // Hent progress-bar elementet
-  const progressBar = document.getElementById("progress-bar");
-
-  // Funktion til at opdatere progress bar baseret på scroll
-  function updateProgressBar() {
-    // Beregn dokumentets samlede højde og hvor langt der er scrollt
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercentage = (scrollTop / docHeight) * 100;
-
-    // Opdater progress barens højde som en procentdel af scroll-positionen
-    progressBar.style.height = scrollPercentage + "%";
-  }
-
-  // Lyt efter scroll-hændelser og opdater progress bar
-  window.addEventListener("scroll", updateProgressBar);
-</script> -->
-
-<script>
-  // CUSTOM CURSOR
-
-  // Find cursor-elementet
-  const customCursor = document.querySelector(".custom-cursor");
-
-  // Opdater cursorens position ved musens bevægelse
-  document.addEventListener("mousemove", (e) => {
-    customCursor.style.left = `${e.pageX}px`;
-    customCursor.style.top = `${e.pageY}px`;
-  });
-
-  // Tilføj eller fjern hover-status, når musen går ind i eller forlader hover-områder
-  const hoverAreas = document.querySelectorAll(".hover-area");
-
-  hoverAreas.forEach((area) => {
-    area.addEventListener("mouseenter", () => {
-      customCursor.classList.add("hover"); // Tilføj hover-status
-    });
-    area.addEventListener("mouseleave", () => {
-      customCursor.classList.remove("hover"); // Fjern hover-status
-    });
-  });
-</script>
 
 <script>
   import { scroll, animate } from "motion";
