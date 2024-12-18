@@ -13,12 +13,12 @@ const {
 } = Astro.props;
 ---
 
-<article class="text-grøn-700 flex flex-col gap-2xs">
+<article class="text-grøn-700 flex flex-col gap-2xs lg:max-w-[30vw]">
   <div class="relative">
     <img
       src={cardimage}
       alt={cardimagealt}
-      class="w-full h-[60vh] object-cover"
+      class="w-full h-[65vh] object-cover"
     />
     {
       badgepopulaere === "true" && (
