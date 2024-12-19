@@ -41,6 +41,12 @@ const { title } = Astro.props;
       class="progress-bar h-full w-3xs md:w-2xs fixed bg-gradient-to-b from-grøn-500 to-grøn-500 right-0 origin-top-left top-0 z-50"
     >
     </div>
+    <script>
+      // Login på vores site, når man besøger det for første gang
+      if (typeof window !== "undefined" && !localStorage.getItem("loggedIn")) {
+        window.location.href = "/login";
+      }
+    </script>
   </body>
 </html>
 
