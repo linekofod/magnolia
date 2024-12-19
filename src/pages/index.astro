@@ -433,71 +433,6 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
   </section>
 
   <!-- INSTAGRAM -->
-  <section class="relative overflow-hidden w-full mb-5xl">
-    <div class="text-center">
-      <h2
-        class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-sm md:mb-lg"
-      >
-        Jeres blomster i hjemmet
-      </h2>
-
-      <!-- Wrapper til karrusel -->
-      <div class="flex justify-center">
-        <div
-          id="carousel"
-          class="flex gap-xl w-[320px] sm:w-[640px] md:w-[960px] lg:w-[1070px] overflow-x-auto scroll-smooth snap-x snap-mandatory"
-        >
-          <!-- Billeder -->
-          <Image
-            src={hjem9}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-          <Image
-            src={hjem7}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-          <Image
-            src={hjem3}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-          <Image
-            src={hjem1}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-          <Image
-            src={hjem2}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-          <Image
-            src={hjem4}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-          <Image
-            src={hjem5}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-          <Image
-            src={hjem6}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-          <Image
-            src={hjem8}
-            alt=""
-            class="w-[280px] h-[280px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 snap-start object-cover"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="mb-xl md:mb-4xl max-w-[1100px] mx-auto pointer-events-none">
     <h2
       class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-sm md:mb-lg text-center"
@@ -721,34 +656,6 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
 
     setInterval(updateText, 1500); // Skift tekst hver 3. sekund
   });
-
-  // INSTAGRAM CAROUSEL
-  const carousel = document.getElementById("carousel");
-
-  // Dupliker billeder for uendelig scroll
-  [...carousel.children].forEach((item) =>
-    carousel.appendChild(item.cloneNode(true))
-  );
-
-  // Beregn bredden dynamisk
-  const calculateGroupWidth = () => {
-    const isMobile = window.innerWidth <= 640; // Små skærme
-    const itemWidth = 316; // 300px billede + 16px gap
-    return isMobile ? itemWidth : itemWidth * 3; // 1 billede på mobil, 3 på større skærme
-  };
-
-  let groupWidth = calculateGroupWidth(); // Initial bredde
-
-  // Opdater bredden ved vinduesændring
-  window.addEventListener("resize", () => {
-    groupWidth = calculateGroupWidth();
-  });
-
-  // Start automatisk rulning
-  setInterval(() => {
-    carousel.scrollLeft =
-      (carousel.scrollLeft + groupWidth) % (carousel.scrollWidth / 2);
-  }, 4500);
 
   // ANIMATIONER
   import { inView, animate } from "motion";
