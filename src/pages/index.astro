@@ -498,6 +498,82 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
     </div>
   </section>
 
+  <section class="mb-xl md:mb-4xl max-w-[1100px] mx-auto pointer-events-none">
+    <h2
+      class="font-headline text-headline2_s md:text-headline2_lg text-grøn-700 mb-sm md:mb-lg text-center"
+    >
+      Jeres blomster i hjemmet
+    </h2>
+    <div
+      class="carousel-insta"
+      data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false, "autoPlay": 4000, "wrapAround": true }'
+    >
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem9}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cover"
+        />
+      </div>
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem7}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cover"
+        />
+      </div>
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem3}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cove"
+        />
+      </div>
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem1}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cover"
+        />
+      </div>
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem2}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cover"
+        />
+      </div>
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem4}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cover"
+        />
+      </div>
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem5}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cover"
+        />
+      </div>
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem6}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cover"
+        />
+      </div>
+      <div class="carousel-cell-insta xl:mr-xl mr-sm">
+        <Image
+          src={hjem8}
+          alt=""
+          class="w-full h-[40vh] md:h-[25vh] xl:h-[40vh] aspect-[1/1] object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
   <!-- ET GRØNNERE VALG -->
   <section class="bg-beige-50 mx-auto py-xl mb-xl md:mb-4xl text-grøn-700">
     <div class="max-w-[1200px] px-sm md:px-s mx-auto text-center">
@@ -598,6 +674,7 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
     opacity: 0.2;
   }
 
+  /* Vores mission karussel */
   .carousel-cell.is-selected {
     opacity: 1;
   }
@@ -607,6 +684,12 @@ import blomst_12 from "/public/imgs/blomster_animation/blomst_12.webp";
       opacity: 0.4;
       margin-top: 40px;
     }
+  }
+
+  /* Instagram karussel */
+
+  .carousel-cell-insta {
+    counter-increment: carousel-cell;
   }
 </style>
 
